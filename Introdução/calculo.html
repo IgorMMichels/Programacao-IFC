@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+    // Esta linha é um comentário
+
+    // Este também é um comentário
+
+    /*
+        Este também é uma outra forma de comentar
+    */
+
+    /*
+    Neste programa perguntaremos ao usuário o salário e quanto receberá de aumento.
+    O resultado final será calculado e apresentado para o usuário.
+    */
+
+    let salario = Number(prompt("Qual é o seu salário?"));
+    document.write("Seu salário é " + salario + "$" + "<br>");
+    
+    const aumento = Number(prompt("Quantos porcento de aumento você recebe anualmente? (Utilize apenas números inteiros)"));
+    //Forma Que eu fiz:
+    let aumentoSalario = salario / 100 * aumento;
+    salario = (salario) + (aumentoSalario);  // coloquei o parsefloat aqui anteriormente porque não sabia fazer a variavel virar número
+    //salario = salario + (salario * aumento / 100) prof fez
+    document.write(`No Próximo ano seu salário será de ${salario}$`);
+
+    /*
+        String
+        Number - int e float
+        Boolean - true/false
+    */
+</script>
