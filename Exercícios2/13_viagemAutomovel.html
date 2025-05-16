@@ -23,7 +23,7 @@
     const custoKm = precoFuel/kmViagem;
 
     //SAÍDA
-    document.write(`Você realisou essa viagem com uma velocidade média de ${velMedia}Km/h.<br>`);
+    document.write(`Você realisou essa viagem com uma velocidade média de ${velMedia.toFixed(1)}Km/h.<br>`);
     document.write(`O consumo médio de combustível do veículo nessa viagem foi de ${consumoMedio.toFixed(2)}km/l.<br>`);
     document.write(`O custo total de combustível nessa viagem foi R$${precoFuel.toFixed(2)}.<br>`);
     document.write(`O custo da sua viagem por quilômetro percorrido foi: R$${custoKm.toFixed(2)}/km.`);

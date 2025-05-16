@@ -16,8 +16,7 @@
     const pesoEngordar = peso + (peso / 100 * 20);
 
     //SAÍDA
-    document.write(`Você terá ${pesoEmagrecer}Kg se emagrecer 15%.<br>`); // nao consegui achar como quebrar a linha dai perguntei pro chat, ele ensinou desse forma porque /n da forma que conheço não estava funcionando.
-
-    document.write(`Você terá ${pesoEngordar}Kg se "engordar" 20%.`);
+    document.write(`Você terá ${pesoEmagrecer.toFixed(2)}Kg se emagrecer 15%.<br>`);
+    document.write(`Você terá ${pesoEngordar.toFixed(2)}Kg se "engordar" 20%.`);
 
 </script>
