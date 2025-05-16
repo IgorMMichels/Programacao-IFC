@@ -15,9 +15,13 @@
 
     
     //PROCESSAMENTO
-    const valorPago = (horasPedreiro * 30) + (horasPintor * 25);
+    const custoPedreiro = (horasPedreiro*30);
+    const custoPintor = (horasPintor*25);
+    const valorPago = custoPedreiro + custoPintor;
     
     //SAÍDA
-    document.write(`O custo de serviço total da obra será de R$${valorPago}`);
+    document.write(`O custo que deverá ser pago ao pedreiro é R$${custoPedreiro}. <br>`);
+    document.write(`O custo que deverá ser pago ao pedreiro é R$${custoPintor}. <br>`);
+    document.write(`O custo de serviço total da obra será de R$${valorPago}.`);
     
 </script>
