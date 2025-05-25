@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Problema: Viagem de automóvel
+    Peça para o usuário informar quanto tempo gastou durante a viagem, quantos litros de combustível foram consumidos, o preço do litro de combustível e qual a quilometragem total percorrida. Calcule e apresente os seguintes dados:
+
+    - Velocidade média da viagem em quilômetros por hora
+    - Consumo médio de combustível do veículo
+    - Custo total do combustível
+    - Custo da viagem por quilômetro percorrido
+    */
+
+    //ENTRADA
+    const tempoViagem = Number(prompt("Informe quanto tempo você gastou durante a viagem. (horas)"));
+    const combustivelViagem = Number(prompt("Informe quantos litros de combustível foram consumidos durante a viagem."));
+    const precoLitro = Number(prompt("Informe o preco do combustivel para cada litro."));
+    const kmViagem = Number(prompt("Informe quantos quilômetros foram percorridos durante a viagem"));
+    
+    //PROCESSAMENTO
+    const velMedia = kmViagem / tempoViagem;
+    const consumoMedio = kmViagem/combustivelViagem;
+    const precoFuel = combustivelViagem*precoLitro;
+    const custoKm = precoFuel/kmViagem;
+
+    //SAÍDA
+    document.write(`Você realisou essa viagem com uma velocidade média de ${velMedia.toFixed(1)}Km/h.<br>`);
+    document.write(`O consumo médio de combustível do veículo nessa viagem foi de ${consumoMedio.toFixed(2)}km/l.<br>`);
+    document.write(`O custo total de combustível nessa viagem foi R$${precoFuel.toFixed(2)}.<br>`);
+    document.write(`O custo da sua viagem por quilômetro percorrido foi: R$${custoKm.toFixed(2)}/km.`);
+</script>

@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Problema: Celsius para Fahrenheit
+    Peça para o usuário informar uma temperatura em graus Celsius. Converta e apresente a temperatura em graus Fahrenheit.
+    */
+
+    //ENTRADA
+    const temperaturaCelcius = Number(prompt("Informe a temperatura em graus Celsius que você deseja converter para Fahrenheit."));
+    
+    //PROCESSAMENTO
+    const temperaturaFahrenheit = (temperaturaCelcius * 1.8) + 32;
+    
+    //SAÍDA
+    document.write(`A sua temperatura convertida para Fahrenreit fica ${temperaturaFahrenheit.toFixed(2)}º F`);
+    //${temperaturaCelcius}º convertidos para Fahrenheit Ficam... ideia inicial mas eu não sei mudar para se a temperatura for entre 1 - 0 e -1 para ficar no singular e não plural.
+
+</script>
