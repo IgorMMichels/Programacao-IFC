@@ -11,7 +11,7 @@
     const notaDepois = Number(prompt("Qual é a nota do seu afilhado agora depois da ajuda?"));
     
     //PROCESSAMENTO
-    if (notaDepois >= notaInicial) {
+    if (notaDepois > notaInicial) {
         const acrescimo = (notaDepois-notaInicial) / 4;
         alert(`Você receberá ${acrescimo} pontos de bonificação.`)
     }

@@ -10,26 +10,26 @@
     const valor3 = Number(prompt("Informe um número inteiro aqui"));
     
     //PROCESSAMENTO
-    /*
     let primeiro = Number("");
     let segundo = Number("");
     let terceiro = Number("");
-    if (valor1 >= valor2 && valor1 >= valor3) {
-        primeiro = valor1;
-    }
-    else if (valor2 >= valor1 && valor2 >= valor3) {
-        primeiro = valor2;
-    }
-    else {
-        primeiro = valor3;
-    }
 
     if (valor1 >= valor2 && valor3 >= valor1 ){
         primeiro = valor3;
         segundo = valor1;
         terceiro = valor2;
     }
+    if (valor1 >= valor3 && valor2 >= valor1 ){
+        primeiro = valor2;
+        segundo = valor1;
+        terceiro = valor3;
+    }
     else if (valor2 >= valor1 && valor3 >=valor2 ) {
+        primeiro = valor3;
+        segundo = valor1;
+        terceiro = valor2;
+    }   
+        else if (valor2 >= valor3 && valor1 >= valor2 ) {
         primeiro = valor3;
         segundo = valor1;
         terceiro = valor2;
@@ -44,13 +44,15 @@
         segundo = valor3;
         terceiro = valor2;  
     }
-    */
+    
+    /*
     const ordemDecrescente = [valor1, valor2, valor3] // usei arrays, achei bem mais simples
     ordemDecrescente.sort()
     ordemDecrescente.reverse()
+    alert(`{${ordemDecrescente}}`)
+    */
 
     //SAÍDA
-    // alert(`{${primeiro}, ${segundo}, ${terceiro}}`)
-    alert(`{${ordemDecrescente}}`)
+    alert(`{${primeiro}, ${segundo}, ${terceiro}}`)
     
 </script>
