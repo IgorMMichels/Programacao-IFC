@@ -1,0 +1,28 @@
+<script>
+    /*
+    //PROBLEMA: TROCAR VARIÁVEIS
+    Faça um script que pede dois inteiros e armazene eles em duas variáveis.
+    Em seguida, troque o valor das variáveis, invertendo e exibindo o antes e o depois em uma janela de alert.
+    */
+
+    //ENTRADA
+    let valor1 = parseInt(prompt("Informe um número inteiro aqui"));
+    let valor2 = parseInt(prompt("Informe um número inteiro aqui"));
+
+    //PROCESSAMENTO
+    let temporario = parseInt("");
+
+    alert(`O primeiro valor era ${valor1}.`);
+    alert(`O segundo valor era ${valor2}.`);
+
+    temporario = valor2;
+    valor1 = temporario;
+    temporario = valor1;
+    valor2 = temporario;
+    temporario = (null);
+
+    alert(`Agora o primero valor é ${valor1}.`);
+    alert(`Agora o segundo valor é ${valor2}.`);
+
+
+</script>
