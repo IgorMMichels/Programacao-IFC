@@ -11,13 +11,38 @@
     */
 
     //ENTRADA
-    let numero = (prompt("Insira um número aqui (menor que 1000)"));
-    const tamanho = numero.length
+    const numero = parseInt(prompt("Insira um número aqui (de 1 à 999)"));
+    const numString = numero.toString()
+    const tamanho = numString.length
     //PROCESSAMENTO
-    if (tamanho == 3) {
-        document.write(`${numero[0]}, centenas, ${numero[1]} dezenas e ${numero[2]} unidades.`)
+    if (0 < numero || numero <1000) {
+        if (tamanho == 3) {
+        if (numString[0] == "1" && numString[1] == "1" && numString[2] =="1") {
+            document.write(`${numString[0]}, centena, ${numString[1]} dezena e ${numString[2]} unidade.`);
+        }
+        else if (numString[0] == "1" && numString[1] != "1" && numString[2] !="1") {
+            document.write(`${numString[0]}, centena, ${numString[1]} dezenas e ${numString[2]} unidades.`);
+        }
+        else if (numString[0] == "1" && numString[1] == "1" && numString[2] !="1") {
+            document.write(`${numString[0]}, centena, ${numString[1]} dezena e ${numString[2]} unidades.`);
+        }
+        else if (numString[0] == "1" && numString[1] != "1" && numString[2] =="1") {
+            document.write(`${numString[0]}, centena, ${numString[1]} dezenas e ${numString[2]} unidade.`);
+        }
+        else if (numString[0] != "1" && numString[1] != "1" && numString[2] =="1") {
+            document.write(`${numString[0]}, centenas, ${numString[1]} dezenas e ${numString[2]} unidade.`);
+        }
+        else if (numString[0] != "1" && numString[1] == "1" && numString[2] =="1") {
+            document.write(`${numString[0]}, centena, ${numString[1]} dezenas e ${numString[2]} unidade.`);
+        }
+        else {
+            document.write(`${numString[0]}, centenas, ${numString[1]} dezenas e ${numString[2]} unidades.`);
+        }
     }
-    
-    //SAÍDA
+        else {
+            document.write(`Valor Inválido.`)
+        }
+
+    }
 
 </script>
