@@ -15,30 +15,52 @@
     const numString = numero.toString()
     const tamanho = numString.length
     //PROCESSAMENTO
-    if (0 < numero || numero <1000) {
+    if (numero >= 1 && numero <1000) {
         if (tamanho == 3) {
-        if (numString[0] == "1" && numString[1] == "1" && numString[2] =="1") {
-            document.write(`${numString[0]}, centena, ${numString[1]} dezena e ${numString[2]} unidade.`);
-        }
-        else if (numString[0] == "1" && numString[1] != "1" && numString[2] !="1") {
-            document.write(`${numString[0]}, centena, ${numString[1]} dezenas e ${numString[2]} unidades.`);
-        }
-        else if (numString[0] == "1" && numString[1] == "1" && numString[2] !="1") {
-            document.write(`${numString[0]}, centena, ${numString[1]} dezena e ${numString[2]} unidades.`);
-        }
-        else if (numString[0] == "1" && numString[1] != "1" && numString[2] =="1") {
-            document.write(`${numString[0]}, centena, ${numString[1]} dezenas e ${numString[2]} unidade.`);
-        }
-        else if (numString[0] != "1" && numString[1] != "1" && numString[2] =="1") {
-            document.write(`${numString[0]}, centenas, ${numString[1]} dezenas e ${numString[2]} unidade.`);
-        }
-        else if (numString[0] != "1" && numString[1] == "1" && numString[2] =="1") {
-            document.write(`${numString[0]}, centena, ${numString[1]} dezenas e ${numString[2]} unidade.`);
-        }
-        else {
+            if (numString[0] == "1" && numString[1] == "1" && numString[2] =="1") {
+                document.write(`${numString[0]}, centena, ${numString[1]} dezena e ${numString[2]} unidade.`);
+            }
+            else if (numString[0] == "1" && numString[1] != "1" && numString[2] !="1") {
+                document.write(`${numString[0]}, centena, ${numString[1]} dezenas e ${numString[2]} unidades.`);
+            }
+            else if (numString[0] == "1" && numString[1] == "1" && numString[2] !="1") {
+                document.write(`${numString[0]}, centena, ${numString[1]} dezena e ${numString[2]} unidades.`);
+            }
+            else if (numString[0] == "1" && numString[1] != "1" && numString[2] =="1") {
+                document.write(`${numString[0]}, centena, ${numString[1]} dezenas e ${numString[2]} unidade.`);
+            }
+            else if (numString[0] != "1" && numString[1] != "1" && numString[2] =="1") {
+                document.write(`${numString[0]}, centenas, ${numString[1]} dezenas e ${numString[2]} unidade.`);
+            }
+            else if (numString[0] != "1" && numString[1] == "1" && numString[2] =="1") {
+                document.write(`${numString[0]}, centena, ${numString[1]} dezenas e ${numString[2]} unidade.`);
+            }
+            else {
             document.write(`${numString[0]}, centenas, ${numString[1]} dezenas e ${numString[2]} unidades.`);
+            }
         }
-    }
+        else if (tamanho == 2) {
+            if (numString[1] == "1" && numString[2] =="1") {
+                document.write(`${numString[1]} dezena e ${numString[2]} unidade.`);
+            }
+            else if (numString[1] == "1" && numString[2] !="1") {
+                document.write(`${numString[1]} dezena e ${numString[2]} unidades.`);
+            }
+            else if (numString[1] != "1" && numString[2] == "1") {
+            document.write(`${numString[1]} dezenas e ${numString[2]} unidade.`);
+            }
+            else {
+            document.write(`${numString[1]} dezenas e ${numString[2]} unidades.`);
+            }
+        }
+        else if (tamanho == 1) {
+            if (numString[2] == "1") {
+                document.write(`${numString[2]} unidade.`);
+            }
+            else {
+            document.write(`${numString[2]} unidades.`);
+            }
+        }
         else {
             document.write(`Valor Inválido.`)
         }

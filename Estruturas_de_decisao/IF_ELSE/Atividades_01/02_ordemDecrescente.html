@@ -18,31 +18,40 @@
         primeiro = valor3;
         segundo = valor1;
         terceiro = valor2;
+        alert(`{${primeiro}, ${segundo}, ${terceiro}}`)
     }
     else if (valor1 >= valor3 && valor2 >= valor1 ){
         primeiro = valor2;
         segundo = valor1;
         terceiro = valor3;
+        alert(`{${primeiro}, ${segundo}, ${terceiro}}`)
     }
     else if (valor2 >= valor1 && valor3 >=valor2 ) {
         primeiro = valor3;
         segundo = valor2;
         terceiro = valor1;
+        alert(`{${primeiro}, ${segundo}, ${terceiro}}`)
     }   
     else if (valor2 >= valor3 && valor1 >= valor2 ) {
         primeiro = valor1;
         segundo = valor1;
         terceiro = valor3;
+        alert(`{${primeiro}, ${segundo}, ${terceiro}}`)
     }   
     else if (valor3 >= valor2 && valor1 >= valor3) {
         primeiro = valor1;
         segundo = valor3;
-        terceiro = valor2;       
+        terceiro = valor2;
+        alert(`{${primeiro}, ${segundo}, ${terceiro}}`)      
     }
     else if (valor3 >= valor1 && valor2 >= valor3) {
         primeiro = valor2;
         segundo = valor3;
-        terceiro = valor1;  
+        terceiro = valor1;
+        alert(`{${primeiro}, ${segundo}, ${terceiro}}`)  
+    }
+    else {
+        alert("Valor Inválido")
     }
     
     /*
@@ -51,8 +60,5 @@
     ordemDecrescente.reverse()
     alert(`{${ordemDecrescente}}`)
     */
-
-    //SAÍDA
-    alert(`{${primeiro}, ${segundo}, ${terceiro}}`)
     
 </script>
