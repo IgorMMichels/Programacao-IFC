@@ -1,0 +1,65 @@
+<script>
+    /*
+    PROBLEMA: OPERAÇÃO MATEMÁTICA
+    Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+    - par ou ímpar;
+    - positivo ou negativo;
+    - inteiro ou decimal.
+    */
+
+    //ENTRADA
+    const numero1 = Number(prompt("Insira o primeiro número aqui."));
+    const numero2 = Number(prompt("Insira o segundo número aqui."));
+    const operacao = prompt("Qual operação você deseja realizar com esses números (+ = Mais), (- = menos), (x = multiplicação), (/ = divisão).");
+    let resultado = ""
+    
+    if (operacao == "+") {
+        resultado = numero1+numero2;
+        document.write(`O resultado é ${resultado}.<br>`);
+    }
+    else if (operacao == "-") {
+        resultado = numero1-numero2;
+        document.write(`O resultado é ${resultado}.<br>`);
+    }
+    else if (operacao == "x") {
+        resultado = numero1*numero2;
+        document.write(`O resultado é ${resultado}.<br>`);
+    }
+    else if (operacao == "/") {
+        resultado = numero1/numero2;
+        document.write(`O resultado é ${resultado}.<br>`);
+    }
+    else {
+
+    }
+
+
+    if (resultado != ""){
+        if (resultado % 2 == 0 ) {
+            document.write("Numero Par!<br>");
+        }
+        else {
+            document.write("Numero Ímpar!<br>");
+        }
+        if (resultado > 0 ) {
+            document.write("Numero Positivo!<br>");
+        }
+        else {
+            document.write("Numero Negativo!<br>");
+        }
+        if (resultado == parseInt(resultado)) {
+            document.write("Numero Inteiro!<br>");
+        }
+        else {
+            document.write("Numero Decimal!");
+        }
+    }
+    else {
+        document.write("Valor inválido!");
+    }
+    //PROCESSAMENTO
+    
+    
+    //SAÍDA
+
+</script>
