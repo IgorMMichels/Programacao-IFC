@@ -10,7 +10,7 @@
 
     let valorSaque = Number(prompt("Informe a quantia que você deseja sacar."))    
     
-    if (valorSaque > 0) {
+    if (valorSaque >= 10 && valorSaque <= 600) {
         if ((valorSaque / 100) >= 1) {
             const nota100 = Math.floor(valorSaque/100);
             if ((valorSaque % 100) >= 1) {
@@ -181,27 +181,7 @@
                 document.write(`Você irá receber ${nota10} notas de 10.`)
             }           
         }
-        else if ((valorSaque / 5) >= 1) {
-            const nota5 = Math.floor(valorSaque/5);
-            if ((valorSaque % 5) >= 1) { 
-                let sobra = (valorSaque) % 5;           
-                const nota1 = Math.floor(sobra/1);
-                document.write(`Você irá receber ${nota5} nota de 5 e ${nota1} notas de 1.`);
-                }
-            else {
-                document.write(`Você irá receber ${nota5} nota de 5.`)
-            }             
-        }
-        else if (valorSaque > 1) {           
-            const nota1 = Math.floor(valorSaque/1);
-            document.write(`Você irá receber ${nota1} notas de 1.`);
-            }
-        else {
-            const nota1 = Math.floor(valorSaque/1);
-            document.write(`Você irá receber ${nota1} nota de 1.`)
-            }             
-        } 
-
+    }
     else {
         alert("Digite um valor válido");
     }
