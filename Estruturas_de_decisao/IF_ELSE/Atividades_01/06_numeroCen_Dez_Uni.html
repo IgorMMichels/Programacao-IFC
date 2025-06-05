@@ -11,7 +11,7 @@
     */
 
     //ENTRADA
-    /*
+
     const numero = parseInt(prompt("Insira um número aqui (de 1 à 999)"));
     const numString = numero.toString()
     const tamanho = numString.length
@@ -19,47 +19,82 @@
     if (numero >= 1 && numero <1000) {
         if (tamanho == 3) {
             if (numString[0] == "1" && numString[1] == "1" && numString[2] =="1") {
-                document.write(`${numString[0]}, centena, ${numString[1]} dezena e ${numString[2]} unidade.`);
+                document.write(`${numString[0]} centena, ${numString[1]} dezena e ${numString[2]} unidade.`);
             }
-            else if (numString[0] == "1" && numString[1] != "1" && numString[2] !="1") {
-                document.write(`${numString[0]}, centena, e ${numString[2]} unidades.`);
+            else if (numString[0] == "1" && numString[1] > "1" && numString[2] > "1") {
+                document.write(`${numString[0]} centena, ${numString[1]} dezenas e ${numString[2]} unidades.`);
             }
-            else if (numString[0] == "1" && numString[1] == "1" && numString[2] !="1") {
-                document.write(`${numString[0]}, centena, ${numString[1]} dezena e ${numString[2]} unidades.`);
+            else if (numString[0] == "1" && numString[1] == "1" && numString[2] >"1") {
+                document.write(`${numString[0]} centena, ${numString[1]} dezena e ${numString[2]} unidades.`);
             }
-            else if (numString[0] == "1" && numString[1] != "1" && numString[2] =="1") {
-                document.write(`${numString[0]}, centena, ${numString[1]} dezenas e ${numString[2]} unidade.`);
+            else if (numString[0] == "1" && numString[1] > "1" && numString[2] =="1") {
+                document.write(`${numString[0]} centena, ${numString[1]} dezenas e ${numString[2]} unidade.`);
             }
-            else if (numString[0] != "1" && numString[1] != "1" && numString[2] =="1") {
-                document.write(`${numString[0]}, centenas, ${numString[1]} dezenas e ${numString[2]} unidade.`);
+            else if (numString[0] > "1" && numString[1] > "1" && numString[2] =="1") {
+                document.write(`${numString[0]} centenas, ${numString[1]} dezenas e ${numString[2]} unidade.`);
             }
-            else if (numString[0] != "1" && numString[1] == "1" && numString[2] =="1") {
-                document.write(`${numString[0]}, centena, ${numString[1]} dezenas e ${numString[2]} unidade.`);
+            else if (numString[0] > "1" && numString[1] == "1" && numString[2] =="1") {
+                document.write(`${numString[0]} centena, ${numString[1]} dezenas e ${numString[2]} unidade.`);
+            }
+            else if (numString[0] > "1" && numString[1] == "1" && numString[2] =="1") {
+                document.write(`${numString[0]} centena, ${numString[1]} dezenas e ${numString[2]} unidade.`);
+            }
+            else if (numString[0] > "1" && numString[1] > "1" && numString[2] > "1"){
+            document.write(`${numString[0]} centenas, ${numString[1]} dezenas e ${numString[2]} unidades.`);
+            }
+            else if (numString[0] > "1" && numString[1] > "1" && numString[2] == "0"){
+            document.write(`${numString[0]} centenas e ${numString[1]} dezenas.`);
+            }
+            else if (numString[0] > "1" && numString[1] == "1" && numString[2] == "0"){
+            document.write(`${numString[0]} centenas e ${numString[1]} dezena.`);
+            }
+            else if (numString[0] > "1" && numString[1] == "0" && numString[2] == "1"){
+            document.write(`${numString[0]} centenas e ${numString[2]} unidade.`);
+            }
+            else if (numString[0] > "1" && numString[1] == "0" && numString[2] > "1"){
+            document.write(`${numString[0]} centenas e ${numString[2]} unidades.`);
+            }
+            else if (numString[0] == "1" && numString[1] == "0" && numString[2] == "1"){
+            document.write(`${numString[0]} centena e ${numString[2]} unidade.`);
+            }
+            else if (numString[0] == "1" && numString[1] == "0" && numString[2] > "1"){
+            document.write(`${numString[0]} centena e ${numString[2]} unidades.`);
+            }
+            else if (numString[0] > "1" && numString[1] == "0" && numString[2] == "0"){
+            document.write(`${numString[0]} centenas.`);
             }
             else {
-            document.write(`${numString[0]}, centenas, ${numString[1]} dezenas e ${numString[2]} unidades.`);
+                document.write(`${numString[0]} centena.`)
             }
+
         }
         else if (tamanho == 2) {
-            if (numString[1] == "1" && numString[2] =="1") {
-                document.write(`${numString[1]} dezena e ${numString[2]} unidade.`);
+            if (numString[0] == "1" && numString[1] =="1") {
+                document.write(`${numString[0]} dezena e ${numString[1]} unidade.`);
             }
-            else if (numString[1] == "1" && numString[2] !="1") {
-                document.write(`${numString[1]} dezena e ${numString[2]} unidades.`);
+            else if (numString[0] == "1" && numString[1] > "1") {
+                document.write(`${numString[1]} dezena e ${numString[1]} unidades.`);
             }
-            else if (numString[1] != "1" && numString[2] == "1") {
-            document.write(`${numString[1]} dezenas e ${numString[2]} unidade.`);
+            else if (numString[0] > "1" && numString[1] == "1") {
+            document.write(`${numString[0]} dezenas e ${numString[1]} unidade.`);
+            }
+            else if (numString[0] > "1" && numString[1] > "1") {
+            document.write(`${numString[0]} dezenas e ${numString[1]} unidades.`);
+            }
+            else if (numString[0] > "1" && numString[1] == "0") {
+            document.write(`${numString[0]} dezenas.`);
             }
             else {
-            document.write(`${numString[1]} dezenas e ${numString[2]} unidades.`);
+                document.write(`${numString[0]} dezena.`);
             }
+            
         }
         else if (tamanho == 1) {
-            if (numString[2] == "1") {
-                document.write(`${numString[2]} unidade.`);
+            if (numString[0] == "1") {
+                document.write(`${numString[0]} unidade.`);
             }
             else {
-            document.write(`${numString[2]} unidades.`);
+            document.write(`${numString[0]} unidades.`);
             }
         }
         else {
@@ -67,8 +102,8 @@
         }
 
     }
-    */
 
+    /*
     let numero = parseInt(prompt("Insira um número aqui (de 1 à 999)"));
     const centenas = Math.floor(numero/100)
     const dezenas = Math.floor((numero%100)/10)
@@ -77,8 +112,8 @@
 
     if (numero >0 && numero <1000) {
         if (centenas >= 1) {
-            if (centenas > 1 && unidades >= 1 && unidades >= 1) {
-
+            if (centenas > 1)
+                mensagem = (centenas)
             }
             else {
                 mensagem = ({centenas})
@@ -100,6 +135,8 @@
         alert("Valor Inválido! (1 à 999)")
     }
 
+    alert()
+    */
 
 
 
