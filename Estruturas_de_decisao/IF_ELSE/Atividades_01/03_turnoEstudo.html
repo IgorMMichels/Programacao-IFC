@@ -1,5 +1,5 @@
 <script>
-    /*
+  /*
     //PROBLEMA: TURNO DE ESTUDO
     Faça um script que pergunte em que turno você estuda.
     Peça para digitar M-matutino ou V-Vespertino ou N-Noturno.
@@ -11,23 +11,24 @@
     conforme o caso.
     */
 
-    //ENTRADA
-    alert("Olá...");
-    const turno = prompt("Em que turno você estuda? M=matutino, V=vespertino, N=noturno.").toUpperCase().trim()
-    
-    //PROCESSAMENTO
-    if (turno == "M") {
-        document.write("Bom Dia!");
-    }
-    else if (turno == "V") {
-        document.write("Boa Tarde!");
-    }
-    else if (turno == "N") {
-        document.write("Boa Noite!");
-    }
-    else {
-        document.write("Valor Inválido, siga o modelo: M=matutino, V=vespertino, N=noturno.");
-    }
-    
+  //ENTRADA
+  alert("Olá...");
+  const turno = prompt(
+    "Em que turno você estuda? M=matutino, V=vespertino, N=noturno."
+  )
+    .toUpperCase()
+    .trim();
 
+  //PROCESSAMENTO
+  if (turno == "M") {
+    document.write("Bom Dia!");
+  } else if (turno == "V") {
+    document.write("Boa Tarde!");
+  } else if (turno == "N") {
+    document.write("Boa Noite!");
+  } else {
+    document.write(
+      "Valor Inválido, siga o modelo: M=matutino, V=vespertino, N=noturno."
+    );
+  }
 </script>

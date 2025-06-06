@@ -1,0 +1,204 @@
+<meta charset="UTF-8" />
+<script>
+  /*
+    PROBLEMA: CAIXA ELETRÔNICO
+    Faça um script para um caixa eletrônico. O script deverá perguntar ao usuário a valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais. O script não deve se preocupar com a quantidade de notas existentes na máquina.
+
+    Exemplo: Para sacar a quantia de 256 reais, o script fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;
+    Exemplo: Para sacar a quantia de 399 reais, o script fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
+    */
+
+  let valorSaque = Number(prompt("Informe a quantia que você deseja sacar."));
+
+  if (valorSaque >= 10 && valorSaque <= 600) {
+    if (valorSaque / 100 >= 1) {
+      const nota100 = Math.floor(valorSaque / 100);
+      if (valorSaque % 100 >= 1) {
+        let sobra = valorSaque % 100;
+        if (sobra / 50 >= 1) {
+          const nota50 = Math.floor(sobra / 50);
+          sobra = sobra % 50;
+          if (sobra / 10 >= 1) {
+            const nota10 = Math.floor(sobra / 10);
+            sobra = sobra % 10;
+            if (sobra / 5 >= 1) {
+              const nota5 = Math.floor(sobra / 5);
+              sobra = sobra % 5;
+              if (sobra / 1 >= 1) {
+                const nota1 = Math.floor(sobra / 1);
+                document.write(
+                  `Você irá receber ${nota100} notas de 100, ${nota50} nota de 50, ${nota10} notas de 10, ${nota5} nota de 5 e ${nota1} notas de 1.`
+                );
+              } else {
+                document.write(
+                  `Você irá receber ${nota100} notas de 100, ${nota50} nota de 50, ${nota10} notas de 10, ${nota5} nota de 5.`
+                );
+              }
+            } else if (sobra / 1 >= 1) {
+              const nota1 = Math.floor(sobra / 1);
+              document.write(
+                `Você irá receber ${nota100} notas de 100, ${nota50} nota de 50, ${nota10} notas de 10 e ${nota1} notas de 1.`
+              );
+            }
+          } else if (sobra / 5 >= 1) {
+            const nota5 = Math.floor(sobra / 5);
+            sobra = sobra % 5;
+            if (sobra / 1 >= 1) {
+              const nota1 = Math.floor(sobra / 1);
+              document.write(
+                `Você irá receber ${nota100} notas de 100, ${nota50} nota de 50, ${nota5} nota de 5 e ${nota1} notas de 1.`
+              );
+            } else {
+              document.write(
+                `Você irá receber ${nota100} notas de 100, ${nota50} nota de 50 e ${nota5} nota de 5.`
+              );
+            }
+          } else if (sobra / 1 >= 1) {
+            const nota1 = Math.floor(sobra / 1);
+            document.write(
+              `Você irá receber ${nota100} notas de 100, ${nota50} nota de 50, e ${nota1} notas de 1.`
+            );
+          } else {
+            document.write(
+              `Você irá receber ${nota100} notas de 100 e ${nota50} nota de 50.`
+            );
+          }
+        } else if (sobra / 10 >= 1) {
+          const nota10 = Math.floor(sobra / 10);
+          sobra = sobra % 10;
+          if (sobra / 5 >= 1) {
+            const nota5 = Math.floor(sobra / 5);
+            sobra = sobra % 5;
+            if (sobra / 1 >= 1) {
+              const nota1 = Math.floor(sobra / 1);
+              document.write(
+                `Você irá receber ${nota100} notas de 100, ${nota10} notas de 10, ${nota5} notas de 5 e ${nota1} notas de 1.`
+              );
+            } else {
+              document.write(
+                `Você irá receber ${nota100} notas de 100, ${nota10} notas de 10 e ${nota5} nota de 5.`
+              );
+            }
+          } else if (sobra / 1 >= 1) {
+            const nota1 = Math.floor(sobra / 1);
+            document.write(
+              `Você irá receber ${nota100} notas de 100, ${nota10} notas de 10, e ${nota1} notas de 1`
+            );
+          }
+        } else if (sobra / 5 >= 1) {
+          const nota5 = Math.floor(sobra / 5);
+          sobra = sobra % 5;
+          if (sobra / 1 >= 1) {
+            const nota1 = Math.floor(sobra / 1);
+            document.write(
+              `Você irá receber ${nota100} notas de 100, ${nota5} notas de 5 e ${nota1} notas de 1.`
+            );
+          } else {
+            document.write(
+              `Você irá receber ${nota100} notas de 100, ${nota5} nota de 5.`
+            );
+          }
+        } else if (sobra / 1 >= 1) {
+          const nota1 = Math.floor(sobra / 1);
+          document.write(
+            `Você irá receber ${nota100} notas de 100, e ${nota1} notas de 1.`
+          );
+        }
+      } else if (nota100 == 1) {
+        document.write(`Você irá receber ${nota100} nota de 100.`);
+      } else {
+        document.write(`Você irá receber ${nota100} notas de 100.`);
+      }
+    } else if (valorSaque / 50 >= 1) {
+      const nota50 = Math.floor(valorSaque / 50);
+      if (valorSaque % 50 >= 1) {
+        let sobra = valorSaque % 50;
+        if (sobra / 10 >= 1) {
+          const nota10 = Math.floor(sobra / 10);
+          sobra = sobra % 10;
+          if (sobra / 5 >= 1) {
+            const nota5 = Math.floor(sobra / 5);
+            sobra = sobra % 5;
+            if (sobra / 1 >= 1) {
+              const nota1 = Math.floor(sobra / 1);
+              document.write(
+                `Você irá receber ${nota50} nota de 50, ${nota10} notas de 10, ${nota5} nota de 5 e ${nota1} notas de 1.`
+              );
+            } else {
+              document.write(
+                `Você irá receber ${nota50} nota de 50, ${nota10} notas de 10, ${nota5} nota de 5.`
+              );
+            }
+          } else if (sobra / 1 >= 1) {
+            const nota1 = Math.floor(sobra / 1);
+            document.write(
+              `Você irá receber ${nota50} nota de 50, ${nota10} notas de 10 e ${nota1} notas de 1.`
+            );
+          }
+        } else if (sobra / 5 >= 1) {
+          const nota5 = Math.floor(sobra / 5);
+          sobra = sobra % 5;
+          if (sobra / 1 >= 1) {
+            const nota1 = Math.floor(sobra / 1);
+            document.write(
+              `Você irá receber ${nota50} nota de 50, ${nota5} nota de 5 e ${nota1} notas de 1.`
+            );
+          } else {
+            document.write(
+              `Você irá receber ${nota50} nota de 50, e ${nota5} nota de 5.`
+            );
+          }
+        } else if (sobra / 1 >= 1) {
+          const nota1 = Math.floor(sobra / 1);
+          document.write(
+            `Você irá receber ${nota50} nota de 50, e ${nota1} notas de 1.`
+          );
+        }
+      } else {
+        document.write(`Você irá receber ${nota50} nota de 50.`);
+      }
+    } else if (valorSaque / 10 >= 1) {
+      const nota10 = Math.floor(valorSaque / 10);
+      if (valorSaque % 10 >= 1) {
+        let sobra = valorSaque % 10;
+        if (sobra / 5 >= 1) {
+          const nota5 = Math.floor(sobra / 5);
+          sobra = sobra % 5;
+          if (sobra / 1 >= 1) {
+            const nota1 = Math.floor(sobra / 1);
+            document.write(
+              `Você irá receber ${nota10} notas de 10, ${nota5} nota de 5 e ${nota1} notas de 1.`
+            );
+          } else {
+            document.write(
+              `Você irá receber ${nota10} notas de 10, ${nota5} nota de 5.`
+            );
+          }
+        } else if (sobra / 5 >= 1) {
+          const nota5 = Math.floor(sobra / 5);
+          if (sobra / 1 >= 1) {
+            const nota1 = Math.floor(sobra / 1);
+            document.write(
+              `Você irá receber ${nota10} notas de 10, ${nota5} nota de 5 e ${nota1} notas de 1.`
+            );
+          } else {
+            document.write(
+              `Você irá receber ${nota10} notas de 10, e ${nota5} nota de 5.`
+            );
+          }
+        } else if (sobra / 1 >= 1) {
+          const nota1 = Math.floor(sobra / 1);
+          document.write(
+            `Você irá receber ${nota10} notas de 10 e ${nota1} notas de 1.`
+          );
+        }
+      } else if (nota10 == 1) {
+        document.write(`Você irá receber ${nota10} nota de 10.`);
+      } else {
+        document.write(`Você irá receber ${nota10} notas de 10.`);
+      }
+    }
+  } else {
+    alert("Digite um valor válido");
+  }
+</script>

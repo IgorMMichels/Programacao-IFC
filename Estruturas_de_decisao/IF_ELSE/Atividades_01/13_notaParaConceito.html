@@ -1,6 +1,6 @@
 <meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: NOTA PARA CONCEITO
     Converta a nota para conceito, conforme a tabela abaixo:
     Nota                     Conceito
@@ -11,32 +11,26 @@
     Entre 5.9 e zero            E
     */
 
-    //ENTRADA
-    const nota = Number(prompt("Que nota você tirou?"));
-    let conceito = "";
-    //PROCESSAMENTO
-    if (nota >= 0 && nota <= 10) {
-        if (nota >= 9) {
-            conceito = "A";
-        }
-        else if (nota >= 8) {
-            conceito = "B";
-        }
-        else if (nota >= 7) {
-            conceito = "C";
-        }
-        else if (nota >= 6) {
-            conceito = "D";
-        }
-        else {
-            conceito = "E";
-        }
+  //ENTRADA
+  const nota = Number(prompt("Que nota você tirou?"));
+  let conceito = "";
+  //PROCESSAMENTO
+  if (nota >= 0 && nota <= 10) {
+    if (nota >= 9) {
+      conceito = "A";
+    } else if (nota >= 8) {
+      conceito = "B";
+    } else if (nota >= 7) {
+      conceito = "C";
+    } else if (nota >= 6) {
+      conceito = "D";
+    } else {
+      conceito = "E";
     }
-    else {
-        alert("Valor Inválido (0 à 10)")
-    }
-    
-    //SAÍDA
-    alert(`Seu conceito é ${conceito}!`)
+  } else {
+    alert("Valor Inválido (0 à 10)");
+  }
 
+  //SAÍDA
+  alert(`Seu conceito é ${conceito}!`);
 </script>

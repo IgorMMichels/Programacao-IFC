@@ -1,64 +1,57 @@
 <script>
-    /*
+  /*
     PROBLEMA: ORDEM DECRESCENTE
     Faça um script que leia três números e mostre-os em ordem decrescente.
     */
 
-    //ENTRADA
-    const valor1 = Number(prompt("Informe um número inteiro aqui"));
-    const valor2 = Number(prompt("Informe um número inteiro aqui"));
-    const valor3 = Number(prompt("Informe um número inteiro aqui"));
-    
-    //PROCESSAMENTO
-    let primeiro = Number("");
-    let segundo = Number("");
-    let terceiro = Number("");
+  //ENTRADA
+  const valor1 = Number(prompt("Informe um número inteiro aqui"));
+  const valor2 = Number(prompt("Informe um número inteiro aqui"));
+  const valor3 = Number(prompt("Informe um número inteiro aqui"));
 
-    if (valor1 >= valor2 && valor3 >= valor1 ){
-        primeiro = valor3;
-        segundo = valor1;
-        terceiro = valor2;
-        alert(`{${primeiro}, ${segundo}, ${terceiro}}`)
-    }
-    else if (valor1 >= valor3 && valor2 >= valor1 ){
-        primeiro = valor2;
-        segundo = valor1;
-        terceiro = valor3;
-        alert(`{${primeiro}, ${segundo}, ${terceiro}}`)
-    }
-    else if (valor2 >= valor1 && valor3 >=valor2 ) {
-        primeiro = valor3;
-        segundo = valor2;
-        terceiro = valor1;
-        alert(`{${primeiro}, ${segundo}, ${terceiro}}`)
-    }   
-    else if (valor2 >= valor3 && valor1 >= valor2 ) {
-        primeiro = valor1;
-        segundo = valor1;
-        terceiro = valor3;
-        alert(`{${primeiro}, ${segundo}, ${terceiro}}`)
-    }   
-    else if (valor3 >= valor2 && valor1 >= valor3) {
-        primeiro = valor1;
-        segundo = valor3;
-        terceiro = valor2;
-        alert(`{${primeiro}, ${segundo}, ${terceiro}}`)      
-    }
-    else if (valor3 >= valor1 && valor2 >= valor3) {
-        primeiro = valor2;
-        segundo = valor3;
-        terceiro = valor1;
-        alert(`{${primeiro}, ${segundo}, ${terceiro}}`)  
-    }
-    else {
-        alert("Valor Inválido")
-    }
-    
-    /*
+  //PROCESSAMENTO
+  let primeiro = Number("");
+  let segundo = Number("");
+  let terceiro = Number("");
+
+  if (valor1 >= valor2 && valor3 >= valor1) {
+    primeiro = valor3;
+    segundo = valor1;
+    terceiro = valor2;
+    alert(`{${primeiro}, ${segundo}, ${terceiro}}`);
+  } else if (valor1 >= valor3 && valor2 >= valor1) {
+    primeiro = valor2;
+    segundo = valor1;
+    terceiro = valor3;
+    alert(`{${primeiro}, ${segundo}, ${terceiro}}`);
+  } else if (valor2 >= valor1 && valor3 >= valor2) {
+    primeiro = valor3;
+    segundo = valor2;
+    terceiro = valor1;
+    alert(`{${primeiro}, ${segundo}, ${terceiro}}`);
+  } else if (valor2 >= valor3 && valor1 >= valor2) {
+    primeiro = valor1;
+    segundo = valor1;
+    terceiro = valor3;
+    alert(`{${primeiro}, ${segundo}, ${terceiro}}`);
+  } else if (valor3 >= valor2 && valor1 >= valor3) {
+    primeiro = valor1;
+    segundo = valor3;
+    terceiro = valor2;
+    alert(`{${primeiro}, ${segundo}, ${terceiro}}`);
+  } else if (valor3 >= valor1 && valor2 >= valor3) {
+    primeiro = valor2;
+    segundo = valor3;
+    terceiro = valor1;
+    alert(`{${primeiro}, ${segundo}, ${terceiro}}`);
+  } else {
+    alert("Valor Inválido");
+  }
+
+  /*
     const ordemDecrescente = [valor1, valor2, valor3] // usei arrays, achei bem mais simples
     ordemDecrescente.sort()
     ordemDecrescente.reverse()
     alert(`{${ordemDecrescente}}`)
     */
-    
 </script>

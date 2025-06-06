@@ -1,0 +1,160 @@
+<meta charset="UTF-8" />
+<script>
+  /*
+      PROBLEMA: CAIXA ELETRÔNICO
+      Faça um script para um caixa eletrônico. O script deverá perguntar ao usuário a valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais. O script não deve se preocupar com a quantidade de notas existentes na máquina.
+
+      Exemplo: Para sacar a quantia de 256 reais, o script fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;
+      Exemplo: Para sacar a quantia de 399 reais, o script fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
+  */
+
+  let valorSaque = parseInt(prompt("Informe a quantia que você deseja sacar."));
+  let notas = 0;
+  const nota100 = Math.floor(valorSaque / 100);
+  let nota50 = 0;
+  let nota10 = Math.floor((valorSaque % 100) / 10);
+  let nota5 = 0;
+  let nota1 = Math.floor(valorSaque % 10);
+  let nota100Extenso = "";
+  let nota50Extenso = "uma";
+  let nota10Extenso = "";
+  let nota5Extenso = "uma";
+  let nota1Extenso = "";
+  let mensagem = "";
+  // debug
+
+  if (nota100 >= 1) {
+    notas++;
+    if (nota100 == 2) {
+      nota100Extenso = "duas";
+    } else if (nota100 == 3) {
+      nota100Extenso = "três";
+    } else if (nota100 == 4) {
+      nota100Extenso = "quatro";
+    } else if (nota100 == 5) {
+      nota100Extenso = "cinco";
+    } else if (nota100 == 6) {
+      nota100Extenso = "seis";
+    } else {
+      nota100Extenso = "uma";
+    }
+  }
+
+  if (nota10 >= 5) {
+    notas++;
+    nota50 = Math.floor((nota10 * 10) / 50);
+    nota10 -= 5;
+  }
+
+  if (nota10 >= 1) {
+    notas++;
+    if (nota10 == 2) {
+      nota10Extenso = "duas";
+    } else if (nota10 == 3) {
+      nota10Extenso = "três";
+    } else if (nota10 == 4) {
+      nota10Extenso = "quatro";
+    } else {
+      nota10Extenso = "uma";
+    }
+  }
+
+  if (nota1 >= 5) {
+    notas++;
+    nota5 = Math.floor(nota1 / 5);
+    nota1 -= 5;
+  }
+
+  if (nota1 >= 1) {
+    notas++;
+    if (nota1 == 1) {
+      nota1Extenso = "uma";
+    } else if (nota1 == 3) {
+      nota1Extenso = "três";
+    } else if (nota1 == 4) {
+      nota1Extenso = "quatro";
+    } else {
+      nota1Extenso = "duas";
+    }
+  }
+
+  console.log(notas); // debug
+  console.log(nota100);
+  console.log(nota50);
+  console.log(nota10);
+  console.log(nota5);
+  console.log(nota1);
+
+  if (valorSaque >= 10 && valorSaque <= 600) {
+    if (nota100 > 1) {
+      if (notas == 2) {
+        mensagem += `${nota100Extenso} notas de 100 e `;
+      } else if (notas > 2) {
+        mensagem += `${nota100Extenso} notas de 100, `;
+      } else {
+        mensagem += `${nota100Extenso} notas de 100.`;
+      }
+      notas--;
+    } else if (nota100 == 1) {
+      if (notas == 2) {
+        mensagem += `${nota100Extenso} nota de 100 e `;
+      } else if (notas > 2) {
+        mensagem += `${nota100Extenso} nota de 100, `;
+      } else {
+        mensagem += `${nota100Extenso} nota de 100.`;
+      }
+      notas--;
+    }
+    if (nota50 == 1) {
+      if (notas == 2) {
+        mensagem += `${nota50Extenso} nota de 50 e `;
+      } else if (notas > 2) {
+        mensagem += `${nota50Extenso} nota de 50, `;
+      } else {
+        mensagem += `${nota50Extenso} nota de 50.`;
+      }
+      notas--;
+    }
+    if (nota10 > 1) {
+      if (notas == 2) {
+        mensagem += `${nota10Extenso} notas de 10 e `;
+      } else if (notas > 2) {
+        mensagem += `${nota10Extenso} notas de 10, `;
+      } else {
+        mensagem += `${nota10Extenso} notas de 10.`;
+      }
+      notas--;
+    } else if (nota10 == 1) {
+      if (notas == 2) {
+        mensagem += `${nota10Extenso} nota de 10 e `;
+      } else if (notas > 2) {
+        mensagem += `${nota10Extenso} nota de 10, `;
+      } else {
+        mensagem += `${nota10Extenso} nota de 10.`;
+      }
+      notas--;
+    }
+    if (nota5 == 1) {
+      if (notas == 2) {
+        mensagem += `${nota50Extenso} nota de 5 e `;
+      } else {
+        mensagem += `${nota50Extenso} nota de 5.`;
+      }
+      notas--;
+    }
+    if (nota1 > 1) {
+      mensagem += `${nota1Extenso} notas de 1.`;
+      notas--;
+    } else if (nota1 == 1) {
+      mensagem += `${nota1Extenso} nota de 1.`;
+      notas--;
+    }
+  } else {
+    alert("Digite um valor válido");
+  }
+  mensagem = mensagem.charAt(0).toUpperCase() + mensagem.slice(1); // encontrei essa forma de colocar em letra maiúscula a primeira
+  if (mensagem != "") {
+    alert(mensagem);
+  } else {
+  }
+</script>

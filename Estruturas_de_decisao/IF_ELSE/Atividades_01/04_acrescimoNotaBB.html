@@ -1,26 +1,31 @@
 <meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: ACRÉSCIMO DE NOTA NO PROGRAMA BB
     Um professor instituiu o programa BB na sua disciplina. Nesse programa, um aluno com notas melhores (o big brother) “adota” um aluno com dificuldades (o little brother) e o ajuda a aprender, em troca de um incentivo em sua nota, que é dado em função de quanto ele ajudou o seu colega a melhorar o próprio resultado. 
     Esse programa recebe a nota do little brother antes de receber ajuda, e a sua nota depois que o big brother o ajudou, e retorna o acréscimo que o big brother receberá em sua nota pela ajuda. O acréscimo é de 1/4 da diferença das notas, se for positivo.
     */
 
-    //ENTRADA
-    const notaInicial = Number(prompt("Qual era a nota do seu afilhado antes da ajuda?"));
-    const notaDepois = Number(prompt("Qual é a nota do seu afilhado agora depois da ajuda?"));
-    
-    //PROCESSAMENTO
-    if (notaDepois > notaInicial) {
-        const acrescimo = (notaDepois-notaInicial) / 4;
-        alert(`Você receberá ${acrescimo} pontos de bonificação.`)
-    }
-    else if (notaInicial = notaDepois) {
-        alert("Infelizmente, a nota de seu afilhado se manteve a mesma, mas o que importa é que você se dedicou para ensiná-lo.")
-    }
-    else {
-        alert("Infelizmente, a nota de seu afilhado abaixou, mas o que importa é que você se dedicou para ensiná-lo.")
-    } 
-    //SAÍDA
+  //ENTRADA
+  const notaInicial = Number(
+    prompt("Qual era a nota do seu afilhado antes da ajuda?")
+  );
+  const notaDepois = Number(
+    prompt("Qual é a nota do seu afilhado agora depois da ajuda?")
+  );
 
+  //PROCESSAMENTO
+  if (notaDepois > notaInicial) {
+    const acrescimo = (notaDepois - notaInicial) / 4;
+    alert(`Você receberá ${acrescimo} pontos de bonificação.`);
+  } else if ((notaInicial = notaDepois)) {
+    alert(
+      "Infelizmente, a nota de seu afilhado se manteve a mesma, mas o que importa é que você se dedicou para ensiná-lo."
+    );
+  } else {
+    alert(
+      "Infelizmente, a nota de seu afilhado abaixou, mas o que importa é que você se dedicou para ensiná-lo."
+    );
+  }
+  //SAÍDA
 </script>

@@ -1,6 +1,6 @@
 <meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: IDADE HUMANA
     É sabido que os caẽs amadurecem mais rapidamente do que os seres humanos (na verdade, alguns seres humanos parecem nunca amadurecer).
     Calcule a idade do seu cão, baseada nos seguintes fatores:
@@ -9,26 +9,26 @@
     - cães grandes: fator 7.
     */
 
-    //ENTRADA
-    const porteCao = prompt("Qual é o porte do seu cão? (G=Grande) (M=Médio) (P=Pequeno)").toUpperCase().trim();
-    let idadeCao = parseInt(prompt("Qual é a idade do seu cão?"));
-    //PROCESSAMENTO
-    if (porteCao == "P" || porteCao == "M" || porteCao == "G") {
-        if (porteCao == "P") {
-            idadeCao = idadeCao * 5;
-        }
-        else if (porteCao == "M") {
-            idadeCao = idadeCao * 6;
-        }
-        else {
-            idadeCao = idadeCao * 7;
-        }
+  //ENTRADA
+  const porteCao = prompt(
+    "Qual é o porte do seu cão? (G=Grande) (M=Médio) (P=Pequeno)"
+  )
+    .toUpperCase()
+    .trim();
+  let idadeCao = parseInt(prompt("Qual é a idade do seu cão?"));
+  //PROCESSAMENTO
+  if (porteCao == "P" || porteCao == "M" || porteCao == "G") {
+    if (porteCao == "P") {
+      idadeCao = idadeCao * 5;
+    } else if (porteCao == "M") {
+      idadeCao = idadeCao * 6;
+    } else {
+      idadeCao = idadeCao * 7;
     }
-    else {
-        alert("Valor Inválido! (G=Grande) (M=Médio) (P=Pequeno)");
-    }
-    
-    //SAÍDA
-    alert(`Seu cão possuí ${idadeCao} anos caninos!`)
+  } else {
+    alert("Valor Inválido! (G=Grande) (M=Médio) (P=Pequeno)");
+  }
 
+  //SAÍDA
+  alert(`Seu cão possuí ${idadeCao} anos caninos!`);
 </script>
