@@ -13,9 +13,18 @@
     const valorImovel = Number(prompt("Informe o valor do imóvel."))
     const salario = Number(prompt("Informe o seu salário."))
     const anosFinanciamento = Number(prompt("Informe em quantos anos o financiamento será realizado."))
+    const prestacaoMensal = valorImovel/anosFinanciamento/12
+    console.log(prestacaoMensal) // debug
     //PROCESSAMENTO
     if (salario >= 1804.00) {
-        
+        if ((salario/100)*30 >= prestacaoMensal) {
+            document.write("Financiamento concedido. <br>");
+            document.write(`Sua prestação mensal será de R$${prestacaoMensal.toFixed(2)}.`);
+        }
+        else {
+            document.write("Financiamento não concedido. <br>");
+            document.write(`Sua prestação mensal seria de R$${prestacaoMensal.toFixed(2)}.`);
+        }
     }
     else {
         alert("Valor Inválido.")
