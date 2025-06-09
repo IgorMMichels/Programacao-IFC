@@ -1,6 +1,6 @@
 <meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: DESTINO TURÍSTICO
     Peça para o usuário informar o preço do transporte aéreo para dois destinos de viagem (São Paulo, Rio de Janeiro).
     
@@ -11,39 +11,47 @@
     Apresente o destino final e o custo final da viagem para o destino.
     */
 
-    //ENTRADA
+  //ENTRADA
 
-    const precoTransporteSp = Number(prompt("Informe o preço do transporte aéreo para São Paulo."));
-    const precoEstadiaSp = Number(prompt("Informe a diária do hotel em São Paulo."));
-    const diasSp = parseInt(prompt("Informe quantos dias você pretende ficar em São Paulo."));
+  const precoTransporteSp = Number(
+    prompt("Informe o preço do transporte aéreo para São Paulo.")
+  );
+  const precoEstadiaSp = Number(
+    prompt("Informe a diária do hotel em São Paulo.")
+  );
+  const diasSp = parseInt(
+    prompt("Informe quantos dias você pretende ficar em São Paulo.")
+  );
 
-    const precoTransporteRj = Number(prompt("Informe o preço do transporte aéreo para Rio de Janeiro."));
-    const precoEstadiaRj = Number(prompt("Informe a diária do hotel no Rio de Janeiro."));
-    const diasRj = parseInt(prompt("Informe quantos dias você pretende ficar no Rio de Janeiro."));
+  const precoTransporteRj = Number(
+    prompt("Informe o preço do transporte aéreo para Rio de Janeiro.")
+  );
+  const precoEstadiaRj = Number(
+    prompt("Informe a diária do hotel no Rio de Janeiro.")
+  );
+  const diasRj = parseInt(
+    prompt("Informe quantos dias você pretende ficar no Rio de Janeiro.")
+  );
 
-    //PROCESSAMENTO
+  //PROCESSAMENTO
 
-    const valorRj = precoTransporteRj * 2 + precoEstadiaRj * diasRj;
-    const valorSp = precoTransporteSp * 2 + precoEstadiaSp * diasSp;
-    
-    if (valorRj >= 0 && valorSp >= 0) {
-        if (valorRj < valorSp) {
-            document.write(`A melhor opção é o Rio de Janeiro! <br>`);
-            document.write(`O custo final da viagem é R$${valorRj}`);
-        }
-        else if (valorRj > valorSp) {
-            document.write(`A melhor opção é São Paulo! <br>`);
-            document.write(`O custo final da viagem é R$${valorSp}`);
-        }
-        else {
-            document.write(`Ambos são o mesmo valor! <br>`);
-            document.write(`O custo final é R$${valorSp}`);
-        }
+  const valorRj = precoTransporteRj * 2 + precoEstadiaRj * diasRj; // x2  para a ida e volta
+  const valorSp = precoTransporteSp * 2 + precoEstadiaSp * diasSp;
+
+  if (valorRj >= 0 && valorSp >= 0) {
+    if (valorRj < valorSp) {
+      document.write(`A melhor opção é o Rio de Janeiro! <br>`);
+      document.write(`O custo final da viagem é R$${valorRj.toFixed(2)}`);
+    } else if (valorRj > valorSp) {
+      document.write(`A melhor opção é São Paulo! <br>`);
+      document.write(`O custo final da viagem é R$${valorSp.toFixed(2)}`);
+    } else {
+      document.write(`Ambos são o mesmo valor! <br>`);
+      document.write(`O custo final é R$${valorSp.toFixed(2)}`);
     }
-    else {
-        alert("Valor Inválido")
-    }
+  } else {
+    alert("Valor Inválido");
+  }
 
-    //SAÍDA
-
+  //SAÍDA
 </script>
