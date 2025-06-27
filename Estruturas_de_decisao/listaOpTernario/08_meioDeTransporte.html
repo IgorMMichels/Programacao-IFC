@@ -6,12 +6,16 @@
     // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
     //Entrada
-
-
+    const precoCombustivel = Number(prompt("Informe o preço do litro do combustível."));
+    const litrosDiarios = Number(prompt("Informe a quantidade de litros utilizados para se deslocar para o trabalho diariamente."));
+    const valorTranportePublico = Number(prompt("Informe o valor que você deverá pagar para se deslocar ao trabalho utilizando transporte público diariamente."));
     //Processamento
+    const valorCarro = litrosDiarios * precoCombustivel;
 
+    (valorCarro < valorTranportePublico ? mensagem = `O meio de transporte mais acessível é seu carro, com o custo diário ficando em R$${valorCarro.toFixed(2)}.` : mensagem = `O meio de transporte mais acessível é o transporte público, com o custo diário ficando em R$${valorTranportePublico.toFixed(2)}`);
     
     //Saída
+    alert(mensagem);
 
     
 </script>

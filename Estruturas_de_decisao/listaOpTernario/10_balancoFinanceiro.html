@@ -10,11 +10,16 @@
     // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
 
     //Entrada
-
-
+    const contaAgua = Number(prompt("Informe o valor da sua conta de água."));
+    const contaEnergia = Number(prompt("Informe o valor da sua conta de energia."));
+    const contaTelefone = Number(prompt("Informe o valor da sua conta de telefone."));
+    const valorCompras = Number(prompt("Informe quantos reais você gasta mensalmente em suas compras (supermercado)."));
+    const salario = Number(prompt("Informe quantos reais você recebe de remuneração mensal."));
     //Processamento
+    const despesas = contaAgua + contaEnergia + contaTelefone + valorCompras;
 
+    (salario > despesas ? mensagem = `Seu salário é maior que suas despesas mensais, além disso, você terá R$${(salario-despesas).toFixed(2)} para gastar e/ou investir no seu futuro.` : mensagem = `Seu salário é menor que suas despesas mensais, portanto, você terá que conseguir R$${(despesas-salario).toFixed(2)} para quitar suas dívidas`); 
     
     //Saída
-    
+    alert(mensagem)
 </script>

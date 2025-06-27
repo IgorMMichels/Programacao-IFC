@@ -10,11 +10,12 @@
     // Entre 5.9 e zero            E
 
     //Entrada
-
+    const nota = Number(prompt("Informe sua nota."));
 
     //Processamento
-
+    (nota < 6 ? conceito = "E" : nota < 7 ? conceito = "D" : nota < 8 ? conceito = "C" : (nota < 9) ? conceito = "B" : conceito = "A");
     
     //Saída
+    alert(`Seu conceito é ${conceito}.`);
 
 </script>
