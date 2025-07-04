@@ -5,9 +5,10 @@
 
     //Entrada
     const idade = (parseInt(prompt("Informe seu ano de nascimento.")));
+    const anoAtual = new Date().getFullYear(); // encontrei essa alternativa na internet 
 
     //Processamento
-    (16 <= 2025-idade ? mensagem = "Você não poderá votar no ano atual." : mensagem = "Você poderá votar.");
+    (16 > anoAtual-idade ? mensagem = "Você não poderá votar no ano atual." : mensagem = "Você poderá votar.");
 
     //Saída
     alert(mensagem)
