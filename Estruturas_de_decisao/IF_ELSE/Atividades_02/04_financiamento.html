@@ -16,7 +16,7 @@
     const prestacaoMensal = valorImovel/anosFinanciamento/12
     console.log(prestacaoMensal) // debug
     //PROCESSAMENTO
-    if (salario >= 1804.00) {
+    if (salario >= 1804.00) { // salário mínimo
         if ((salario/100)*30 >= prestacaoMensal) {
             document.write("Financiamento concedido. <br>");
             document.write(`Sua prestação mensal será de R$${prestacaoMensal.toFixed(2)}.`);

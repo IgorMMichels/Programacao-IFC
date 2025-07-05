@@ -18,20 +18,20 @@
     let salario = Number(prompt("Informe seu salário."))
 
     //PROCESSAMENTO
-    if (salario <= 2000 ){
-        salario += (salario/100 * 15);
-        alert(`Seu salário com o novo reajuste será de R$${salario.toFixed(2)}.`);
-    }
-    else if (salario >= 2000 ){
-        salario += (salario/100 * 10);
+    if (salario > 7000 ){
+        salario += (salario/100 * 5);
         alert(`Seu salário com o novo reajuste será de R$${salario.toFixed(2)}.`);
     }
     else if (salario > 4000 ){
         salario += (salario/100 * 7.5);
         alert(`Seu salário com o novo reajuste será de R$${salario.toFixed(2)}.`);
     }
-    else if (salario > 7000 ){
-        salario += (salario/100 * 5);
+    else if (salario > 2000 ){
+        salario += (salario/100 * 10);
+        alert(`Seu salário com o novo reajuste será de R$${salario.toFixed(2)}.`);
+    }
+    else if (salario <= 2000 ){
+        salario += (salario/100 * 15);
         alert(`Seu salário com o novo reajuste será de R$${salario.toFixed(2)}.`);
     }
     else {

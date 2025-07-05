@@ -15,19 +15,17 @@
   );
 
   //PROCESSAMENTO
-  if (grausCelsius >= 0) {
     if (grausCelsius < 100) {
       alert("Está muito baixa!");
     } else if (grausCelsius <= 200) {
       alert("Está baixa!");
     } else if (grausCelsius < 500) {
       alert("Está normal!");
-    } else {
+    } else if (grausCelsius > 500) {
       alert("Está muito alta!");
-    }
-  } else {
+    } else {
     alert("Valor inválido.");
-  }
+    }
 
   //SAÍDA
 </script>

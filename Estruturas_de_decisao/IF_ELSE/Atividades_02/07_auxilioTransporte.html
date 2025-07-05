@@ -26,7 +26,7 @@
     .trim();
 
   //PROCESSAMENTO
-  if (salario >= 1804) {
+  if (salario >= 1804) { // salário mínimo
     // salário mínimo
     if (auxilioTransporte == "S" || possuiCarro == "S") {
       salario = salario * 0.94;
@@ -42,7 +42,7 @@
         document.write(
           `Seu novo salario é R$${salario.toFixed(
             2
-          )} com o desconto de 6% e o adicional de R$200.00`
+          )} com o desconto de 6% e o adicional de R$150.00`
         );
       }
     } else {
