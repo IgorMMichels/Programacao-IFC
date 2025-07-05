@@ -7,7 +7,7 @@
     const numero1 = parseInt(prompt("Informe o primeiro número."));
     const numero2 = parseInt(prompt("Informe o segundo número."));
     //Processamento
-    (numero1 > numero2 ? mensagem = `O Número ${numero1} é o maior.` : mensagem = `O Número ${numero2} é o maior`) 
+    (numero1 > numero2 ? mensagem = `O Número ${numero1} é o maior.` : (numero1 == numero2) ? mensagem = `Os números são iguais!`: mensagem = `O Número ${numero2} é o maior`) 
     
     //Saída
     alert(mensagem)
