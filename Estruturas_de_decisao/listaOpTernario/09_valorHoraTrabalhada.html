@@ -11,11 +11,10 @@
     const horaSemanal = parseInt(prompt("Informe quantas horas você trabalha semanalmente."));
     const valorHora = Number(prompt("Informe quantos reais você recebe por hora."));
     //Processamento
-    const horasMes = horaSemanal*4;
-    let recebeMes = horasMes*valorHora;
+    let recebeSemana = horaSemanal*valorHora;
 
-    (horasMes <= 60 && horasMes > 45 ? recebeMes += recebeMes * .20 : recebeMes += recebeMes * .30);    
+    (horaSemanal <= 60 && horaSemanal > 45 ? recebeSemana += recebeSemana * .20 : (horaSemanal > 60) ? recebeSemana += recebeSemana * .30 : recebeSemana = recebeSemana);    
     
     //Saída
-    alert(`Você receberá R$${recebeMes.toFixed(2)} recebendo R$${(recebeMes/horasMes).toFixed(2)} por horas trabalhadas.`);
+    alert(`Você receberá R$${recebeSemana.toFixed(2)} recebendo R$${(recebeSemana/horaSemanal).toFixed(2)} por horas trabalhadas.`);
 </script>
