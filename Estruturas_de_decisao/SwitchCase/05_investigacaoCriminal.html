@@ -16,32 +16,37 @@
     const esteveLocal = prompt("Esteve no local do crime? (S)im (N)ão.").toUpperCase().trim();
     const moraPerto = prompt("Mora perto da vítima? (S)im (N)ão.").toUpperCase().trim();
     const deviaVitima = prompt("Devia para a vítima? (S)im (N)ão.").toUpperCase().trim();
-    const trabalhouVitima = prompt("Telefonou para a vítima? (S)im (N)ão.").toUpperCase().trim();
+    const trabalhouVitima = prompt("Trabalhou para a vítima? (S)im (N)ão.").toUpperCase().trim();
     let nivelSuspeito = 0
     //PROCESSAMENTO
 
     switch (telefonouVitima) {
         case "SIM":
+        case "S":
             nivelSuspeito ++
             break;
     }
     switch (esteveLocal) {
         case "SIM":
+        case "S":
             nivelSuspeito ++
             break;
     }
     switch (moraPerto) {
         case "SIM":
+        case "S":
             nivelSuspeito ++
             break;
     }
     switch (deviaVitima) {
         case "SIM":
+        case "S":
             nivelSuspeito ++
             break;
     }
     switch (trabalhouVitima) {
         case "SIM":
+        case "S":
             nivelSuspeito ++
             break;
     }
@@ -52,7 +57,7 @@
             alert("Cúmplice.");
             break;
         case 5:
-            alert("Assasino.");
+            alert("Assassino.");
             break;
         case 2:
             alert("Suspeito.");

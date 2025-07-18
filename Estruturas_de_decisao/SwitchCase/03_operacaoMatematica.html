@@ -14,7 +14,7 @@
   const operacao = prompt(
     "Informe a operação que deseja realizar. +, -, * e /."
   );
-  let resultado;
+  let resultado = NaN;
   let valorInvalido = false;
   //PROCESSAMENTO
   switch (operacao) {
@@ -38,7 +38,8 @@
       valorInvalido = true;
       break;
   }
-  let validaPar = resultado % 2 == 0;
+
+  let validaPar = parseInt(resultado) % 2 == 0;
   let validaPositivo = resultado >= 0;
   let validaInteiro = parseInt(resultado) == resultado;
   switch (valorInvalido) {

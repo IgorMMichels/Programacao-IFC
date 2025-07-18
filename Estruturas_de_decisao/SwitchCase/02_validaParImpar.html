@@ -7,15 +7,13 @@
 
     //ENTRADA
     const numero = parseInt(prompt("Informe um número aqui."));
-    const tipo = (numero % 2 == 0);
-    console.log(tipo);
     //PROCESSAMENTO
 
-    switch (tipo) {
-        case true:
+    switch (numero % 2) {
+        case 0:
             alert("Numero Par.");       
             break;
-        case false:
+        case 1:
             alert("Numero Ímpar.");
             break;
         default:
