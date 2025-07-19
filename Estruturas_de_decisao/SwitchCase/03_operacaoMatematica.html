@@ -28,7 +28,15 @@
       break;
     case "/":
       resultado = numero1 / numero2;
-      document.write(`O resultado é ${resultado}. <br>`);
+      switch(resultado == Infinity) {
+        case true:
+        document.write(`Dividido por 0!`);
+        valorInvalido = true;
+        break;
+        case false:
+        document.write(`O resultado é ${resultado}. <br>`);
+        break;
+      }
       break;
     case "*":
       resultado = numero1 * numero2;
@@ -71,7 +79,7 @@
           break;
       }
       break;
-      
+
       default:
       alert("Valor Inválido");
       break;
