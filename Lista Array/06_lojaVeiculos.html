@@ -1,23 +1,88 @@
 <meta charset="UTF-8" />
 <script>
-    /*
-    PROBLEMA: LOJA DE VEÍCULOS
-    Crie os seguintes arrays:
-    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
-    let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
-    let carrosHatch = ["308", "Focus", "i30"];
-    
-    Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
+  /*
+  PROBLEMA: LOJA DE VEÍCULOS
+  Crie os seguintes arrays:
+  let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+  let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+  let carrosHatch = ["308", "Focus", "i30"];
 
-    Apresente a lista final de cada tipo de veículo.
-    */
+  Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
 
-    //ENTRADA
+  Apresente a lista final de cada tipo de veículo.
+  */
 
+  //ENTRADA
+  let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+  let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+  let carrosHatch = ["308", "Focus", "i30"];
 
-    //PROCESSAMENTO
+  alert(`A lista de carros SUV é ${carrosSUV}.`);
+  alert(`A lista de carros Sedan é ${carrosSedan}.`);
+  alert(`A lista de carros Hatch é ${carrosHatch}.`);
 
+  const carro1 = prompt("Informe um carro a ser adicionado na lista.");
+  const adicionarCarro1 = prompt(
+    "Em qual lista você deseja adicionar o primeiro carro? (SUV, Sedan ou Hatch)."
+  )
+    .toUpperCase()
+    .trim();
+  if (adicionarCarro1 == "SUV") {
+    carrosSUV.push(carro1);
+  } else if (adicionarCarro1 == "SEDAN") {
+    carrosSedan.push(carro1);
+  } else if (adicionarCarro1 == "HATCH") {
+    carrosHatch.push(carro1);
+  } else {
+    alert("Valor Inválido");
+    valorInvalido = True;
+  }
 
-    //SAÍDA
+  const carro2 = prompt("Informe um carro a ser adicionado na lista.");
+  const adicionarCarro2 = prompt(
+    "Em qual lista você deseja adicionar o segundo carro? (SUV, Sedan ou Hatch)."
+  )
+    .toUpperCase()
+    .trim();
 
+  if (adicionarCarro2 == "SUV") {
+    carrosSUV.push(carro2);
+  } else if (adicionarCarro2 == "SEDAN") {
+    carrosSedan.push(carro2);
+  } else if (adicionarCarro2 == "HATCH") {
+    carrosHatch.push(carro2);
+  } else {
+    alert("Valor Inválido");
+    valorInvalido = True;
+  }
+
+  const carro3 = prompt("Informe um carro a ser adicionado na lista.");
+  const adicionarCarro3 = prompt(
+    "Em qual lista você deseja adicionar o terceiro carro? (SUV, Sedan ou Hatch)."
+  )
+    .toUpperCase()
+    .trim();
+
+  if (adicionarCarro3 == "SUV") {
+    carrosSUV.push(carro3);
+  } else if (adicionarCarro3 == "SEDAN") {
+    carrosSedan.push(carro3);
+  } else if (adicionarCarro3 == "HATCH") {
+    carrosHatch.push(carro3);
+  } else {
+    alert("Valor Inválido");
+    valorInvalido = True;
+  }
+
+  let valorInvalido = False;
+
+  if (valorInvalido == False) {
+    document.write(`A nova lista de carros SUV é ${carrosSUV}. <br>`);
+    document.write(`A nova lista de carros Sedan é ${carrosSedan}. <br>`);
+    document.write(`A nova lista de carros Hatch é ${carrosHatch}. <br>`);
+  }
+
+  //PROCESSAMENTO
+
+  //SAÍDA
 </script>

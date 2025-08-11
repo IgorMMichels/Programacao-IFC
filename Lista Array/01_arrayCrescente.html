@@ -12,12 +12,11 @@
   const listaNumero = []
   //PROCESSAMENTO
   if (primeiroNumero > segundoNumero) {
-        listaNumero = [segundoNumero, primeiroNumero];
+        listaNumero.push(segundoNumero, primeiroNumero);
   } else {
-        listaNumero = [primeiroNumero, segundoNumero];
+        listaNumero.push(primeiroNumero, segundoNumero);
   }
 
-  listaNumero.join(" - ");
-  alert(listaNumero)
+  alert(listaNumero.join(" - "));
   //SAÍDA
 </script>
