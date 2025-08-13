@@ -15,11 +15,11 @@
     "Qual carro você deseja remover da lista? (Escreva Corretamente o Nome do Carro.)"
   );
   const indice = carrosSUV.indexOf(removerCarro);
-  const listaCarrosAntiga = carrosSUV;
-  const listaCarrosNova = carrosSUV.splice(indice, 1);
+  const listaCarrosAntiga = [...carrosSUV];
+  carrosSUV.splice(indice, 1);
 
   document.write(
     `A lista antiga de carros é ${listaCarrosAntiga.join(", ")}. <br>`
   );
-  document.write(`A lista de carros após a remoção é ${listaCarrosNova}. <br>`);
+  document.write(`A lista de carros após a remoção é ${carrosSUV}. <br>`);
 </script>
