@@ -1,6 +1,6 @@
 <meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: ADICIONAR SUV
     Crie os seguintes arrays:
      let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
@@ -8,13 +8,16 @@
     Apresente a lista antiga de SUVs e a nova lista, após a adição do veículo solicitado.
     */
 
-    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
-    alert(`A Lista Inicial é ${carrosSUV}`)
-    const adicionarCarro = prompt("Qual carro você deseja adicionar na lista?");
-    const listaCarrosAntiga = carrosSUV.slice()
-    carrosSUV.push(adicionarCarro);
+  let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+  alert(`A Lista Inicial é ${carrosSUV}`);
+  const adicionarCarro = prompt("Qual carro você deseja adicionar na lista?");
+  const listaCarrosAntiga = carrosSUV.slice();
+  carrosSUV.push(adicionarCarro);
 
-    document.write(`A lista antiga de carros é ${listaCarrosAntiga.join(", ")}. <br>`);
-    document.write(`A lista de carros após a remoção é ${carrosSUV.join(", ")}. <br>`);
-
+  document.write(
+    `A lista antiga de carros é ${listaCarrosAntiga.join(", ")}. <br>`
+  );
+  document.write(
+    `A lista de carros após a remoção é ${carrosSUV.join(", ")}. <br>`
+  );
 </script>

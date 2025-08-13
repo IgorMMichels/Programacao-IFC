@@ -1,5 +1,5 @@
 <script>
-    /*
+  /*
     PROBLEMA: ARRAY EM ORDEM DECRESCENTE
     Peça para um usuário inserir três números. Crie um array com os três números, colocando-os em ordem decrescente. Para ordenar, NÃO use o método reverse();
     Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
@@ -32,7 +32,7 @@
   } else if (valor2 >= valor3 && valor1 >= valor2) {
     primeiro = valor1;
     segundo = valor1;
-    terceiro = valor3; 
+    terceiro = valor3;
   } else if (valor3 >= valor2 && valor1 >= valor3) {
     primeiro = valor1;
     segundo = valor3;
@@ -46,9 +46,8 @@
   }
 
   const listaNumero = [primeiro, segundo, terceiro];
-  
-  (valorInvalido == false ? alert(listaNumero.join(" - ")) : alert("Valor Inválido"));
-  
 
-
+  valorInvalido == false
+    ? alert(listaNumero.join(" - "))
+    : alert("Valor Inválido");
 </script>

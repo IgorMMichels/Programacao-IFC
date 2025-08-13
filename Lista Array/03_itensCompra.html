@@ -1,6 +1,6 @@
 <meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: ITENS DA LISTA DE COMPRAS
     Peça para o usuário inserir 3 frutas para a lista de compras. (Use 3 vezes o prompt).
     Peça também para o usuário inserir 3 bebidas para a lista de compras (Use outras 3 vezes o prompt).
@@ -10,28 +10,26 @@
     A lista completa de compras é: fruta1, fruta2, fruta3, bebida1, bebida2, bebida3.
     */
 
-    //ENTRADA
-    const fruta1 = prompt("Insira uma fruta a lista de compras.");
-    const fruta2 = prompt("Insira uma fruta a lista de compras.");
-    const fruta3 = prompt("Insira uma fruta a lista de compras.");
+  //ENTRADA
+  const fruta1 = prompt("Insira uma fruta a lista de compras.");
+  const fruta2 = prompt("Insira uma fruta a lista de compras.");
+  const fruta3 = prompt("Insira uma fruta a lista de compras.");
 
-    const listaFrutas = ([fruta1,fruta2,fruta3]).join(", ");
+  const listaFrutas = [fruta1, fruta2, fruta3].join(", ");
 
-    const bebida1 = prompt("Insira uma bebida a lista de compras.");
-    const bebida2 = prompt("Insira uma bebida a lista de compras.");
-    const bebida3 = prompt("Insira uma bebida a lista de compras.");
+  const bebida1 = prompt("Insira uma bebida a lista de compras.");
+  const bebida2 = prompt("Insira uma bebida a lista de compras.");
+  const bebida3 = prompt("Insira uma bebida a lista de compras.");
 
-    const listaBebidas = ([bebida1,bebida2,bebida3]).join(", ");
+  const listaBebidas = [bebida1, bebida2, bebida3].join(", ");
 
-    const listaCompleta = ([listaFrutas, listaBebidas]).join(", ");
-    
+  const listaCompleta = [listaFrutas, listaBebidas].join(", ");
 
-    //PROCESSAMENTO
+  //PROCESSAMENTO
 
-    document.write(`As frutas a ser compradas são: ${listaFrutas}. <br>`);
-    document.write(`As bebidas a ser compradas são: ${listaBebidas}. <br>`);
-    document.write(`A lista completa de compras é : ${listaCompleta}.`);
+  document.write(`As frutas a ser compradas são: ${listaFrutas}. <br>`);
+  document.write(`As bebidas a ser compradas são: ${listaBebidas}. <br>`);
+  document.write(`A lista completa de compras é : ${listaCompleta}.`);
 
-    //SAÍDA
-
+  //SAÍDA
 </script>
