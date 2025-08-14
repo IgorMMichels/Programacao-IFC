@@ -1,0 +1,24 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: PROCURAR LETRA
+    Peça para o usuário digitar UMA palavra.
+    Peça para o usuário digitar a letra que deseja encontrar na palavra que acabou de digitar.
+
+    Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
+    */
+
+    const palavra = prompt("Informe uma palavra.").trim().toLowerCase();
+    const letra = prompt("Informe a letra que deseja encontrar na palavra que acabou de digitar.").toLowerCase().trim();
+    const palavraArray = Array.from(palavra);
+    const procuraLetra = palavraArray.indexOf(letra);
+    console.log(procuraLetra) // debug
+
+    if (procuraLetra == -1) {
+        alert("A letra que você procura não está na palavra.");
+    } else {
+        alert(`A primeira posição da letra ${letra} é ${procuraLetra + 1}`);
+    }
+
+
+</script>

@@ -1,0 +1,27 @@
+<script>
+    /*
+    PROBLEMA: Organizando uma Fila de Atendimento
+    Simule uma fila de atendimento onde uma nova pessoa chega e entra no final da fila, e a pessoa que estava na primeira posição é atendida e sai da fila.
+
+    Instruções:
+
+    Declare um array filaDeAtendimento com os nomes: ["Ana", "Bruno", "Carla"].
+    Simule a chegada de um novo cliente. Use um método para adicionar o nome ao final do array, sendo que este nome será informado pelo usuário.
+    Considere que um cliente já foi atendido. Pergunte ao usuário qual foi o cliente atendido e use o método splice para removê-lo do array.
+    Exiba a lista de clientes na fila atualizada.
+    */
+
+    //ENTRADA
+
+    const filaDeAtendimento = ["Ana", "Bruno", "Carla"];
+    const chegadaCliente = prompt("Qual cliente chegou para você atender?").trim();
+
+    filaDeAtendimento.push(chegadaCliente);
+
+    const clienteAtendido = prompt(`Qual desses clientes ja foram atendidos  ${filaDeAtendimento.join(", ")}? Escreva o nome Corretamente.`).trim();
+
+    filaDeAtendimento.splice(filaDeAtendimento.indexOf(clienteAtendido), 1);
+
+    alert(`A fila de clientes a ser atendida no momento é ${filaDeAtendimento.join(", ")}.`);
+
+</script>
