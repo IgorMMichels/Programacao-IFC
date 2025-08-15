@@ -21,6 +21,8 @@
   alert(`A lista de carros Sedan é ${carrosSedan}.`);
   alert(`A lista de carros Hatch é ${carrosHatch}.`);
 
+  let valorInvalido = False;
+
   const carro1 = prompt("Informe um carro a ser adicionado na lista.");
   const adicionarCarro1 = prompt(
     "Em qual lista você deseja adicionar o primeiro carro? (SUV, Sedan ou Hatch)."
@@ -73,8 +75,6 @@
     alert("Valor Inválido");
     valorInvalido = True;
   }
-
-  let valorInvalido = False;
 
   if (valorInvalido == False) {
     document.write(`A nova lista de carros SUV é ${carrosSUV}. <br>`);

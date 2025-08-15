@@ -9,9 +9,13 @@
     */
 
     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    
     alert(`A Lista Inicial é ${carrosSUV}`)
+
     const adicionarCarro = prompt("Qual carro você deseja adicionar na lista?");
+
     const listaCarrosAntiga = carrosSUV.slice()
+
     carrosSUV.push(adicionarCarro);
 
     document.write(`A lista antiga de carros é ${listaCarrosAntiga.join(", ")}. <br>`);
