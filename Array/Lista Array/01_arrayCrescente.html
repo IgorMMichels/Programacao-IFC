@@ -9,12 +9,12 @@
   //ENTRADA
   const primeiroNumero = Number(prompt("Informe o primeiro número."));
   const segundoNumero = Number(prompt("Informe o segundo número."));
-  const listaNumero = []
+  const listaNumero = [];
   //PROCESSAMENTO
   if (primeiroNumero > segundoNumero) {
-        listaNumero.push(segundoNumero, primeiroNumero);
+    listaNumero.push(segundoNumero, primeiroNumero);
   } else {
-        listaNumero.push(primeiroNumero, segundoNumero);
+    listaNumero.push(primeiroNumero, segundoNumero);
   }
 
   alert(listaNumero.join(" - "));

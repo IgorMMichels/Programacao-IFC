@@ -20,11 +20,20 @@
 
     const existeSecreto = prompt("Existe algum ingrediente secreto?").toUpperCase().trim();
 
+
+
     let valorInvalido = false
 
     if (existeSecreto == "SIM") {
         
+    } else if (existeSecreto == "NAO" || existeSecreto == "NÃO" ) {
+        alert("A receita não possui ingrediente secreto.");
+        alert("");
+    } else {
+        valorInvalido == true;
+
     }
+    
 
     //PROCESSAMENTO
 

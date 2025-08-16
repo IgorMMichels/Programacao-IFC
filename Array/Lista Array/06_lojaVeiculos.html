@@ -21,7 +21,7 @@
   alert(`A lista de carros Sedan é ${carrosSedan}.`);
   alert(`A lista de carros Hatch é ${carrosHatch}.`);
 
-  let valorInvalido = False;
+  let valorInvalido = false;
 
   const carro1 = prompt("Informe um carro a ser adicionado na lista.");
   const adicionarCarro1 = prompt(
@@ -37,7 +37,7 @@
     carrosHatch.push(carro1);
   } else {
     alert("Valor Inválido");
-    valorInvalido = True;
+    valorInvalido = true;
   }
 
   const carro2 = prompt("Informe um carro a ser adicionado na lista.");
@@ -55,7 +55,7 @@
     carrosHatch.push(carro2);
   } else {
     alert("Valor Inválido");
-    valorInvalido = True;
+    valorInvalido = true;
   }
 
   const carro3 = prompt("Informe um carro a ser adicionado na lista.");
@@ -73,10 +73,10 @@
     carrosHatch.push(carro3);
   } else {
     alert("Valor Inválido");
-    valorInvalido = True;
+    valorInvalido = true;
   }
 
-  if (valorInvalido == False) {
+  if (valorInvalido == false) {
     document.write(`A nova lista de carros SUV é ${carrosSUV}. <br>`);
     document.write(`A nova lista de carros Sedan é ${carrosSedan}. <br>`);
     document.write(`A nova lista de carros Hatch é ${carrosHatch}. <br>`);
