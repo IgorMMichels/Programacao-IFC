@@ -1,5 +1,5 @@
 <script>
-    /*
+  /*
     PROBLEMA: Gerenciando Documentos Confidenciais
     Cenário: Você trabalha para uma agência de segurança e precisa manipular uma lista de códigos de acesso a documentos. A lista original não pode ser alterada. Sua tarefa é criar uma cópia "pública" de uma parte da lista e, em uma segunda etapa, criar uma versão "atualizada" onde um código antigo é substituído por um novo.
 
@@ -16,12 +16,19 @@
 
     */
 
-    //ENTRADA
+  //ENTRADA
 
+  const codigosDeAcesso = ["Delta-7", "Alpha-9", "Omega-3", "Gama-4", "Zeta-1"];
 
-    //PROCESSAMENTO
+  const copiaCodigosAcesso = [...codigosDeAcesso];
 
+  const codigosAtualizados = [...codigosDeAcesso];
 
-    //SAÍDA
-    
+  codigosDeAcesso.splice(codigosAtualizados.indexOf("Omega-3"), 1, "Sigma-5"); //continuar amanha
+
+  codigosAtualizados.splice(codigosAtualizados.indexOf("Omega-3"), 1, "Sigma-5");
+
+  document.write("Lista Original: " + copiaCodigosAcesso.join(", ") + "<br>");
+  document.write("Lista Pública: " + codigosDeAcesso.join(", ") + "<br>");
+  document.write("Lista Atualizada: " + codigosAtualizados.join(", ") + "<br>");
 </script>

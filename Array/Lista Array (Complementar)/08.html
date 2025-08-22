@@ -1,5 +1,5 @@
 <script>
-    /*
+  /*
     PROBLEMA: Validador de Lista de Convidados
     Cenário: Você está na portaria de um evento exclusivo e precisa verificar se o nome de uma pessoa que acabou de chegar está na lista de convidados.
 
@@ -13,12 +13,19 @@
     Exiba uma mensagem no console: "Acesso liberado!" se o nome estiver na lista, ou "Acesso negado." se não estiver.
     */
 
-    //ENTRADA
+  //ENTRADA
 
+  const convidadosVIP = ["Angela", "Ricardo", "Julia", "Marcos", "Fernanda"];
 
-    //PROCESSAMENTO
+  const nomeConvidado = prompt(
+    "Digite o nome do convidado que você deseja verificar."
+  ).trim();
 
+  const foiConvidado = convidadosVIP.includes(nomeConvidado);
 
-    //SAÍDA
-    
+  foiConvidado == true ? alert("Acesso Liberado!") : alert("Acesso negado.");
+
+  //PROCESSAMENTO
+
+  //SAÍDA
 </script>

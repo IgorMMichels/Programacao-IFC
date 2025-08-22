@@ -1,5 +1,5 @@
 <script>
-    /*
+  /*
     PROBLEMA: Controle de Estoque Interativo
     Cenário: Você trabalha em uma loja de poções mágicas. Um cliente comprou o último "Elixir da Coragem" e você precisa removê-lo do sistema de inventário.
 
@@ -23,12 +23,32 @@
     Erro: Item 'Capa da Invisibilidade' não encontrado no estoque.
     */
 
-    //ENTRADA
+  //ENTRADA
 
+  let inventarioMagico = [
+    "Poção de Cura",
+    "Elixir da Coragem",
+    "Antídoto Universal",
+    "Gás do Sono",
+  ];
 
-    //PROCESSAMENTO
+  const itemVendido = prompt(
+    "Qual item foi vendido? " + inventarioMagico.join(", ")
+  );
 
+  inventarioMagico.indexOf(itemVendido) == -1
+    ? (valorInvalido = true)
+    : (valorInvalido = false);
 
-    //SAÍDA
-    
+  if (valorInvalido == false) {
+    inventarioMagico.splice(inventarioMagico.indexOf(itemVendido), 1);
+    alert(`Item '${itemVendido}' removido do estoque.`);
+    alert("Inventário atual: " + inventarioMagico.join(", "));
+  } else {
+    alert(`Erro '${itemVendido}'' não encontrado no estoque.`);
+  }
+
+  //PROCESSAMENTO
+
+  //SAÍDA
 </script>

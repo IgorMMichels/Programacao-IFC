@@ -1,5 +1,5 @@
 <script>
-    /*
+  /*
     PROBLEMA: Ingrediente Secreto
     Você está criando uma receita e precisa verificar duas coisas: se um "Ingrediente Secreto" está na sua lista de ingredientes e, se estiver, qual a sua posição para que você possa adicioná-lo no momento certo.
 
@@ -14,30 +14,36 @@
 
     */
 
-    //ENTRADA
+  //ENTRADA
 
-    let ingredientes = ["Farinha", "Açúcar", "Ovos", "Sal", "Chocolate"];
+  let ingredientes = ["Farinha", "Açúcar", "Ovos", "Sal", "Chocolate"];
 
-    const existeSecreto = prompt("Existe algum ingrediente secreto?").toUpperCase().trim();
+  alert(`Os ingredientes são: ${ingredientes.join(", ")}`);
 
+  const existeSecreto = prompt("Existe algum ingrediente secreto?")
+    .toUpperCase()
+    .trim();
 
+  let valorInvalido = false;
 
-    let valorInvalido = false
+  if (existeSecreto == "SIM") {
+    const ingredienteSecreto = prompt(
+      "Qual é o ingrediente secreto (Escreva corretamente.)"
+    ).trim();
+    alert("A receita possui ingrediente secreto.");
+    alert(
+      `O ingrediente secreto é o ${
+        ingredientes.indexOf(ingredienteSecreto) + 1
+      }º.`
+    );
+  } else if (existeSecreto == "NAO" || existeSecreto == "NÃO") {
+    alert("A receita não possui ingrediente secreto.");
+  } else {
+    valorInvalido == true;
+    alert("Valor Inválido.");
+  }
 
-    if (existeSecreto == "SIM") {
-        
-    } else if (existeSecreto == "NAO" || existeSecreto == "NÃO" ) {
-        alert("A receita não possui ingrediente secreto.");
-        alert("");
-    } else {
-        valorInvalido == true;
+  //PROCESSAMENTO
 
-    }
-    
-
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-    
+  //SAÍDA
 </script>

@@ -1,5 +1,5 @@
 <script>
-    /*
+  /*
     PROBLEMA: Substituição Tática no Time
     Cenário: Você é o técnico de um time de e-sports. Durante uma partida, você precisa fazer uma substituição: tirar um jogador e colocar outro no lugar.
 
@@ -13,13 +13,29 @@
     Use um único método de array para remover o jogadorSai e, na mesma posição, adicionar o jogadorEntra.
     Exiba a escalação final do time.
     */
-    
-    //ENTRADA
 
+  //ENTRADA
 
-    //PROCESSAMENTO
+  let valorInvalido = false;
 
+  let timeTitular = ["Phoenix", "Jett", "Sova", "Sage", "Cypher"];
 
-    //SAÍDA
-    
+  const jogadorSai = prompt("Qual jogador vai sair? " + timeTitular.join(", "));
+
+  timeTitular.indexOf(jogadorSai) == -1
+    ? (valorInvalido = true)
+    : (valorInvalido = false);
+
+  if (valorInvalido == false) {
+    const jogadorEntra = prompt("Qual jogador vai entrar?");
+    timeTitular.splice(timeTitular.indexOf(jogadorSai), 1);
+    timeTitular.push(jogadorEntra);
+    alert("A escalação final do time é: " + timeTitular.join(", "));
+  } else {
+    alert("Valor Inválido.");
+  }
+
+  //PROCESSAMENTO
+
+  //SAÍDA
 </script>

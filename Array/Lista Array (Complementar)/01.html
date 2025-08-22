@@ -1,5 +1,5 @@
 <script>
-    /*
+  /*
     PROBLEMA: Organizando uma Fila de Atendimento
     Simule uma fila de atendimento onde uma nova pessoa chega e entra no final da fila, e a pessoa que estava na primeira posição é atendida e sai da fila.
 
@@ -11,17 +11,26 @@
     Exiba a lista de clientes na fila atualizada.
     */
 
-    //ENTRADA
+  //ENTRADA
 
-    const filaDeAtendimento = ["Ana", "Bruno", "Carla"];
-    const chegadaCliente = prompt("Qual cliente chegou para você atender?").trim();
+  const filaDeAtendimento = ["Ana", "Bruno", "Carla"];
+  const chegadaCliente = prompt(
+    "Qual cliente chegou para você atender?"
+  ).trim();
 
-    filaDeAtendimento.push(chegadaCliente);
+  filaDeAtendimento.push(chegadaCliente);
 
-    const clienteAtendido = prompt(`Qual desses clientes ja foram atendidos  ${filaDeAtendimento.join(", ")}? Escreva o nome Corretamente.`).trim();
+  const clienteAtendido = prompt(
+    `Qual desses clientes ja foram atendidos  ${filaDeAtendimento.join(
+      ", "
+    )}? Escreva o nome Corretamente.`
+  ).trim();
 
-    filaDeAtendimento.splice(filaDeAtendimento.indexOf(clienteAtendido), 1);
+  filaDeAtendimento.splice(filaDeAtendimento.indexOf(clienteAtendido), 1);
 
-    alert(`A fila de clientes a ser atendida no momento é ${filaDeAtendimento.join(", ")}.`);
-
+  alert(
+    `A fila de clientes a ser atendida no momento é ${filaDeAtendimento.join(
+      ", "
+    )}.`
+  );
 </script>

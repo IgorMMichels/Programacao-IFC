@@ -1,5 +1,5 @@
 <script>
-    /*
+  /*
     PROBLEMA: Montando uma Equipe de Elite
     Cenário: Você é o líder de uma agência e precisa montar uma equipe para uma missão especial. Você tem dois times disponíveis, "Equipe Alpha" e "Equipe Bravo". Sua tarefa é criar uma "Equipe de Elite" pegando os dois primeiros membros da Equipe Alpha e os dois últimos membros da Equipe Bravo.
 
@@ -15,12 +15,29 @@
 
     */
 
-    //ENTRADA
+  //ENTRADA
 
+  const equipeAlpha = [
+    "Agente Smith",
+    "Agente Jones",
+    "Técnico Brown",
+    "Analista White",
+  ];
+  const equipeBravo = [
+    "Especialista Green",
+    "Piloto Black",
+    "Médica Grey",
+    "Engenheiro Blue",
+  ];
 
-    //PROCESSAMENTO
+  const membrosAlpha = equipeAlpha.slice(2);
+  const membrosBravo = equipeBravo.slice(-2);
 
+  const equipeDeElite = membrosAlpha.concat(membrosBravo);
 
-    //SAÍDA
-    
+  alert("Equipe de Elite: " + equipeDeElite.join(", "));
+
+  //PROCESSAMENTO
+
+  //SAÍDA
 </script>

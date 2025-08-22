@@ -1,5 +1,5 @@
 <script>
-    /*
+  /*
     PROBLEMA: Gerenciando uma Playlist de Músicas
     Você está criando uma playlist. Comece com algumas músicas e, em seguida, adicione uma nova música ao final da lista e remova a primeira música da playlist.
 
@@ -13,16 +13,17 @@
     ["The Pretender", "Learn to Fly", "MUSICA_INFORMADA_PELO_USUARIO"]
     */
 
-    //ENTRADA
+  //ENTRADA
 
-    const playlist =  ["Everlong", "The Pretender", "Learn to Fly"]; // foo  fighters 
+  const playlist = ["Everlong", "The Pretender", "Learn to Fly"]; // foo  fighters
 
-    const novaMusica = prompt("Qual música você deseja adicionar na playlist?").trim();
+  const novaMusica = prompt(
+    "Qual música você deseja adicionar na playlist?"
+  ).trim();
 
-    playlist.push(novaMusica);
+  playlist.push(novaMusica);
 
-    playlist.shift();
+  playlist.shift();
 
-    alert(`Músicas a ser tocadas a seguir são: ${playlist.join(", ")}.`);
-    
+  alert(`Músicas a ser tocadas a seguir são: ${playlist.join(", ")}.`);
 </script>
