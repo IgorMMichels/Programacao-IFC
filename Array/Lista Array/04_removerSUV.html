@@ -14,12 +14,19 @@
   const removerCarro = prompt(
     "Qual carro você deseja remover da lista? (Escreva Corretamente o Nome do Carro.)"
   );
-  const indice = carrosSUV.indexOf(removerCarro);
   const listaCarrosAntiga = [...carrosSUV];
-  carrosSUV.splice(indice, 1);
+  const indice = carrosSUV.indexOf(removerCarro);
+  const estaNaArray = carrosSUV.includes(removerCarro);
 
-  document.write(
-    `A lista antiga de carros é ${listaCarrosAntiga.join(", ")}. <br>`
-  );
-  document.write(`A lista de carros após a remoção é ${carrosSUV.join(", ")}. <br>`);
+  if (estaNaArray == true) {
+    carrosSUV.splice(indice, 1);
+    document.write(
+      `A lista antiga de carros é ${listaCarrosAntiga.join(", ")}. <br>`
+    );
+    document.write(
+      `A lista de carros após a remoção é ${carrosSUV.join(", ")}. <br>`
+    );
+  } else {
+    alert("Valor Inválido.");
+  }
 </script>
