@@ -25,17 +25,14 @@
     .trim();
 
   let valorInvalido = false;
+  const posicaoIngrediente = ingredientes.indexOf(ingredienteSecreto);
 
   if (existeSecreto == "SIM") {
     const ingredienteSecreto = prompt(
       "Qual é o ingrediente secreto (Escreva corretamente.)"
     ).trim();
     alert("A receita possui ingrediente secreto.");
-    alert(
-      `O ingrediente secreto é o ${
-        ingredientes.indexOf(ingredienteSecreto) + 1
-      }º.`
-    );
+    alert(`O ingrediente secreto é o ${posicaoIngrediente + 1}º.`);
   } else if (existeSecreto == "NAO" || existeSecreto == "NÃO") {
     alert("A receita não possui ingrediente secreto.");
   } else {
