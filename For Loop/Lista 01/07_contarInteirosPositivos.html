@@ -7,6 +7,17 @@
 
     //ENTRADA
 
+    let listaDeNumeros = [1, 2.5, -3, 4, 8.9, 4.789, -25.6, 42];
+    let listaNumIntPositivos = [];
+
+    for (let i of listaDeNumeros) {
+        if (Number.isInteger(i) && i>0 ) {
+            listaNumIntPositivos.push(i);
+        }
+    }
+
+    alert(`Os números inteiros e positivos localizados são: ${listaNumIntPositivos.join(", ")}.`);
+    alert(`Foram encontrados ${listaNumIntPositivos.length} números inteiros e positivos.`);
 
     //PROCESSAMENTO
 
