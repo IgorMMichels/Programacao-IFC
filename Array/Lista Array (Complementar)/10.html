@@ -36,6 +36,8 @@
     "Qual item foi vendido? " + inventarioMagico.join(", ")
   );
 
+  let valorInvalido = false
+
   inventarioMagico.indexOf(itemVendido) == -1
     ? (valorInvalido = true)
     : (valorInvalido = false);
@@ -45,7 +47,7 @@
     alert(`Item '${itemVendido}' removido do estoque.`);
     alert("Inventário atual: " + inventarioMagico.join(", "));
   } else {
-    alert(`Erro '${itemVendido}'' não encontrado no estoque.`);
+    alert(`Erro '${itemVendido}' não encontrado no estoque.`);
   }
 
   //PROCESSAMENTO

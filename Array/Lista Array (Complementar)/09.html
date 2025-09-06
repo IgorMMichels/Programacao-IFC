@@ -28,8 +28,7 @@
 
   if (valorInvalido == false) {
     const jogadorEntra = prompt("Qual jogador vai entrar?");
-    timeTitular.splice(timeTitular.indexOf(jogadorSai), 1);
-    timeTitular.push(jogadorEntra);
+    timeTitular.splice(timeTitular.indexOf(jogadorSai), 1, jogadorEntra);
     alert("A escalação final do time é: " + timeTitular.join(", "));
   } else {
     alert("Valor Inválido.");

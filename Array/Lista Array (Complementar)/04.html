@@ -25,18 +25,21 @@
     .trim();
 
   let valorInvalido = false;
-  const posicaoIngrediente = ingredientes.indexOf(ingredienteSecreto);
 
   if (existeSecreto == "SIM") {
     const ingredienteSecreto = prompt(
       "Qual é o ingrediente secreto (Escreva corretamente.)"
     ).trim();
-    alert("A receita possui ingrediente secreto.");
-    alert(`O ingrediente secreto é o ${posicaoIngrediente + 1}º.`);
+    const posicaoIngrediente = ingredientes.indexOf(ingredienteSecreto);
+    if (posicaoIngrediente != -1) {
+      alert("A receita possui ingrediente secreto.");
+      alert(`O ingrediente secreto é o ${posicaoIngrediente + 1}º.`);
+    } else {
+      alert(`Valor Inválido ${ingredienteSecreto} não foi encontrado na lista.`);
+    }
   } else if (existeSecreto == "NAO" || existeSecreto == "NÃO") {
     alert("A receita não possui ingrediente secreto.");
-  } else {
-    valorInvalido == true;
+  } else{
     alert("Valor Inválido.");
   }
 
