@@ -8,8 +8,26 @@
 
     //Entrada
 
-
+    let bebidas = ["Cerveja", "Vinho", "Suco Natural", "Tequila", "Água", "Refrigerante", "Vodka"];
+    let bebidasPermitidas = [];
+    let valorInvalido = false;
     //Processamento
+
+
+    for (let i of bebidas) {
+        const verificaBebida = prompt(`${i} possuí álcool?`).toUpperCase().trim();
+        if (verificaBebida == "SIM") {
+            continue;
+        } else if (verificaBebida == "NAO" || verificaBebida == "NÃO") {
+            bebidasPermitidas.push(i);
+        } else {
+            valorInvalido = true;
+            break;
+        }
+    }
+
+    (valorInvalido == true) ? alert("Valor Inválido.") : alert(`As bebidas permitidas para menores de 18 anos são: ${bebidasPermitidas.join(", ")}.`);
+    
 
 
     //Saída

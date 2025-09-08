@@ -11,14 +11,22 @@
 
     let nomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
 
+    let nomesCorrigidos = [];
+
     //Processamento
 
     for (let i of nomes) {
-        if (i.includes("")) {
-            
+        if (i.includes("á") || i.includes("é") || i.includes("í") || i.includes("ó") || i.includes("ú") ) {
+            i = i.replace("á", "a");
+            i = i.replace("é", "e");
+            i = i.replace("í", "i");
+            i = i.replace("ó", "o");
+            i = i.replace("ú", "u");
         }
+        nomesCorrigidos.push(i)
     }
 
+    alert("A lista com os nomes corrigidos são: " + nomesCorrigidos.join(", ") + ".");
 
     //Saída
 
