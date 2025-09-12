@@ -1,24 +1,53 @@
 <script>
-    //Problema: Cor Preferida
-    /*
+  //Problema: Cor Preferida
+  /*
     Considere a seguinte lista de cores:
     let cores = ["Branco", "Azul", "Marrom", "Cinza", "Verde", "Amarelo", "Vermelho", "Preto"];
     Pergunte ao usuário qual das cores da lista que ele gosta.
     Apresente as cores preferidas e a quantidade de cores que o usuário gosta.
     */
 
-    //Entrada
+  //Entrada
 
-    let cores = ["Branco", "Azul", "Marrom", "Cinza", "Verde", "Amarelo", "Vermelho", "Preto"];
-    let coresUsuarioGosta = 0;
+  let cores = [
+    "Branco",
+    "Azul",
+    "Marrom",
+    "Cinza",
+    "Verde",
+    "Amarelo",
+    "Vermelho",
+    "Preto",
+  ];
+  let gostaCor = 0;
+  let coresUsuarioGosta = [];
+  let valorInvalido = false;
 
-    for (let i of cores) {
-        
+  for (let i of cores) {
+    let gostaCor = prompt(`Você gosta da cor ${i}? (S)im (N)ão`)
+      .toUpperCase()
+      .trim();
+    if (gostaCor == "S" || gostaCor == "SIM") {
+      gostaCor++;
+      coresUsuarioGosta.push(i);
+    } else if (gostaCor == "N" || gostaCor == "NÃO" || gostaCor == "NAO") {
+    } else {
+      alert("Valor Inválido");
+      valorInvalido = true;
+      break;
     }
+  }
 
-    //Processamento
+  if (valorInvalido == false) {
+    document.write(
+      `As cores que o usuário gosta são: ${coresUsuarioGosta.join(", ")}. <br>`
+    );
+    document.write(`O usuário gosta de ${coresUsuarioGosta.length} cores.`);
+  } else {
+    
+  }
 
+  //Processamento
 
-    //Saída
-
+  //Saída
 </script>

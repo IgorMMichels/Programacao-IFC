@@ -1,26 +1,59 @@
 <script>
-    //Problema: Cidades e Estados
-    /*
+  //Problema: Cidades e Estados
+  /*
     Considere a seguinte lista de Cidades:
     let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
     Pergunte ao usuário a qual estado pertence cada uma das cidades e adicione em listas separadas, sendo uma lista para cada estado.
     No final do programa apresente os estados com as suas respectivas cidades. Porém, ordene a apresentação das listas, apresentando de forma decrescente pela quantidade de cidades que o estado possui.
     */
 
-    //Entrada
+  //Entrada
 
-    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
-    let parana = [];
-    let santaCatarina = [];
-    let rioGrandeDoSul = [];
+  let cidades = [
+    "Porto Alegre",
+    "Curitiba",
+    "Florianópolis",
+    "Joinville",
+    "Blumenau",
+    "Gramado",
+    "Santa Maria",
+    "Londrina",
+    "Itajaí",
+  ];
+  let parana = [];
+  let santaCatarina = [];
+  let rioGrandeDoSul = [];
+  let valorInvalido = false;
 
-    for (let cidades of cidades) {
-        let estadoCidade = (`Qual o estado de ${cidades} (SC, PR, RS)`).toUpperCase().trim()
+  for (let cidade of cidades) {
+    let estadoCidade = prompt(`Qual o estado de ${cidade} (SC, PR, RS)`)
+      .toUpperCase()
+      .trim();
+    if (estadoCidade == "SC") {
+      santaCatarina.push(cidade);
+    } else if (estadoCidade == "PR") {
+      parana.push(cidade);
+    } else if (estadoCidade == "RS") {
+      rioGrandeDoSul.push(cidade);
+    } else {
+      alert("Valor Inválido");
+      valorInvalido = true;
+      break;
     }
+  }
 
-    //Processamento
+  if (valorInvalido == false) {
+    document.write(
+      `As cidades de Santa Catarina são: ${santaCatarina.join(", ")}. <br>`
+    );
+    document.write(`As cidades de Paraná são: ${parana.join(", ")}. <br>`);
+    document.write(
+      `As cidades de Rio Grande do Sul são: ${rioGrandeDoSul.join(", ")}. <br>`
+    );
+  } else {
+  }
 
+  //Processamento
 
-    //Saída
-
+  //Saída
 </script>
