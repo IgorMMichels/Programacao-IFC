@@ -17,11 +17,11 @@
 
     for (let i of nomes) {
         if (i.includes("á") || i.includes("é") || i.includes("í") || i.includes("ó") || i.includes("ú") ) {
-            i = i.replace("á", "a");
-            i = i.replace("é", "e");
-            i = i.replace("í", "i");
-            i = i.replace("ó", "o");
-            i = i.replace("ú", "u");
+            i = i.replace(/á/g, "a"); // flag global para remover mais de um caracter agudo se presente na palavra, encontrei na internet.
+            i = i.replace(/é/g, "e");
+            i = i.replace(/í/g, "i");
+            i = i.replace(/ó/g, "o");
+            i = i.replace(/ú/g, "u");
         }
         nomesCorrigidos.push(i)
     }

@@ -36,24 +36,93 @@
     } else if (estadoCidade == "RS") {
       rioGrandeDoSul.push(cidade);
     } else {
-      alert("Valor Inválido");
       valorInvalido = true;
       break;
     }
   }
 
   if (valorInvalido == false) {
-    document.write(
-      `As cidades de Santa Catarina são: ${santaCatarina.join(", ")}. <br>`
-    );
-    document.write(`As cidades de Paraná são: ${parana.join(", ")}. <br>`);
-    document.write(
-      `As cidades de Rio Grande do Sul são: ${rioGrandeDoSul.join(", ")}. <br>`
-    );
+    if (
+      santaCatarina.length >= rioGrandeDoSul.length &&
+      parana.length >= santaCatarina.length
+    ) {
+      document.write(`As cidades de Paraná são: ${parana.join(", ")}. <br>`);
+      document.write(
+        `As cidades de Santa Catarina são: ${santaCatarina.join(", ")}. <br>`
+      );
+      document.write(
+        `As cidades de Rio Grande do Sul são: ${rioGrandeDoSul.join(
+          ", "
+        )}. <br>`
+      );
+    } else if (
+      santaCatarina.length >= parana.length &&
+      rioGrandeDoSul.length >= santaCatarina.length
+    ) {
+      document.write(
+        `As cidades de Rio Grande do Sul são: ${rioGrandeDoSul.join(
+          ", "
+        )}. <br>`
+      );
+      document.write(
+        `As cidades de Santa Catarina são: ${santaCatarina.join(", ")}. <br>`
+      );
+      document.write(`As cidades de Paraná são: ${parana.join(", ")}. <br>`);
+    } else if (
+      rioGrandeDoSul.length >= santaCatarina.length &&
+      parana.length >= rioGrandeDoSul.length
+    ) {
+      document.write(`As cidades de Paraná são: ${parana.join(", ")}. <br>`);
+      document.write(
+        `As cidades de Rio Grande do Sul são: ${rioGrandeDoSul.join(
+          ", "
+        )}. <br>`
+      );
+      document.write(
+        `As cidades de Santa Catarina são: ${santaCatarina.join(", ")}. <br>`
+      );
+    } else if (
+      rioGrandeDoSul.length >= parana.length &&
+      santaCatarina.length >= rioGrandeDoSul.length
+    ) {
+      document.write(
+        `As cidades de Santa Catarina são: ${santaCatarina.join(", ")}. <br>`
+      );
+      document.write(
+        `As cidades de Rio Grande do Sul são: ${rioGrandeDoSul.join(
+          ", "
+        )}. <br>`
+      );
+      document.write(`As cidades de Paraná são: ${parana.join(", ")}. <br>`);
+    } else if (
+      parana.length >= rioGrandeDoSul.length &&
+      santaCatarina.length >= parana.length
+    ) {
+      document.write(
+        `As cidades de Santa Catarina são: ${santaCatarina.join(", ")}. <br>`
+      );
+      document.write(`As cidades de Paraná são: ${parana.join(", ")}. <br>`);
+      document.write(
+        `As cidades de Rio Grande do Sul são: ${rioGrandeDoSul.join(
+          ", "
+        )}. <br>`
+      );
+    } else if (
+      parana.length >= santaCatarina.length &&
+      rioGrandeDoSul.length >= parana.length
+    ) {
+      document.write(
+        `As cidades de Rio Grande do Sul são: ${rioGrandeDoSul.join(
+          ", "
+        )}. <br>`
+      );
+      document.write(`As cidades de Paraná são: ${parana.join(", ")}. <br>`);
+      document.write(
+        `As cidades de Santa Catarina são: ${santaCatarina.join(", ")}. <br>`
+      );
+    }
   } else {
+    valorInvalido = true;
+    alert("Valor Inválido");
   }
-
-  //Processamento
-
-  //Saída
 </script>

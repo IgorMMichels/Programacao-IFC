@@ -24,15 +24,14 @@
   let valorInvalido = false;
 
   for (let i of cores) {
-    let gostaCor = prompt(`Você gosta da cor ${i}? (S)im (N)ão`)
+    let respostaCor = prompt(`Você gosta da cor ${i}? (S)im (N)ão`)
       .toUpperCase()
       .trim();
-    if (gostaCor == "S" || gostaCor == "SIM") {
+    if (respostaCor == "S" || respostaCor == "SIM") {
       gostaCor++;
       coresUsuarioGosta.push(i);
-    } else if (gostaCor == "N" || gostaCor == "NÃO" || gostaCor == "NAO") {
+    } else if (respostaCor == "N" || respostaCor == "NÃO" || respostaCor == "NAO") {
     } else {
-      alert("Valor Inválido");
       valorInvalido = true;
       break;
     }
@@ -44,7 +43,7 @@
     );
     document.write(`O usuário gosta de ${coresUsuarioGosta.length} cores.`);
   } else {
-    
+    alert("Valor Inválido");
   }
 
   //Processamento
