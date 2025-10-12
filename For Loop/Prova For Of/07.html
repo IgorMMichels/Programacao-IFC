@@ -8,7 +8,17 @@ Apresente para o usuário qual será o valor final da compra.
     */
    
 
-    
+    const contasNaoPagas = [50.00, 15.50, 120.00, 80];
+
+    const juros = Number(prompt("Quanto será a taxa de juros aplicado nas contas"));
+
+    let conta = 0
+
+    for (let i of contasNaoPagas) {
+        conta += i + ((i/100) * juros)
+    }
+
+    alert(`O custo total de todas as contas com o juro aplicado é: R$${conta}.`);
 
 
 

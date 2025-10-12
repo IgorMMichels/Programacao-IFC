@@ -7,5 +7,18 @@ Porém os produtos disponíveis no mercado são:
 const itensDisponiveis = ['maçã', 'pão', 'leite', 'manteiga', 'café'];
 Apresente para o usuário quais itens ele conseguirá comprar no mercado.
     */
-   
+    
+    const listaDeCompras = ['pão', 'queijo', 'leite', 'suco'];
+    const itensDisponiveis = ['maçã', 'pão', 'leite', 'manteiga', 'café'];
+
+    const itensPossiveisCompra = []
+
+    for (let i of listaDeCompras) {
+        if (itensDisponiveis.indexOf(i) != -1) {
+            itensPossiveisCompra.push(i);
+        }
+    }
+
+    alert(`Os itens que você poderá comprar são: ${itensPossiveisCompra.join(", ")}.`);
+
 </script>
