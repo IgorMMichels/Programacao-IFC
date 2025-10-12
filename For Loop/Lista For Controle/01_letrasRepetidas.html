@@ -12,12 +12,19 @@
     //ENTRADA
 
     let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
-    
+    const letrasRepetidas = []
     //PROCESSAMENTO
 
-    for (let i of listaDeLetras) {
-        
+    for (let i = 0; i <= listaDeLetras.length - 1; i ++) {
+        if (listaDeLetras.indexOf(listaDeLetras[i].toLowerCase())  != (listaDeLetras.lastIndexOf(listaDeLetras[i].toLowerCase()))) {
+            letrasRepetidas.push(listaDeLetras[i].toLowerCase())
+        }
+
     }
+
+    letrasRepetidas.sort()
+
+    alert(`AAAAAAAAAA ${letrasRepetidas.join("")}`)
 
     
     //SAÍDA
