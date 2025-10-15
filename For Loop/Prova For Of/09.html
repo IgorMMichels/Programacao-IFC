@@ -1,5 +1,5 @@
 <script>
-    /*
+  /*
     Verificar Existência de Item
 Considere que você possui a demanda dos seguintes itens de compra:
 listaDeCompras = ['pão', 'queijo', 'leite', 'suco'];
@@ -7,18 +7,19 @@ Porém os produtos disponíveis no mercado são:
 const itensDisponiveis = ['maçã', 'pão', 'leite', 'manteiga', 'café'];
 Apresente para o usuário quais itens ele conseguirá comprar no mercado.
     */
-    
-    const listaDeCompras = ['pão', 'queijo', 'leite', 'suco'];
-    const itensDisponiveis = ['maçã', 'pão', 'leite', 'manteiga', 'café'];
 
-    const itensPossiveisCompra = []
+  const listaDeCompras = ["pão", "queijo", "leite", "suco"];
+  const itensDisponiveis = ["maçã", "pão", "leite", "manteiga", "café"];
 
-    for (let i of listaDeCompras) {
-        if (itensDisponiveis.indexOf(i) != -1) {
-            itensPossiveisCompra.push(i);
-        }
+  const itensPossiveisCompra = [];
+
+  for (let i of listaDeCompras) {
+    if (itensDisponiveis.indexOf(i) != -1) {
+      itensPossiveisCompra.push(i);
     }
+  }
 
-    alert(`Os itens que você poderá comprar são: ${itensPossiveisCompra.join(", ")}.`);
-
+  alert(
+    `Os itens que você poderá comprar são: ${itensPossiveisCompra.join(", ")}.`
+  );
 </script>

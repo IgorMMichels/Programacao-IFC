@@ -1,21 +1,18 @@
 <script>
-    /*
+  /*
     Usuários Cadastrados
 Considere a lista de Usuários:
 usuariosCadastrados = ['admin', 'julia', 'pedro', 'lucas'];
 Peça para o usuário inserir o seu próprio nome.
 Valide se o nome inserido pelo usuário consta na lista, retornando para o usuário se ele está cadastrado ou não.
     */
-   
-    const usuariosCadastrados = ['admin', 'julia', 'pedro', 'lucas'];
-    const nome = prompt("Insira seu nome");
 
-    for (let i of usuariosCadastrados) {
-        if (usuariosCadastrados.indexOf(nome.toLowerCase()) != -1) {
-            alert(`${nome} é um nome cadastrado no sistema.`);
-        } else {
-            alert(`${nome} não é um nome cadastrado no sistema.`);
-        }
-    }
+  const usuariosCadastrados = ["admin", "julia", "pedro", "lucas"];
+  const nome = prompt("Insira seu nome");
 
+  if (usuariosCadastrados.includes(nome)) {
+    alert(`${nome} é um nome cadastrado no sistema.`);
+  } else {
+    alert(`${nome} não é um nome cadastrado no sistema.`);
+  }
 </script>
