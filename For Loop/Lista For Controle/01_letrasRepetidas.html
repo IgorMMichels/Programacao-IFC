@@ -12,19 +12,19 @@
     //ENTRADA
 
     let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
-    const letrasRepetidas = []
-    //PROCESSAMENTO
+    let letrasUnicas = [];
 
-    for (let i = 0; i <= listaDeLetras.length - 1; i ++) {
-        if (listaDeLetras.indexOf(listaDeLetras[i].toLowerCase())  != (listaDeLetras.lastIndexOf(listaDeLetras[i].toLowerCase()))) {
-            letrasRepetidas.push(listaDeLetras[i].toLowerCase())
+
+    for (let i = 0; i < listaDeLetras.length; i ++) {
+        const letraAtual = listaDeLetras[i].toLowerCase();
+        if (letrasUnicas.indexOf(letraAtual) == -1) {
+            letrasUnicas.push(letraAtual)
         }
-
     }
+    
+    letrasUnicas.sort()
 
-    letrasRepetidas.sort()
-
-    alert(`AAAAAAAAAA ${letrasRepetidas.join("")}`)
+    alert(`As letras únicas contidas no array são: ${letrasUnicas.join(", ")}.`)
 
     
     //SAÍDA
