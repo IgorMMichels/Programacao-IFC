@@ -6,12 +6,15 @@
     No final, apresente o maior número informado pelo usuário.
     */
 
-    //ENTRADA
+    let maiorNumero = Number();
 
-    
-    //PROCESSAMENTO
+    for (let i = 0; i < 5; i++) {
+        let numero = Number(prompt(`Informe um número para adicionar a lista.`));
+        if (numero >= maiorNumero) {
+            maiorNumero = numero;
+        }
+    }
 
-    
-    //SAÍDA
+    alert(`O maior número informado por você foi: ${maiorNumero}.`);
 
 </script>

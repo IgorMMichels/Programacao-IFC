@@ -7,6 +7,61 @@
     Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo de votos e também a porcentagem de votos de cada candidato a representante de sala.
     */
 
-    
+    let canditados = [];
+
+    for (let i = 1; i <= 3; i++) {
+        let candidato = prompt(`Informe o ${i}° candidato para representante da sala`);
+        canditados.push(candidato);
+    }
+
+    let alunosVotantes = parseInt(prompt(`Informe a quantidade de alunos votantes.`));
+
+    while (Number.isInteger(alunosVotantes) == false) {
+        alunosVotantes = parseInt(prompt(`Informe a quantidade de alunos votantes. (número)`));
+    }
+
+    let votoPrimeiro = 0;
+    let votoSegundo = 0;
+    let votoTerceiro = 0;
+    let votoNulo = 0;
+
+    let i = 1
+
+    for (i; i <= alunosVotantes; i++) {
+        let voto = prompt(`Em qual aluno você deseja votar para representante da sala? ${canditados.join(" ou ")}.`).toLowerCase().trim();
+
+        if (voto == (canditados[0]).toLowerCase()) {
+            votoPrimeiro ++;
+            alert(`Voto no candidato ${canditados[0]} computado!`)
+        } else if ((voto == (canditados[1]).toLowerCase())) {
+            votoSegundo ++;
+            alert(`Voto no candidato ${canditados[1]} computado!`)
+        } else if ((voto == (canditados[2]).toLowerCase())) {
+            votoTerceiro ++;
+            alert(`Voto no candidato ${canditados[2]} computado!`)
+        } else if (voto == "nulo") {
+            votoNulo ++;
+            alert(`Voto Nulo Computado!`)
+        } else {
+            alert(`Seu voto não foi computado por algum erro de digitação! Por favor insira novamente o seu voto`);
+            i--
+        }
+    }
+
+    let votosCandidatos = [votoPrimeiro, votoSegundo, votoTerceiro];
+
+    let maisVotado =  Math.max(...votosCandidatos);
+
+    let ganhador = canditados[votosCandidatos.indexOf(maisVotado)];
+
+    document.write(`O ganhador da votação e futuro representante da sala é: ${ganhador}! <br>`);
+    document.write(`A quantidade total de votos é: ${alunosVotantes}. <br>`);
+    document.write(`Porcentagem dos canditados: <br>`);
+    document.write(`Canditado(a) ${canditados[0]}: ${Math.round((votoPrimeiro * 100) / alunosVotantes)}% <br>`);
+    document.write(`Canditado(a) ${canditados[1]}: ${Math.round((votoSegundo * 100) / alunosVotantes)}% <br>`);
+    document.write(`Canditado(a) ${canditados[2 ]}: ${Math.round((votoTerceiro * 100) / alunosVotantes)}% <br>`);
+    document.write(`Voto Nulo: ${Math.round((votoNulo * 100) / alunosVotantes)}% <br>`);
+
+    // até agora a melhor atividade !
 
 </script>
