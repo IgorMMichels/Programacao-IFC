@@ -16,7 +16,7 @@
   } else if (numero % 2 == 0) {
     primo = false;
   } else {
-    for (let i = 1; i <= Math.sqrt(numero); i += 2) {
+    for (let i = 3; i <= Math.sqrt(numero); i += 2) {
       if (numero % i == 0) {
         primo = false;
         break;

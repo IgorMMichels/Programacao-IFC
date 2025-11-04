@@ -7,11 +7,15 @@
 
   let multiplos3 = [];
 
+  let soma = 0;
+
   for (let i = 1; i < 100; i++) {
     if (Number.isInteger(i / 3)) {
       multiplos3.push(i);
+      soma += i
     }
   }
 
-  alert(`Os números múltiplos de 3 são: ${multiplos3.join(", ")}.`);
+  document.write(`Os números múltiplos de 3 são: ${multiplos3.join(", ")}. <br>`);
+  document.write(`A soma desses números é: ${soma} <br>`);
 </script>
