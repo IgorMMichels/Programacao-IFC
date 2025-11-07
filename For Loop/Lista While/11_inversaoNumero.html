@@ -7,12 +7,25 @@
     Saída: 54321
     */
 
-    //ENTRADA
+    const numero = parseInt(prompt(`Informe um número inteiro.`));
 
+    let numAtual;
 
-    //PROCESSAMENTO
+    let i = 0;
 
+    let arrayNumero = Array.from(numero.toString()); // poderia usar reverse direto
 
-    //SAÍDA
+    while (numero.length > i) {
+        numAtual = arrayNumero[0]
+
+        arrayNumero.push(numAtual) // arrumar
+        arrayNumero.shift()
+
+        i++
+    }
+
+    alert(arrayNumero.join(""))
+
+    
 
 </script>
