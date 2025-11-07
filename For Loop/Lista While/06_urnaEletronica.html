@@ -1,6 +1,6 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: URNA ELETRÔNICA
     Faça um programa que simule a urna eletrônica.
     A tela a ser apresentada deverá ser da seguinte forma:
@@ -19,12 +19,76 @@
     d) O candidato vencedor.
     */
 
-    let opcoes = ["Canditado Joãozinho", "Candidato Mariazinha", "Nulo", "Branco"];
+  let opcoes = [
+    "Candidato Joãozinho",
+    "Candidato Mariazinha",
+    "Nulo",
+    "Branco",
+  ];
 
-    let voto = parseInt(prompt(`Insira seu voto:/nAs opções são:/n1. ${opcoes[0]}/n2. ${opcoes[1]}/n3. ${opcoes[2]}/n4. ${opcoes[3]}/`));
+  let voto;
 
-    while (voto != 0) {
+  let votoJoao = 0;
+  let votoMaria = 0;
+  let votoNulo = 0;
+  let votoBranco = 0;
 
+  while (voto != 0) {
+    voto = parseInt(
+      prompt(
+        `Insira seu voto: \nAs opções são: \n 1. ${opcoes[0]} \n 2. ${opcoes[1]} \n 3. ${opcoes[2]} \n 4. ${opcoes[3]} \nEntre com seu voto:`
+      )
+    );
+    if (voto == 1) {
+      alert(`Voto computado em: ${opcoes[0]}.`);
+      alert(`Para parar a contagem de votos digite 0.`);
+      votoJoao++;
+    } else if (voto == 2) {
+      alert(`Voto computado em: ${opcoes[1]}.`);
+      alert(`Para parar a contagem de votos digite 0.`);
+      votoMaria++;
+    } else if (voto == 3) {
+      alert(`Voto Nulo Computado.`);
+      alert(`Para parar a contagem de votos digite 0.`);
+      votoNulo++;
+    } else if (voto == 4) {
+      alert(`Voto Branco Computado.`);
+      alert(`Para parar a contagem de votos digite 0.`);
+      votoBranco++;
+    } else if (voto == 0) {
+      break;
+    } else {
+      alert(`Nenhum voto foi computado.`);
+      alert(`Para parar a contagem de votos digite 0.`);
     }
+  }
 
+  let votosCandidatos = [votoJoao, votoMaria];
+
+  let maisVotado = Math.max(...votosCandidatos);
+
+  let ganhador = opcoes[votosCandidatos.indexOf(maisVotado)];
+
+  // se votos nulos ganharem adicionar no futuro
+
+  document.write(`O resumo da eleição foi: <br><br>`);
+  document.write(
+    `O numero de votos do canditado ${opcoes[0]} foi: ${votoJoao} votos. <br>`
+  );
+  document.write(
+    `O numero de votos do canditado ${opcoes[1]} foi: ${votoMaria} votos. <br>`
+  );
+  document.write(
+    `A porcentagem de votos nulo foi: ${Math.round(
+      (votoNulo * 100) / (votoBranco + votoJoao + votoNulo + votoMaria)
+    )}%. <br>`
+  );
+  document.write(
+    `A porcentagem de votos branco foi: ${Math.round(
+      (votoBranco * 100) / (votoBranco + votoJoao + votoNulo + votoMaria)
+    )}%. <br><br>`
+  );
+
+  document.write(`O Canditado vencedor Foi: <br><br>`);
+  document.write(`${ganhador}!`);
 </script>

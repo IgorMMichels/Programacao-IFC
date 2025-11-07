@@ -54,7 +54,12 @@
 
     let ganhador = canditados[votosCandidatos.indexOf(maisVotado)];
 
-    document.write(`O ganhador da votação e futuro representante da sala é: ${ganhador}! <br>`);
+    if (votoPrimeiro == maisVotado && votoTerceiro == maisVotado || votoSegundo == maisVotado && votoPrimeiro == maisVotado || votoSegundo == maisVotado && votoTerceiro == maisVotado ) {
+        document.write(`A votação acabou em empate, portanto, nenhum canditado ganhou.<br>`);
+    } else {
+        document.write(`O ganhador da votação e futuro representante da sala é: ${ganhador}! <br>`);
+    }
+
     document.write(`A quantidade total de votos é: ${alunosVotantes}. <br>`);
     document.write(`Porcentagem dos canditados: <br>`);
     document.write(`Canditado(a) ${canditados[0]}: ${Math.round((votoPrimeiro * 100) / alunosVotantes)}% <br>`);
