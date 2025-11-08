@@ -11,20 +11,22 @@
 
     let numAtual;
 
-    let i = 0;
+    let i = 1;
 
     let arrayNumero = Array.from(numero.toString()); // poderia usar reverse direto
 
-    while (numero.length > i) {
-        numAtual = arrayNumero[0]
 
-        arrayNumero.push(numAtual) // arrumar
-        arrayNumero.shift()
+    let arrayInvertida = [];
+
+    while ((numero.toString()).length >= i) {
+        numAtual = arrayNumero[(numero.toString()).length-i]
+
+        arrayInvertida.push(numAtual)
 
         i++
     }
 
-    alert(arrayNumero.join(""))
+    alert(arrayInvertida.join(""))
 
     
 
