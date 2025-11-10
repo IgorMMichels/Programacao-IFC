@@ -1,0 +1,41 @@
+<script>
+  function digaMeuNome() {
+    // funcao VOID, nao retorna
+    alert(`Igor Michels`);
+  }
+
+  function digaNome(nome) {
+    alert(nome);
+  }
+
+  // digaNome("Igor");
+
+  function calculo(n1, n2) {
+    // funcao com parametros
+    const resultado = n1 + n2;
+    alert(resultado);
+  }
+
+  // calculo(12, 21); // pega os valores em ordem
+
+  function soma(n1, n2) {
+    // funcao com return
+    const resultado = n1 + n2;
+
+    return resultado; // serve para remover o valor de dentro da função para não "morrer" dentro        
+  }
+
+  const resultadoSoma = soma(30, 40);
+  alert(resultadoSoma);
+
+
+  // Arrow Function
+
+  const digaNome2 = () => {
+    alert(`Igor`)
+  }
+
+  digaNome2()
+
+
+</script>
