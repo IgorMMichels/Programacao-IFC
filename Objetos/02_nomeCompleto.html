@@ -1,16 +1,16 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: NOME COMPLETO DA PESSOA
     Crie um objeto chamado pessoa com as propriedades nome e sobrenome, e crie um método que retorne o nome completo da pessoa.
     */
-    
-    //ENTRADA
 
+  let nomePessoa = {
+    nome: "Igor",
+    sobrenome: "Michels",
+  };
 
-    //PROCESSAMENTO
+  const retornaNome = (nome, sobrenome) => nomePessoa.nome + " " + nomePessoa.sobrenome;
 
-
-    //SAÍDA
-    
+  alert(retornaNome(nomePessoa.nome, nomePessoa.sobrenome));
 </script>

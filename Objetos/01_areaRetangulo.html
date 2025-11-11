@@ -1,12 +1,20 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: ÁREA DO RETÂNGULO
     Crie um objeto chamado retangulo com as propriedades base e altura, e crie um método para calcular a área do retângulo.
     */
-    
-    const calculaArea = (base, altura) => {
-        
-    }
-    
+
+  const calculaArea = (base, altura) => (base * altura) / 2;
+
+  let retangulo = {
+    base: 15,
+    altura: 8,
+  };
+
+  for (let prop in retangulo) {
+    document.write(prop + ": " + retangulo[prop] + "<br>");
+  }
+
+  document.write(`Área: ${calculaArea(retangulo.base, retangulo.altura)}`);
 </script>

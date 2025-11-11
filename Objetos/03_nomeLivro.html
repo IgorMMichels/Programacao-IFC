@@ -5,12 +5,14 @@
     Crie um objeto chamado livro com as propriedades titulo, autor e numeroDePaginas, e crie um método que retorne o livro em formato string.
     */
     
-    //ENTRADA
-
-
-    //PROCESSAMENTO
-
-
-    //SAÍDA
+    let livro = {
+        titulo: "Biografia Autoral de Igor Michels",
+        autor: "Igor Michels",
+        numeroDePaginas: 92
+    }
     
+    for (let prop in livro) {
+        document.write(prop + ": " + livro[prop] + "<br>"); // fazer uma função ver
+    }
+
 </script>
