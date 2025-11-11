@@ -1,16 +1,21 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: DADOS DO CARRO
     Crie um objeto chamado carro com as propriedades marca, modelo e ano, e crie um método que retorne a marca, modelo e ano do carro em formato string.
     */
-    
-    //ENTRADA
 
+  const retornaCarro = (marca, modelo, ano) => {
+    let carro = {
+      marca: marca,
+      modelo: modelo,
+      ano: ano,
+    };
 
-    //PROCESSAMENTO
+    return carro
+  };
 
-
-    //SAÍDA
-    
+   for (let prop in carro) {
+        document.write(prop + ": " + carro[prop] + "<br>"); // fazer uma função ver
+    }
 </script>
