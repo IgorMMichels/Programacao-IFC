@@ -1,18 +1,17 @@
 <script>
-    //PROBLEMA
-    /*
+  //PROBLEMA
+  /*
     Considere que a pessoa possui, no banco, uma quantia de R$ 10.000,00.
     Contudo, embora ao final de cada mês o valor investido ainda esteja rendendo 3% (0.03), todo início de mês precisa retirar dinheiro para poder pagar suas dívidas. A quantia utilizada no início de cada mês, que é subtraído do valor investido, é de R$ 300,00.
     Em quantos meses a pessoa terá gasto todo o seu valor investido?
     */
+  let valorBanco = 10000;
+  let meses;
 
-    //ENTRADA
+  for (meses = 0; valorBanco > 0; meses++) {
+    valorBanco -= 300;
+    valorBanco *= 1.03;
+  }
 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
-
+  alert(`O valor total do cliente será gasto em ${meses} meses.`);
 </script>

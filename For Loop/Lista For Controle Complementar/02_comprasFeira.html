@@ -1,3 +1,4 @@
+<meta charset="UTF-8" />
 <script>
   //PROBLEMA
   /*
@@ -14,31 +15,34 @@
   Após o usuário informar a quantia vendida para cada item, calcule e apresente o faturamento do feirante.
   */
 
-
   let produtos = [
-      {nome: "Tomate", preco: 3.90},
-      {nome: "Batata", preco: 3.40},
-      {nome: "Batata-Doce", preco: 4.70},
-      {nome: "Batata-Doce", preco: 3.90},
-      {nome: "Alface", preco: 1.50},
-      {nome: "Cebola", preco: 2.90},
-      {nome: "Cebolinha", preco: 1.40},
-      {nome: "Beterraba", preco: 4.10},
-  ]
+    { nome: "Tomate", preco: 3.9 },
+    { nome: "Batata", preco: 3.4 },
+    { nome: "Batata-Doce", preco: 4.7 },
+    { nome: "Batata-Doce", preco: 3.9 },
+    { nome: "Alface", preco: 1.5 },
+    { nome: "Cebola", preco: 2.9 },
+    { nome: "Cebolinha", preco: 1.4 },
+    { nome: "Beterraba", preco: 4.1 },
+  ];
+
+  console.log();
 
   let valorTotal = 0;
   let produtoAtual;
+  let qntProduto;
 
-  for (let i = 0; i < produtos.length; i ++) {
-      produtoAtual = prompt(`Informe o produto para ser adicionado (informe apenas o nome): \n - Tomate: R$ 3,90 (Kg)
-  \n - Batata: R$ 3,40 (Kg)
-  \n - Batata-Doce: R$ 4,70 (Kg)
-  \n -  Alface: R$ 1,50 (Und)
-  \n - Cebola: R$ 2,90 (Kg)
-  \n - Cebolinha: R$ 1,40 (Und)
-  \n - Beterraba: R$ 4,10 (Kg)`) .toLowerCase().trim();
-      while (produtoAtual != "tomate") {
-        
-      }
+  for (let i = 0; i < produtos.length; i++) {
+    produtoAtual = produtos[i].nome;
+
+    qntProduto =  Number(prompt(`Quantos(as) ${produtoAtual} você deseja adicionar? Preço: R$${produtos[i].preco.toFixed(2)}`));
+
+    while(!isNaN(qntProduto) || qntProduto % 1 != 0 || qntProduto < 0) {
+        qntProduto =  Number(prompt(`Inválido. Quantos(as) ${produtoAtual} você deseja adicionar? Preço: R$${produtos[i].preco.toFixed(2)}`));
+    }
+
+    valorTotal += produtos[i].preco * qntProduto;
   }
+
+  alert(`O faturamento final será: R$${valorTotal.toFixed(2)}`);
 </script>

@@ -1,18 +1,37 @@
 <script>
-    //PROBLEMA
-    /*
-    Considere que uma pessoa está investindo, no início de cada mês, uma quantia de R$ 100,00. O rendimento ao final do mês é de 1,8% (0.018).
-    Calcule qual será o total que a pessoa terá investido ao final de 24 meses, ao final de 48 meses e ao final de 96 meses.
-    Apresente os valores para cada um dos períodos.
-    Apresente também qual foi o rendimento que a pessoa obteve em cada um dos períodos (ou seja, o que conseguiu obter além da quantia investida).
-    */
+  //PROBLEMA
+  /*
+     Considere que uma pessoa está investindo, no início de cada mês, uma quantia de R$ 100,00. O rendimento ao final do mês é de 1,8% (0.018).
+     Calcule qual será o total que a pessoa terá investido ao final de 24 meses, ao final de 48 meses e ao final de 96 meses.
+     Apresente os valores para cada um dos períodos.
+     Apresente também qual foi o rendimento que a pessoa obteve em cada um dos períodos (ou seja, o que conseguiu obter além da quantia investida).
+     */
 
-    //ENTRADA
+  let investimento = 10000; // 10000 porque é mais bonito...
+  let investimento24;
+  let investimento48;
+  let investimento96;
 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+  let i = 1;
+  for (i; i <= 24; i++) {
+    investimento *= 1.018;
+  }
+  investimento24 = investimento;
+
+  for (i; i <= 48; i++) {
+    investimento *= 1.018;
+  }
+
+  investimento48 = investimento;
+
+  for (i; i <= 96; i++) {
+    investimento *= 1.018;
+  }
+
+  investimento96 = investimento;
+
+  document.write(`Resulatdo do Investimento: <br>`);
+  document.write(`Rendimento total ao final de 24 meses: R$${(investimento24-100).toFixed(2)} | Valor Total R$${investimento24.toFixed(2)}.<br>`);
+  document.write(`Rendimento total ao final de 48 meses: R$${(investimento48-100).toFixed(2)} | Valor Total R$${investimento48.toFixed(2)}.<br>`);
+  document.write(`Rendimento total ao final de 96 meses: R$${(investimento96-100).toFixed(2)} | Valor Total R$${investimento96.toFixed(2)}.`);
 </script>

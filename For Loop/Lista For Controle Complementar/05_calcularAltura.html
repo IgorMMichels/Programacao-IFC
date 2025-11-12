@@ -1,19 +1,29 @@
+<meta charset="UTF-8" />
 <script>
-    //PROBLEMA
-    /*
+  //PROBLEMA
+  /*
     Desenvolva um programa que pergunte ao usuário a quantidade de pessoas que terão sua medida informada.
     Após, calcule e apresente os seguintes dados:
     - Menor altura 
     - Maior altura
     */
 
-    //ENTRADA
+  let qntAltura = Number(prompt(`Quantas pessoas terão sua altura informada?`));
 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
 
+  let altura;
+
+  let alturaPessoas = [];
+
+  for (let i = 1; i <= qntAltura; i++) {
+    altura = Number(prompt(`Informe a altura da pessoa. Ex: (cm: 181)`));
+
+    alturaPessoas.push(altura)
+  }
+
+  let menorAltura = Math.min(...alturaPessoas);
+  let maiorAltura = Math.max(...alturaPessoas);
+
+  document.write(`A menor altura registrada foi: ${(menorAltura/100).toFixed(2)} Metros <br>`);
+  document.write(`A maior altura registrada foi: ${(maiorAltura/100).toFixed(2)} Metros <br>`);
 </script>
