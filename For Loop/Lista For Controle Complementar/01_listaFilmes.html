@@ -1,0 +1,48 @@
+<script>
+  //PROBLEMA
+  /*
+    Pergunte ao usuário quantos filmes deseja cadastrar.
+    Considere que os gêneros dos filmes que serão cadastrados serão Comédia, Drama e Romance.
+    Para cada filme que o usuário inserir, pergunte o gênero do filme e o adicione na lista correspondente.
+    Apresente os gêneros e os seus respectivos filmes, que foram informados pelo usuário.
+    ***Não apresente listas que não tiveram filme cadastrado.
+    */
+
+  let numFilmes = Number(prompt(`Quantos filmes você deseja cadastrar?`));
+
+  while (numFilmes < 1 || numFilmes % 1 != 0) {
+    numFilmes = Number(prompt(`Quantos filmes você deseja cadastrar?`));
+  }
+
+  /* let filmes = {
+        
+    } */
+
+  let nomeFilme;
+  let generoFilme;
+
+  let comedia = [];
+  let drama = [];
+  let romance = [];
+
+  for (let i = 1; i <= numFilmes; i++) {
+    nomeFilme = prompt(`Informe o nome do filme`).trim();
+    generoFilme = prompt(`Informe o gênero do filme (comedia) (drama) (romance)`).trim().toLowerCase();
+    while (generoFilme != "comedia" && generoFilme != "drama" && generoFilme != "romance") {
+        generoFilme = prompt(`Informe o gênero do filme (comedia) (drama) (romance)`).trim().toLowerCase();
+    }
+
+    if (generoFilme == "comedia") {
+        comedia.push(nomeFilme);
+    } else if (generoFilme == "drama") {
+        drama.push(nomeFilme);
+    } else if (generoFilme == "romance"){
+        romance.push(nomeFilme)
+    }
+  }
+
+  (comedia.length > 0) ? document.write(`Os filmes do gênero comédia são: ${comedia.join(", ")}; <br>`) : null;
+  (drama.length > 0) ? document.write(`Os filmes do gênero comédia são: ${drama.join(", ")}; <br>`) : null;
+  (romance.length > 0) ? document.write(`Os filmes do gênero comédia são: ${romance.join(", ")}; <br>`) : null;
+
+</script>

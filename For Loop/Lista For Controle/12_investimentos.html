@@ -13,5 +13,7 @@
     investimento = investimento * (1 + 2 / 100);
   }
 
-  alert(`Levará ${dias} dias para Joãozinho atingir 2000 reais.`);
+  dias = (dias/5) * 7
+
+  alert(`Levará ${Math.ceil(dias)} dias para Joãozinho atingir 2000 reais.`);
 </script>

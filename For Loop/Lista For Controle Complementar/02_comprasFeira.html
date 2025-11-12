@@ -1,0 +1,44 @@
+<script>
+  //PROBLEMA
+  /*
+  Peça para o feirante informar a quantia de itens que foram vendidos de cada produto.
+  Considere que os itens que comercializa e os seus respectivos preços, são:
+  - Tomate: R$ 3,90 (Kg)
+  - Batata: R$ 3,40 (Kg)
+  - Batata-Doce: R$ 4,70 (Kg)
+  - Alface: R$ 1,50 (Und)
+  - Cebola: R$ 2,90 (Kg)
+  - Cebolinha: R$ 1,40 (Und)
+  - Beterraba: R$ 4,10 (Kg)
+
+  Após o usuário informar a quantia vendida para cada item, calcule e apresente o faturamento do feirante.
+  */
+
+
+  let produtos = [
+      {nome: "Tomate", preco: 3.90},
+      {nome: "Batata", preco: 3.40},
+      {nome: "Batata-Doce", preco: 4.70},
+      {nome: "Batata-Doce", preco: 3.90},
+      {nome: "Alface", preco: 1.50},
+      {nome: "Cebola", preco: 2.90},
+      {nome: "Cebolinha", preco: 1.40},
+      {nome: "Beterraba", preco: 4.10},
+  ]
+
+  let valorTotal = 0;
+  let produtoAtual;
+
+  for (let i = 0; i < produtos.length; i ++) {
+      produtoAtual = prompt(`Informe o produto para ser adicionado (informe apenas o nome): \n - Tomate: R$ 3,90 (Kg)
+  \n - Batata: R$ 3,40 (Kg)
+  \n - Batata-Doce: R$ 4,70 (Kg)
+  \n -  Alface: R$ 1,50 (Und)
+  \n - Cebola: R$ 2,90 (Kg)
+  \n - Cebolinha: R$ 1,40 (Und)
+  \n - Beterraba: R$ 4,10 (Kg)`) .toLowerCase().trim();
+      while (produtoAtual != "tomate") {
+        
+      }
+  }
+</script>

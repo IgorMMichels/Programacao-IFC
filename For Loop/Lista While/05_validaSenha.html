@@ -16,5 +16,10 @@
     );
   }
 
+  let senhaUsuario = Number(prompt(`Informe a senha para acessar a conta.`));
+  while(senhaUsuario != senha) {
+    senhaUsuario = Number(prompt(`Senha Incorreta! Informe a senha para acessar a conta.`));
+  }
+
   alert(`Senha Correta.`);
 </script>

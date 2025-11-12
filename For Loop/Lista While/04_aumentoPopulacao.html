@@ -7,10 +7,12 @@
 
   let anos = 0;
 
-  let habitantes = 80000;
+  let habitantesA = 80000;
+  let habitantesB = 200000;
 
-  while (habitantes <= 200000) {
-    habitantes *= 1.03;
+  while (habitantesA < habitantesB) {
+    habitantesA *= 1.03;
+    habitantesB *= 1.015;
     anos++;
   }
 
