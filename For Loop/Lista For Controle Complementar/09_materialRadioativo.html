@@ -6,13 +6,24 @@
     Apresente, ao fim do programa, a massa inicial, massa final e o necessário para que atinja a massa determinada.
     */
 
-    //ENTRADA
+    let material = Number(prompt(`Informe quantas gramas o material radioativo tem.`));
 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
+    while (!isNaN(material) || material < 1) {
+        material = Number(prompt(`Informe quantas gramas o material radioativo tem.`));
+    }
+
+    let minuto;
+    let horas;
+
+    for (minuto = 1; material <= 1; minuto ++) {
+        material /= 2;
+        minuto ++;
+    }
+
+    if (minuto / 60 > 0) {
+        horas = (minuto/60);
+        minutos -= horas*60
+    }
     
 
 </script>

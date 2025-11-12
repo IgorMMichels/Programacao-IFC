@@ -4,13 +4,16 @@
     Desenvolva um programa que mostre a tabuada de 1 até 9.
     */
 
-    //ENTRADA
 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+    let denominador;
+    let multiplicador;
+
+    for (denominador= 1; denominador <= 10; denominador++) {
+        document.write(`Tabuada do ${denominador}: <br>`)
+
+        for (multiplicador = 1; multiplicador <= 10; multiplicador++) {
+            document.write(`${denominador} * ${multiplicador} = ${denominador*multiplicador} <br>`)
+        }
+    }
 
 </script>
