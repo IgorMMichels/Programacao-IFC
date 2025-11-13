@@ -1,0 +1,44 @@
+<meta charset="UTF-8" />
+<script>
+  //PROBLEMA
+  /*
+    Faça um algoritmo que pergunte ao usuário quantos números primos deseja descobrir.
+    Desenvolva um programa que identifique a quantidade de números primos desejada pelo usuário.
+    Apresente a lista de números primos na tela.
+    */
+
+  let numero = Number(prompt(`Quantos números primos você deseja descobrir.`));
+
+  while (isNaN(numero) || numero < 1) {
+    numero = Number(prompt(`Quantos números primos você deseja descobrir.`));
+  }
+
+  let primos = [];
+
+  let primo = true;
+
+  for (let i = 1; primos.length < numero; i ++) {
+    primo = true
+    if (i <= 1) {
+      primo = false;
+    } else if (i == 2) {
+      primo = true
+
+    } else if (i % 2 == 0) {
+      primo = false;
+    } else {
+      for (let i = 3; i <= Math.sqrt(i); i += 2) {
+        if (i % i == 0) {
+          primo = false;
+          break;
+        }
+      }
+    }
+
+    if (primo == true) {
+        primos.push(i)
+    }
+  }
+
+  alert(primos)
+</script>

@@ -1,0 +1,53 @@
+<script>
+    //PROBLEMA
+    /*
+    Desenvolva um programa que receba a idade de 10 pessoas. Após, calcule e mostre:
+    - A quantidade de pessoas em cada faixa etária
+    - A percentagem de pessoas em cada faixa etária
+
+    Faixas etárias:
+    1ª: Até 15 anos
+    2ª: De 16 a 30 anos
+    3ª: De 31 a 45 anos
+    4ª: De 46 a 60 anos
+    5ª: Acima de 61 anos
+    */
+
+    let primeiraFaixa = 0;
+    let segundaFaixa = 0;
+    let terceiraFaixa = 0;
+    let quartaFaixa = 0;
+    let quintaFaixa = 0;
+
+    let idade;
+
+    for (let i = 1; i <= 10; i ++) {
+        idade = Number(prompt(`Informe a idade da pessoa atual.`));
+        
+        while (isNaN(idade) || (idade < 0 || idade > 120)) {
+            idade = Number(prompt(`Inválido, informe uma idade válida.`));
+        }
+
+        if (idade < 16) {
+            primeiraFaixa ++;
+        } else if (idade < 31) {
+            segundaFaixa ++;
+        } else if (idade < 46) {
+            terceiraFaixa ++;
+        } else if (idade < 61) {
+            quartaFaixa ++;
+        } else {
+            quintaFaixa ++;
+        }
+    }
+
+    document.write(`Faixas etárias:<br>`);
+    document.write(`1ª: Até 15 anos: ${primeiraFaixa} pessoas | ${((primeiraFaixa*100) / 10).toFixed(2)}% <br>`);
+    document.write(`2ª: De 16 a 30 anos: ${segundaFaixa} pessoas | ${((segundaFaixa*100) / 10).toFixed(2)}% <br>`);
+    document.write(`3ª: De 31 a 45 anos: ${terceiraFaixa} pessoas | ${((terceiraFaixa*100) / 10).toFixed(2)}% <br>`);
+    document.write(`4ª: De 46 a 60 anos: ${quartaFaixa} pessoas | ${((quartaFaixa*100) / 10).toFixed(2)}% <br>`);
+    document.write(`5ª: Acima de 61 anos: ${quintaFaixa} pessoas | ${((quintaFaixa*100) / 10).toFixed(2)}%`);
+    
+
+
+</script>

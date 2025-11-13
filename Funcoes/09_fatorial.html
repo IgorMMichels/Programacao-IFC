@@ -14,5 +14,12 @@
     return resultado;
   };
 
-  alert(fatorial(7))
+
+  let numero = Number(prompt(`Informe um número inteiro e positivo.`));
+
+  while (!isNaN(numero) && numero < 1) {
+    numero = Number(prompt(`Informe um número inteiro e positivo.`));
+  }
+
+  fatorial(numero)
 </script>

@@ -2,10 +2,10 @@
     //Problema: Peça para o usuário informar um número inteiro.
     //Escreva todos os números na tela, até o número informado pelo usuário, colocando um número em cada linha e começando do número 1!
 
-    let numero = parseInt(prompt(`Informe um número inteiro (positivo).`));
+    let numero = Number(prompt(`Informe um número inteiro (positivo).`));
 
-    while (numero < 1) {
-        numero = parseInt(prompt(`Informe um número inteiro (positivo).`));
+    while (isNaN(numero) || numero < 1) {
+        numero = Number(prompt(`Informe um número inteiro (positivo).`));
     }
 
     for (let i = 1; i <= numero; i++){
