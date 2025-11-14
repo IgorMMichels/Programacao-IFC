@@ -1,0 +1,90 @@
+<meta charset="UTF-8" />
+<script>
+  /*
+  PROBLEMA: PESQUISA DE IDADE
+  Foi feita uma pesquisa entre os habitantes de uma região. Foram coletados os dados de idade, sexo (M/F) e salário. Faça um programa que calcule e mostre:
+
+  a) A média dos salários do grupo;
+  b) A maior e a menor idade do grupo;
+  c) A quantidade de mulheres na região;
+  d) A idade e o sexo da pessoa que possui o menor salário;
+
+  Finalize a entrada de dados ao ser digitada uma idade negativa.
+  */
+
+  // funcao para criar objetos, com id e etc, voltar aqui após terminar a lista de funções
+
+  let sexo;
+  let idade = 1;
+  let salario;
+
+  let sexoGrupo = [];
+  let idadeGrupo = [];
+  let salarioGrupo = [];
+
+  let somaSalario = 0;
+
+  let mulheres = 0;
+  let homens = 0;
+
+  let qntPessoa = 0;
+  let idPessoa = 0;
+
+  let pessoa = [];
+
+  while (idade > 0) {
+    idade = parseInt(
+      prompt(
+        `Informe a idade da Pessoa (Finalize a entrada digitando uma idade negativa.)`
+      )
+    );
+    if (idade < 0) {
+      break; // otimizar isso no futuro
+    }
+    idadeGrupo.push(idade);
+
+    sexo = prompt(
+      `Informe o Sexo da Pessoa (F)eminimo, (M)asculino`
+    ).toUpperCase();
+    if (sexo == "F") {
+      sexoGrupo.push(`Feminio`);
+      mulheres++;
+    } else if (sexo == "M") {
+      sexoGrupo.push(`Masculino`);
+      homens++;
+    } else {
+      sexoGrupo.push(`N/A`);
+    }
+
+    salario = Number(prompt(`Informe o salário da Pessoa`));
+    somaSalario += salario;
+    idPessoa++
+
+    adicionaPessoa(idade, sexo, salario)
+  }
+
+  function adicionaPessoa(idade, sexo, salario) {
+    
+  }
+
+  let mediaSalario = somaSalario / qntPessoa;
+
+  let menorSalario = Math.min(...salarioGrupo);
+
+  let maiorIdadeGrupo = Math.max(...idadeGrupo);
+  let menorIdadeGrupo = Math.min(...idadeGrupo);
+
+  document.write(`Resumo do apanhado de informações: <br>`);
+  document.write(
+    `A média salarial do grupo: R$${mediaSalario.toFixed(2)}. <br>`
+  );
+  document.write(
+    `A maior idade do grupo é ${maiorIdadeGrupo} anos, e a menor idade do grupo é ${menorIdadeGrupo} anos. <br>`
+  );
+  document.write(`A quantidade de mulheres na região: ${mulheres}. <br>`);
+  document.write(
+    `A pessoa que possuí o menor salário é do sexo ${
+      sexoGrupo[salarioGrupo.indexOf(menorSalario)]
+    } e possui ${idadeGrupo[salarioGrupo.indexOf(menorSalario)]} anos.<br>`
+  );
+</script>
