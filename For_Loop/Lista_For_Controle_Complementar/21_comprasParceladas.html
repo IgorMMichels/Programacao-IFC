@@ -1,6 +1,6 @@
 <script>
-    //PROBLEMA
-    /*
+  //PROBLEMA
+  /*
     Considere que uma loja utiliza o identificador V para transações à vista e P para transações parceladas.
     Faça um programa que receba os valores de 10 transações realizadas, separando em listas as transações parceladas e transações à vista.
     Apresente, ao fim do programa, os seguintes dados:
@@ -10,13 +10,43 @@
     - O valor da primeira prestação das compras a prazo, considerando que serão pagas em três vezes.
     */
 
-    //ENTRADA
+  let v = [];
+  let p = [];
 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+  let tipo;
+  let valor;
+  let totalCompras = 0;
 
+  for (let i = 1; i <= 10; i++) {
+    valor = Number(prompt("Qual o valor a compra?"));
+
+    while (isNaN(valor) || valor < 0) {
+      valor = Number(prompt("Qual o valor a compra? (Insira um valor Válido)"));
+    }
+
+    tipo = prompt(
+      `Como será feito o pagamento, parcelado ou à vista? Á (V)ista (P)arcelado.`
+    )
+      .toLowerCase()
+      .trim();
+
+    while (tipo != "v" && tipo != "p") {
+      tipo = prompt(
+        `Como será feito o pagamento, parcelado ou à vista? Á (V)ista (P)arcelado.`
+      )
+        .toLowerCase()
+        .trim();
+    }
+
+    totalCompras += valor;
+
+    tipo == "v" ? v.push(valor) : p.push(valor);
+  }
+
+  let primeiraPrestação = p[0]/3
+
+  document.write(`Foram efetuadas ${v.length} compras à vista. <br>`);
+  document.write(`Foram efetuadas ${p.length} compras parceladas. <br>`);
+  document.write(`O total das compras efetuadas foi: R${totalCompras.toFixed(2)}`);
+  document.write(`O valor da prestação da prmeira compra é: R$${primeiraPrestação.toFixed(2)}`)
 </script>

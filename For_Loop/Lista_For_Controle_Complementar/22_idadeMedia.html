@@ -1,20 +1,61 @@
 <script>
-    //PROBLEMA
-    /*
+  //PROBLEMA
+  /*
     Desenvolva um programa que receba o sexo e a idade de 10 pessoas.
     Calcule e apresente:
     - A média das idades das 10 pessoas
     - A idade média das mulheres
     - A idade média dos homens
     */
+  let idade;
+  let somaIdade = 0;
+  let somaIdadeM = 0;
+  let somaIdadeF = 0;
 
-    //ENTRADA
+  let idadeM = [];
+  let idadeF = [];
 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+  for (let i = 1; i <= 10; i++) {
+    idade = Number(prompt(`Informe a idade da pessoa.`));
 
+    while (isNaN(idade) || idade < 0 || idade > 120) {
+      idade = Number(
+        prompt(`Informe a idade da pessoa. (Insira uma idade válida)`)
+      );
+    }
+
+    sexo = prompt(`Informe o sexo da pessoa. (F)eminimo (M)asculino`)
+      .toUpperCase()
+      .trim();
+
+    while (sexo != "F" && tipo != "M") {
+      sexo = prompt(`Informe o sexo da pessoa. (F)eminimo (M)asculino`)
+        .toUpperCase()
+        .trim();
+    }
+
+    somaIdade += idade;
+
+    if (sexo == "F") {
+      idadeF.push(idade);
+      somaIdadeF += idade;
+    } else {
+      idadeM.push(idade);
+      somaIdadeM += idade;
+    }
+  }
+
+  let mediaIdade = somaIdade / 10;
+  let mediaIdadeM = somaIdadeM / idadeM.length;
+  let mediaIdadeF = somaIdadeF / idadeF.length;
+
+  document.write(
+    `A média das idades das 10 pessoas é: ${Math.ceil(mediaIdade)} anos`
+  );
+  document.write(
+    `A média das idades das mulheres é: ${Math.ceil(mediaIdadeF)} anos`
+  );
+  document.write(
+    `A média das idades dos homens é: ${Math.ceil(mediaIdadeM)} anos`
+  );
 </script>
