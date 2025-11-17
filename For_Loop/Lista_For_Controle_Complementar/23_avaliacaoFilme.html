@@ -1,6 +1,6 @@
 <script>
-    //PROBLEMA
-    /*
+  //PROBLEMA
+  /*
     Desenvolva um programa que pergunte ao espectador a sua idade e a sua avaliação sobre o filme, sendo que deverá informar R para REGULAR e B para BOM.
     Apresente os seguintes dados:
     - A média de idade das pessoas que responderam que o filme era REGULAR
@@ -10,9 +10,60 @@
     - O percentual de pessoas que classificou o filme como BOM
     */
 
-    let filmes = ["A Cabana", "Projeto X", "Up: Altas Aventuras"];
+  let filmes = ["A Cabana", "Projeto X", "Up: Altas Aventuras"];
 
-    let sorteiaFilme = filmes[Math.floor(Math.random() * filmes.length) * 2];
-    
+  let sorteiaFilme = filmes[Math.floor(Math.random() * filmes.length) * 2];
+
+  let assitiuFilme;
+
+  let avaliacaoFilme;
+
+  let assistiramFilme = 0;
+  let notaRegular = 0;
+  let notaBoa = 0;
+  let idades = [];
+  let somaIdade // fazer depois
+
+  for (let i = 1; i <= 10; i++) {
+    assitiuFilme = prompt(`Você assistiu o filme ${sorteiaFilme}?`)
+      .toUpperCase()
+      .trim();
+
+    while (
+      assistiramFilme != "S" &&
+      assistiramFilme != "SIM" &&
+      assistiramFilme != "N" &&
+      assistiramFilme != "NÃO" &&
+      assistiramFilme != "NAO"
+    ) {
+      assitiuFilme = prompt(
+        `Você assistiu o filme ${sorteiaFilme}? (S)im ou (N)ao`
+      )
+        .toUpperCase()
+        .trim();
+    }
+
+    if (assitiuFilme == "S" || assitiuFilme == "SIM") {
+      assistiramFilme++;
+      avaliacaoFilme = prompt(
+        `Como você classifica o filme ${sorteiaFilme}? (R)egular (B)om`
+      );
+      while (avaliacaoFilme != "R" && avaliacaoFilme != "B") {
+        avaliacaoFilme = prompt(
+          `Como você classifica o filme ${sorteiaFilme}? (R)egular (B)om`
+        );
+      }
+      avaliacaoFilme == "R" ? notaRegular++ : notaBoa++;
+    }
+  }
+
+  let mediaFilmeR = notaRegular / assistiramFilme
+  let mediaFilmeB = notaBoa / assistiramFilme
+
+  let porcentagemFilmeR = ((notaRegular * 100) / assistiramFilme).toFixed(2)
+  let porcentagemFilmeB = ((notaBoa * 100) / assistiramFilme).toFixed(2)
+
+  document.write(``)
+
 
 </script>
