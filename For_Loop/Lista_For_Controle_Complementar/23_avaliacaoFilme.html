@@ -14,7 +14,7 @@
 
   let sorteiaFilme = filmes[Math.floor(Math.random() * filmes.length)];
 
-  let assitiuFilme;
+  let assistiuFilme;
 
   let avaliacaoFilme;
 
@@ -37,19 +37,13 @@
     },
   ] */
 
-  for (let i = 1; i <= 10; i++) {
-    assitiuFilme = prompt(`Você assistiu o filme ${sorteiaFilme}?`)
+  for (let i = 1; i <= 3; i++) {
+    assistiuFilme = prompt(`Você assistiu o filme ${sorteiaFilme}?`)
       .toUpperCase()
       .trim();
 
-    while (
-      assistiramFilme != "S" &&
-      assistiramFilme != "SIM" &&
-      assistiramFilme != "N" &&
-      assistiramFilme != "NÃO" &&  // arrumar aqui...
-      assistiramFilme != "NAO"
-    ) {
-      assitiuFilme = prompt(
+    while (assistiuFilme != "S" && assistiuFilme != "SIM" && assistiuFilme != "N" && assistiuFilme != "NÃO" && assistiuFilme != "NAO" ) {
+      assistiuFilme = prompt(
         `Você assistiu o filme ${sorteiaFilme}? (S)im ou (N)ao`
       )
         .toUpperCase()
@@ -62,16 +56,16 @@
       idade = Number(prompt(`Informe sua idade. (Valor Válido)`));
     }
 
-    if (assitiuFilme == "S" || assitiuFilme == "SIM") {
+    if (assistiuFilme == "S" || assistiuFilme == "SIM") {
       somaIdadeFilme += idade;
       assistiramFilme++;
       avaliacaoFilme = prompt(
         `Como você classifica o filme ${sorteiaFilme}? (R)egular (B)om`
-      );
+      ).toUpperCase().trim();
       while (avaliacaoFilme != "R" && avaliacaoFilme != "B") {
         avaliacaoFilme = prompt(
           `Como você classifica o filme ${sorteiaFilme}? (R)egular (B)om`
-        );
+        ).toUpperCase().trim();
       }
       if (avaliacaoFilme == "R") {
         notaRegular++;
@@ -83,26 +77,26 @@
     }
   }
 
-  let mediaIdadeFilmeR = somaIdadeFilmeR / assistiramFilme;
-  let mediaIdadeFilmeB = somaIdadeFilmeB / assistiramFilme;
-  let mediaIdadeFilme = mediaIdadeFilme / assistiramFilme;
+  let mediaIdadeFilmeR = somaIdadeFilmeR / notaRegular;
+  let mediaIdadeFilmeB = somaIdadeFilmeB / notaBoa;
+  let mediaIdadeFilme = somaIdadeFilme / assistiramFilme;
   let porcentagemFilmeR = ((notaRegular * 100) / assistiramFilme).toFixed(2);
   let porcentagemFilmeB = ((notaBoa * 100) / assistiramFilme).toFixed(2);
 
   document.write(
-    `A média de idade das pessoas que responderam que o filme era REGULAR é: ${mediaIdadeFilmeR} anos. <br>`
+    `A média de idade das pessoas que responderam que o filme era REGULAR é: ${mediaIdadeFilmeR.toFixed(2)} anos. <br>`
   );
 
   document.write(
-    `A média de idade das pessoas que responderam que o filme era BOM é: ${mediaIdadeFilmeB} anos. <br>`
+    `A média de idade das pessoas que responderam que o filme era BOM é: ${mediaIdadeFilmeB.toFixed(2)} anos. <br>`
   );
 
   document.write(
-    `A média de idade de todas as pessoas que assistiram ao filme é: ${mediaIdadeFilme} anos. <br>`
+    `A média de idade de todas as pessoas que assistiram ao filme é: ${mediaIdadeFilme.toFixed(2)} anos. <br>`
   );
 
   document.write(
-    `O percentual de pessoas que classificou o filme como REGULAR é: ${porcentagemFilmeR}%`
+    `O percentual de pessoas que classificou o filme como REGULAR é: ${porcentagemFilmeR}% <br>`
   );
   document.write(
     `O percentual de pessoas que classificou o filme como REGULAR é: ${porcentagemFilmeB}%`
