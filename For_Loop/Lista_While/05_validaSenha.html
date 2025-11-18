@@ -14,9 +14,9 @@
 
   //ENTRADA
 
-  let senha = Number(prompt(`Informe sua senha`));
+  let senha = prompt(`Informe sua senha`);
 
-  while ((Number.isInteger(senha) && String(senha).length == 4) == false) {
+  while (String(senha).length != 4 || isNaN(Number(senha))) {
     alert(`Senha Incorreta.`);
     senha = Number(
       prompt(`Informe sua senha (apenas numeros inteiros e de 4 carácteres.)`)

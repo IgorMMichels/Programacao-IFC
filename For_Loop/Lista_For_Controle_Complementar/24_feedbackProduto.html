@@ -1,6 +1,6 @@
 <script>
-    //PROBLEMA
-    /*
+  //PROBLEMA
+  /*
     Considere que um novo produto foi lançado no mercado. Para saber se atendeu as expectativas dos consumidores, a empresa decidiu entrevistar 10 pessoas.
     Peça para que seja informado o gênero da pessoa (M-Masculino ou F-Feminino). Também peça para responder se o produto atendeu as suas expectativas (S-Sim ou N-Não).
     Ao final, apresente os seguintes dados:
@@ -10,17 +10,61 @@
     - Percentual de homens que responderam não entre todos os homens analisados
     */
 
-    //ENTRADA
+  let sexo;
+  let atendeuEspectativas;
+  let idPessoa = 0;
+  let atendeu;
 
+  let pessoas = [];
 
-    //PROCESSAMENTO
-    //ENTRADA
+  for (let i = 1; i <= 1; i++) {
+    sexo = prompt(`Informe o sexo da pessoa. (F)eminimo (M)asculino`)
+      .toUpperCase()
+      .trim();
 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+    while (sexo != "F" && sexo != "M") {
+      sexo = prompt(`Informe o sexo da pessoa. (F)eminimo (M)asculino`)
+        .toUpperCase()
+        .trim();
+    }
 
+    atendeuEspectativas = prompt(`O produto atendeu suas espectativas`)
+      .toUpperCase()
+      .trim();
+
+    while (
+      atendeuEspectativas != "S" &&
+      atendeuEspectativas != "SIM" &&
+      atendeuEspectativas != "N" &&
+      atendeuEspectativas != "NÃO" &&
+      atendeuEspectativas != "NAO"
+    ) {
+      atendeuEspectativas = prompt(`O produto atendeu suas espectativas`)
+        .toUpperCase()
+        .trim();
+    }
+
+    if (atendeuEspectativas == "S" || atendeuEspectativas == "SIM") {
+      atendeu = "Sim";
+    } else {
+      atendeu = "Não";
+    }
+
+    idPessoa = i;
+    adicionaPessoa(idPessoa, sexo, atendeu);
+  }
+
+  for (let i = 0; i < pessoas.length; i++) {
+    for (let prop in pessoas[i]) {
+      document.write(prop + ": " + (pessoas[i])[prop] + "<br>"); // CONTINUAR DEPOIS
+    }
+  }
+
+  function adicionaPessoa(idPessoa, genero, atendeuEspectativas) {
+    pessoas.push({
+      id: idPessoa,
+      sexo: genero,
+      atendeuEspectativa: atendeuEspectativas,
+    });
+  }
 </script>

@@ -6,15 +6,24 @@
     - Poupança: 1,5% ao mês
     - Poupança plus: 2% ao mês
     - Fundos de renda fixa: 4% ao mês
+    // esquema de piramide 
     */
 
-    //ENTRADA
+    let valorInvestimento = Number(prompt(`Informe o valor que você deseja investir`));
 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
+    let valorPoupanca = valorInvestimento;
+    let valorPoupancaPlus = valorInvestimento;
+    let valorRendaFixa = valorInvestimento;
+
+    for (let i = 0; i <= 36; i ++) {
+        valorPoupanca *= 1.015;
+        valorPoupancaPlus *= 1.02;
+        valorRendaFixa *= 1.04;
+    }
+
+    document.write(`O valor previsto para o investimento poupança em anos é: R$${valorPoupanca.toFixed(2)} <br>`);
+    document.write(`O valor previsto para o investimento poupança plus em anos é: R$${valorPoupancaPlus.toFixed(2)} <br>`);
+    document.write(`O valor previsto para o investimento renda fixa em anos é: R$${valorRendaFixa.toFixed(2)} <br>`);
     
 
 </script>

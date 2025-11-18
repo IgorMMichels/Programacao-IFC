@@ -68,16 +68,22 @@
   let maisVotado = Math.max(...votosCandidatos);
 
   let ganhador = opcoes[votosCandidatos.indexOf(maisVotado)];
-
-  // se votos nulos ganharem adicionar no futuro
-
   document.write(`O resumo da eleição foi: <br><br>`);
+  if (votoJoao == votoMaria) {
+    document.write(
+      `A votação terminou em empate, portanto não houve nenhum vencedor. <br>`
+    );
+  }
+  
   document.write(
     `O numero de votos do canditado ${opcoes[0]} foi: ${votoJoao} votos. <br>`
   );
   document.write(
     `O numero de votos do canditado ${opcoes[1]} foi: ${votoMaria} votos. <br>`
   );
+
+  // se votos nulos ganharem adicionar no futuro
+
   document.write(
     `A porcentagem de votos nulo foi: ${Math.round(
       (votoNulo * 100) / (votoBranco + votoJoao + votoNulo + votoMaria)

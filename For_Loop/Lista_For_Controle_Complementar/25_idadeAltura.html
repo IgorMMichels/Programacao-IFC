@@ -1,6 +1,6 @@
 <script>
-    //PROBLEMA
-    /*
+  //PROBLEMA
+  /*
     Desenvolva um programa que receba a idade de 10 pessoas, e também o seu peso.
     Calcule e apresente os seguintes dados:
     - Média do peso das pessoas que possuem mais de 50 anos
@@ -8,13 +8,49 @@
     - Média do peso de todas as pessoas
     */
 
-    //ENTRADA
+  let somaPesoMenos25 = 0;
+  let pessoaMenos25 = 0;
+  let somaPesoMais50 = 0;
+  let pessoaMais50 = 0;
+  let somaPeso = 0;
+  let idade;
+  let peso;
+  let qntPessoa = 0;
 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+  for (let i = 1; i <= 10; i++) {
+    idade = Number(prompt(`Informe a idade da pessoa.`));
+    while (isNaN(idade) || idade < 0 || idade > 120) {
+      idade = Number(prompt(`Informe a idade da pessoa. (Valor Válido)`));
+    }
+    peso = Number(prompt(`Informe o peso da pessoa. (Kg)`));
+    while (isNaN(peso) || peso < 0 || idade > 350) {
+      peso = Number(prompt(`Informe o peso da pessoa. (Kg)(Valor)`));
+    }
 
+    if (idade < 25) {
+      somaPesoMenos25 += peso;
+      pessoaMenos25++;
+    } else if (idade > 50) {
+      somaPesoMais50 += peso;
+      pessoaMais50++;
+    } 
+    somaPeso += peso;
+    qntPessoa++;
+  }
+
+  let mediaPesoMais50 = somaPesoMais50 / pessoaMais50;
+  let mediaPesoMenos25 = somaPesoMenos25 / pessoaMenos25;
+  let mediaPeso = somaPeso / qntPessoa;
+
+  document.write(
+    `A média do peso das pessoas que possuem mais de 50 anos é: ${mediaPesoMais50.toFixed(
+      2
+    )}Kg <br>`
+  );
+  document.write(
+    `A média do peso das pessoas que possuem mais de 50 anos é: ${mediaPesoMenos25.toFixed(
+      2
+    )}Kg <br>`
+  );
+  document.write(`A média de peso de todas as pessoas é: ${mediaPeso}Kg <br>`);
 </script>

@@ -40,7 +40,9 @@
     }
     idadeGrupo.push(idade);
 
-    sexo = prompt(`Informe o Sexo da Pessoa (F)eminimo, (M)asculino`).toUpperCase();
+    sexo = prompt(
+      `Informe o Sexo da Pessoa (F)eminimo, (M)asculino`
+    ).toUpperCase();
     if (sexo == "F") {
       sexoGrupo.push(`Feminio`);
       mulheres++;
@@ -55,21 +57,27 @@
     salarioGrupo.push(salario);
     somaSalario += salario;
 
-    qntPessoa ++
+    qntPessoa++;
   }
 
-  let mediaSalario = somaSalario/qntPessoa
+  let mediaSalario = somaSalario / qntPessoa;
 
   let menorSalario = Math.min(...salarioGrupo);
 
   let maiorIdadeGrupo = Math.max(...idadeGrupo);
   let menorIdadeGrupo = Math.min(...idadeGrupo);
-  
+
+  document.write(`Resumo do apanhado de informações: <br>`);
   document.write(
-    `Resumo do apanhado de informações: <br>`
+    `A média salarial do grupo: R$${mediaSalario.toFixed(2)}. <br>`
   );
-  document.write(`A média salarial do grupo: R$${mediaSalario.toFixed(2)}. <br>`);
-  document.write(`A maior idade do grupo é ${maiorIdadeGrupo} anos, e a menor idade do grupo é ${menorIdadeGrupo} anos. <br>`);
+  document.write(
+    `A maior idade do grupo é ${maiorIdadeGrupo} anos, e a menor idade do grupo é ${menorIdadeGrupo} anos. <br>`
+  );
   document.write(`A quantidade de mulheres na região: ${mulheres}. <br>`);
-  document.write(`A pessoa que possuí o menor salário é do sexo ${sexoGrupo[salarioGrupo.indexOf(menorSalario)]} e possui ${idadeGrupo[salarioGrupo.indexOf(menorSalario)]} anos.<br>`);
+  document.write(
+    `A pessoa que possuí o menor salário é do sexo ${
+      sexoGrupo[salarioGrupo.indexOf(menorSalario)]
+    } e possui ${idadeGrupo[salarioGrupo.indexOf(menorSalario)]} anos.<br>`
+  );
 </script>
