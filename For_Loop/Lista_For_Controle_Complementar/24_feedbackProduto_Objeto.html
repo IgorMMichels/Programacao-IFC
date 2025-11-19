@@ -12,18 +12,12 @@
 
   let sexo;
   let atendeuEspectativas;
-
   let idPessoa = 0;
-  let atendeuS = 0;
-  let atendeuN = 0;
-  let homens = 0;
-  let mulheres = 0;
-  let mulheresRespondeuSim = 0;
-  let homensRespondeuNao = 0;
+  let atendeu;
 
   let pessoas = [];
 
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 1; i <= 1; i++) {
     sexo = prompt(`Informe o sexo da pessoa. (F)eminimo (M)asculino`)
       .toUpperCase()
       .trim();
@@ -33,8 +27,6 @@
         .toUpperCase()
         .trim();
     }
-
-    sexo == "M" ? homens++ : mulheres++;
 
     atendeuEspectativas = prompt(`O produto atendeu suas espectativas`)
       .toUpperCase()
@@ -53,20 +45,26 @@
     }
 
     if (atendeuEspectativas == "S" || atendeuEspectativas == "SIM") {
-      atendeuS ++;
+      atendeu = "Sim";
     } else {
-      atendeuN ++;
+      atendeu = "Não";
     }
 
-    if (sexo == "F" && atendeuEspectativas == "S") {
-      mulheresRespondeuSim++;
-    } else if (sexo == "M" && atendeuEspectativas == "N") {
-      homensRespondeuNao++;
+    idPessoa = i;
+    adicionaPessoa(idPessoa, sexo, atendeu);
+  }
+
+  for (let i = 0; i < pessoas.length; i++) {
+    for (let prop in pessoas[i]) {
+      document.write(prop + ": " + (pessoas[i])[prop] + "<br>"); // CONTINUAR DEPOIS
     }
   }
 
-  document.write(`Numero de Pessoas que Respondeu Sim: ${atendeuS} <br>`);
-  document.write(`Numero de Pessoas que Respondeu Não: ${atendeuN} <br>`);
-  document.write(`Numero de Mulheres que Respondeu Sim: ${mulheresRespondeuSim} <br>`);
-  document.write(`Percentual de homens que Responderam Não Entre Todos os Homens: ${((homensRespondeuNao * 100) / homens).toFixed(2)}% <br>`);
+  function adicionaPessoa(idPessoa, genero, atendeuEspectativas) {
+    pessoas.push({
+      id: idPessoa,
+      sexo: genero,
+      atendeuEspectativa: atendeuEspectativas,
+    });
+  }
 </script>
