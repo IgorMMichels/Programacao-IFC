@@ -1,6 +1,6 @@
 <script>
-    //PROBLEMA
-    /*
+  //PROBLEMA
+  /*
     Desenvolva um programa que pergunte ao usuário o limite inferior e o limite superior.
     Imprima todos os números pares que estão neste intervalo e calcule a soma desses números.
     Por exemplo:
@@ -10,13 +10,30 @@
     - Soma: 28
     */
 
-    //ENTRADA
+  let limiteInferior = prompt(`Informe o limite inferior/numero inicial.`);
+  let limiteSuperior = prompt(`Informe o limite superior/numero final`);
 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+  while (
+    isNaN(limiteInferior) ||
+    limiteSuperior > limiteInferior ||
+    isNaN(limiteSuperior)
+  ) {
+    limiteInferior = prompt(`Informe o limite inferior/numero inicial.`);
+    limiteSuperior = prompt(`Informe o limite superior/numero final`);
+  }
 
+  let soma = 0;
+  let pares = [];
+
+  for (let i = limiteInferior; limiteInferior < limiteSuperior; i++) {
+    if (limiteInferior % 2 == 0) {
+      pares.push(limiteInferior);
+      soma += i;
+    }
+  }
+
+  document.write(`Limite inferior: ${limiteInferior}<br>`);
+  document.write(`Limite superior: ${limiteSuperior}<br>`);
+  document.write(`Saída: ${pares.join(", ")}<br>`);
+  document.write(`Soma: ${soma}`);
 </script>

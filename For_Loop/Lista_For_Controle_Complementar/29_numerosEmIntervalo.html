@@ -5,19 +5,26 @@
     Apresente a percentagem e a quantidade de números que estão no intervalo sugeridos.
     */
 
-    let numeros = [];
     let numero;
 
-    let numerosEntre;
+    let numerosEntre = [];
+
     // mudar a forma de fazer essa atividade
 
     for (let i = 1; i <= 10; i ++) {
         numero = Number(prompt(`Informe um número para ser adicionado a lista.`));
 
-        while(isNaN(idade)) {
-            numero.push(numeros)
+        while(isNaN(numero)) {
+            numero = Number(prompt(`Informe um número para ser adicionado a lista. (Valor Válido)`));
+        }
+
+        if (numero >= 100 && numero <= 200) {
+            numerosEntre.push(numero)
         }
     }
+
+    document.write(`${numerosEntre.length} números estão entre 100 e 200, sua porcentagem de numeros é: ${((numerosEntre.length * 100) / 10).toFixed(2)}% <br>`);
+    document.write(`Os números que estão nesse intervalo são: ${numerosEntre.join(", ")}.`);
 
     
     
