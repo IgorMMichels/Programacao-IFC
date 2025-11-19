@@ -7,7 +7,11 @@
     Saída: 54321
     */
 
-    const numero = parseInt(prompt(`Informe um número inteiro.`));
+    let numero = parseInt(prompt(`Informe um número inteiro.`));
+
+    while (isNaN(numero) || !Number.isInteger(numero)) {
+        numero = parseInt(prompt(`Informe um número inteiro (válido).`));   
+    }
 
     let numAtual;
 

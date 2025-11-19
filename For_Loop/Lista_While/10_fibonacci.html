@@ -9,27 +9,19 @@
     prompt(`Quantos números da sequência de Fibonacci você deseja obter.`)
   );
 
-  let numeroPassado = 0;
+  while (isNaN(numerosSequencia) || numerosSequencia < 0) {
+    numerosSequencia = parseInt(
+      prompt(`Quantos números da sequência de Fibonacci você deseja obter.`)
+    );
+  }
 
-  let fibonacci = [];
-
-  // na atividade do sábado letivo, poderiamos pedir para o usuário informar os 2 primeiros números da sequencia, de onde começaria como 0 e 1, facilitando um pouco a conta, tive que fazer gambiarra para funcionar...
+  let fibonacci = [0, 1];
 
   let valor = 1;
 
-  let i = 0;
-
-  while (i < numerosSequencia) {
-    if (i == 0) {
-      fibonacci.push(0);
-    } else if (i == 1) {
-      fibonacci.push(valor);
-    } else {
-      valor = fibonacci[i - 1] + fibonacci[i - 2];
-      fibonacci.push(valor);
-    }
-
-    i++;
+  while (fibonacci.length < numerosSequencia) {
+    valor = fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2];
+    fibonacci.push(valor);
   }
 
   alert(`A sequência fibonacci de ${numerosSequencia} números é: ${fibonacci}`);

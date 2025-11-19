@@ -10,5 +10,13 @@
     alert(`Bom dia, ${visitante}!`);
   }
 
-  boasVindas("Igor");
+  let nome = prompt(`Informe seu nome.`).trim().toLowerCase();
+
+  while (!isNaN(nome)) {
+    nome = prompt(`Informe seu nome.`).trim().toLowerCase();
+  }
+
+  nome = nome.charAt(0).toUpperCase() + nome.slice(1);
+
+  boasVindas(nome);
 </script>
