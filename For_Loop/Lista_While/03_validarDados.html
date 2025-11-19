@@ -20,7 +20,7 @@
 
   let idade = parseInt(prompt(`Informe sua idade.`));
 
-  while (isNaN(idade) && idade < 0 || idade > 150) {
+  while (isNaN(idade) || idade < 0 || idade > 150) {
     idade = parseInt(
       prompt(`Idade inválida, informe uma idade entre 0 e 150 anos.`)
     );
@@ -36,7 +36,7 @@
     .toLowerCase()
     .trim();
 
-  while (isNaN(sexo) && sexo != "m" && sexo != "f") {
+  while (sexo != "m" && sexo != "f") {
     sexo = prompt(
       `Inválido, informe o seu sexo novamente (m)asculino ou (f)eminino.`
     )

@@ -7,7 +7,7 @@
 
   let numero = Number(prompt(`Informe um número entre zero e dez.`));
 
-  while ((numero >= 0 && numero <= 10) == false) {
+  while (isNaN(nota) || nota < 0 || nota > 10) {
     numero = Number(
       prompt(`Valor Inválido, informe um número entre zero e dez.`)
     );

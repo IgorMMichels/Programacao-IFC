@@ -40,9 +40,16 @@
     }
     idadeGrupo.push(idade);
 
-    sexo = prompt(
-      `Informe o Sexo da Pessoa (F)eminimo, (M)asculino`
-    ).toUpperCase();
+    sexo = prompt(`Informe o Sexo da Pessoa (F)eminimo, (M)asculino`)
+      .toUpperCase()
+      .trim();
+
+    while (sexo != "F" && sexo != "M") {
+      sexo = prompt(`Informe o Sexo da Pessoa (F)eminimo, (M)asculino`)
+        .toUpperCase()
+        .trim();
+    }
+
     if (sexo == "F") {
       sexoGrupo.push(`Feminio`);
       mulheres++;
@@ -54,6 +61,11 @@
     }
 
     salario = Number(prompt(`Informe o salário da Pessoa`));
+
+    while (isNaN(salario) || salario < 0) {
+      salario = Number(prompt(`Informe o salário da Pessoa (Valor Válido)`));
+    }
+
     salarioGrupo.push(salario);
     somaSalario += salario;
 
