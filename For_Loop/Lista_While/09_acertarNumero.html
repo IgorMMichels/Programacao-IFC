@@ -9,7 +9,7 @@
   let numero = parseInt(prompt(`Informe um número de 1 a 30`));
 
 
-  let aleatorio = Math.ceil(Math.random() * 30); // para não ter chance de ser zero
+  let aleatorio = Math.floor(Math.random() * 30);
 
   while (numero != aleatorio) {
     if (numero > aleatorio) {
