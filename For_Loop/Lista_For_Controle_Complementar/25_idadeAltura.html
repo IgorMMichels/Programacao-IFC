@@ -23,7 +23,7 @@
       idade = Number(prompt(`Informe a idade da pessoa. (Valor Válido)`));
     }
     peso = Number(prompt(`Informe o peso da pessoa. (Kg)`));
-    while (isNaN(peso) || peso < 0 || idade > 350) {
+    while (isNaN(peso) || peso < 0 || peso > 350) {
       peso = Number(prompt(`Informe o peso da pessoa. (Kg)(Valor)`));
     }
 
@@ -48,7 +48,7 @@
     )}Kg <br>`
   );
   document.write(
-    `A média do peso das pessoas que possuem mais de 50 anos é: ${mediaPesoMenos25.toFixed(
+    `A média do peso das pessoas que possuem menos de 25 anos é: ${mediaPesoMenos25.toFixed(
       2
     )}Kg <br>`
   );

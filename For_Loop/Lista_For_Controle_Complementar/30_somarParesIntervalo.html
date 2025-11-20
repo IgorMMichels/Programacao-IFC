@@ -10,24 +10,24 @@
     - Soma: 28
     */
 
-  let limiteInferior = prompt(`Informe o limite inferior/numero inicial.`);
-  let limiteSuperior = prompt(`Informe o limite superior/numero final`);
+  let limiteInferior = Number(prompt(`Informe o limite inferior/numero inicial.`));
+  let limiteSuperior = Number(prompt(`Informe o limite superior/numero final`));
 
   while (
     isNaN(limiteInferior) ||
-    limiteSuperior > limiteInferior ||
-    isNaN(limiteSuperior)
+    isNaN(limiteSuperior) ||
+    limiteSuperior <= limiteInferior 
   ) {
-    limiteInferior = prompt(`Informe o limite inferior/numero inicial.`);
-    limiteSuperior = prompt(`Informe o limite superior/numero final`);
+    limiteInferior = Number(prompt(`Informe o limite inferior/numero inicial.`));
+    limiteSuperior = Number(prompt(`Informe o limite superior/numero final`));
   }
 
   let soma = 0;
   let pares = [];
 
-  for (let i = limiteInferior; limiteInferior < limiteSuperior; i++) {
-    if (limiteInferior % 2 == 0) {
-      pares.push(limiteInferior);
+  for (let i = limiteInferior; i < limiteSuperior; i++) {
+    if (i % 2 == 0) {
+      pares.push(i);
       soma += i;
     }
   }

@@ -43,10 +43,17 @@
     tipo == "v" ? v.push(valor) : p.push(valor);
   }
 
-  let primeiraPrestação = p[0]/3
-
   document.write(`Foram efetuadas ${v.length} compras à vista. <br>`);
   document.write(`Foram efetuadas ${p.length} compras parceladas. <br>`);
-  document.write(`O total das compras efetuadas foi: R${totalCompras.toFixed(2)}`);
-  document.write(`O valor da prestação da prmeira compra é: R$${primeiraPrestação.toFixed(2)}`)
+  document.write(
+    `O total das compras efetuadas foi: R${totalCompras.toFixed(2)}`
+  );
+  if (p.length > 0) {
+    let primeiraPrestação = p[0] / 3;
+    document.write(
+      `O valor da prestação da prmeira compra é: R$${primeiraPrestação.toFixed(
+        2
+      )}`
+    );
+  }
 </script>

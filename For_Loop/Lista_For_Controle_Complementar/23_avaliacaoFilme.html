@@ -42,7 +42,13 @@
       .toUpperCase()
       .trim();
 
-    while (assistiuFilme != "S" && assistiuFilme != "SIM" && assistiuFilme != "N" && assistiuFilme != "NÃO" && assistiuFilme != "NAO" ) {
+    while (
+      assistiuFilme != "S" &&
+      assistiuFilme != "SIM" &&
+      assistiuFilme != "N" &&
+      assistiuFilme != "NÃO" &&
+      assistiuFilme != "NAO"
+    ) {
       assistiuFilme = prompt(
         `Você assistiu o filme ${sorteiaFilme}? (S)im ou (N)ao`
       )
@@ -61,11 +67,15 @@
       assistiramFilme++;
       avaliacaoFilme = prompt(
         `Como você classifica o filme ${sorteiaFilme}? (R)egular (B)om`
-      ).toUpperCase().trim();
+      )
+        .toUpperCase()
+        .trim();
       while (avaliacaoFilme != "R" && avaliacaoFilme != "B") {
         avaliacaoFilme = prompt(
           `Como você classifica o filme ${sorteiaFilme}? (R)egular (B)om`
-        ).toUpperCase().trim();
+        )
+          .toUpperCase()
+          .trim();
       }
       if (avaliacaoFilme == "R") {
         notaRegular++;
@@ -83,22 +93,32 @@
   let porcentagemFilmeR = ((notaRegular * 100) / assistiramFilme).toFixed(2);
   let porcentagemFilmeB = ((notaBoa * 100) / assistiramFilme).toFixed(2);
 
-  document.write(
-    `A média de idade das pessoas que responderam que o filme era REGULAR é: ${mediaIdadeFilmeR.toFixed(2)} anos. <br>`
-  );
+  if (assistiramFilme > 0) {
+    document.write(
+      `A média de idade das pessoas que responderam que o filme era REGULAR é: ${mediaIdadeFilmeR.toFixed(
+        2
+      )} anos. <br>`
+    );
 
-  document.write(
-    `A média de idade das pessoas que responderam que o filme era BOM é: ${mediaIdadeFilmeB.toFixed(2)} anos. <br>`
-  );
+    document.write(
+      `A média de idade das pessoas que responderam que o filme era BOM é: ${mediaIdadeFilmeB.toFixed(
+        2
+      )} anos. <br>`
+    );
 
-  document.write(
-    `A média de idade de todas as pessoas que assistiram ao filme é: ${mediaIdadeFilme.toFixed(2)} anos. <br>`
-  );
+    document.write(
+      `A média de idade de todas as pessoas que assistiram ao filme é: ${mediaIdadeFilme.toFixed(
+        2
+      )} anos. <br>`
+    );
 
-  document.write(
-    `O percentual de pessoas que classificou o filme como REGULAR é: ${porcentagemFilmeR}% <br>`
-  );
-  document.write(
-    `O percentual de pessoas que classificou o filme como REGULAR é: ${porcentagemFilmeB}%`
-  );
+    document.write(
+      `O percentual de pessoas que classificou o filme como REGULAR é: ${porcentagemFilmeR}% <br>`
+    );
+    document.write(
+      `O percentual de pessoas que classificou o filme como BOM é: ${porcentagemFilmeB}%`
+    );
+  } else {
+    document.write(`Nenhuma pessoa assistiu o filme.`)
+  }
 </script>
