@@ -12,7 +12,7 @@
 
   let nome = prompt(`Informe seu nome.`).trim().toLowerCase();
 
-  while (!isNaN(nome)) {
+  while (!isNaN(nome) || nome === "")  {
     nome = prompt(`Informe seu nome.`).trim().toLowerCase();
   }
 

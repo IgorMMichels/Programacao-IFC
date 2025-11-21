@@ -9,8 +9,21 @@
     return ((graus - 32) * 5) / 9;
   }
 
-  const fahrenheitCelciusArrow = (graus) => (graus - 32) * 5 / 9;
+  const fahrenheitCelciusArrow = (graus) => ((graus - 32) * 5) / 9;
 
-  alert(fahrenheitCelciusArrow(176));
-  
+  let graus = Number(
+    prompt(
+      `Informe uma temperatura em graus Fahrenheit para Converter em graus Celcius.`
+    )
+  );
+
+  while (isNaN(graus) || graus == "" || graus < 1) {
+    graus = Number(
+      prompt(
+        `Informe uma temperatura em graus Fahrenheit para Converter em graus Celcius.`
+      )
+    );
+  }
+
+  alert(`A temperatura ${graus} graus Fahrenheit em celcius é: ${fahrenheitCelcius(graus)}º`);
 </script>

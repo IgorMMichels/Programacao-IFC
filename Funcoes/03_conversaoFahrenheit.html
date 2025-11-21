@@ -11,7 +11,12 @@
 
   const grausFahrenheitArrow = (graus) => (9 * graus + 160) / 5;
 
-  const validaNumero = (numero) >= 
 
-  alert(grausFahrenheit(80));
+  let graus = Number(prompt(`Informe uma temperatura em graus Celcius para Converter em Fahrenheit.`));
+
+  while (isNaN(graus) || graus == "" || graus < 1) {
+    graus = Number(prompt(`Informe uma temperatura em graus Celcius para Converter em Fahrenheit.`));
+  }
+
+  alert(`A temperatura ${graus}º graus celcius em Fahrenheit é: ${fahrenheitCelcius(graus)}`);
 </script>

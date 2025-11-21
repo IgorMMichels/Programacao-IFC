@@ -12,9 +12,9 @@
 
     for (let i = 0; i < arrayPalavra.length; i++) {
       if (
-        arrayPalavra[i] == "A" ||
-        arrayPalavra[i] == "E" ||
-        arrayPalavra[i] == "I" ||
+        arrayPalavra[i].replace("Ã", "A") == "A" ||
+        arrayPalavra[i].replace("É", "E")  == "E" ||
+        arrayPalavra[i].replace("Í", "I") == "I" ||
         arrayPalavra[i] == "O" ||
         arrayPalavra[i] == "U"
       ) {
@@ -26,5 +26,11 @@
     return qntVogal;
   };
 
-  alert(vogalPalavra("Paralelepipedo"));
+  let palavra = prompt(`Informe uma palavra para saber quantas vogais tem.`);
+
+  while (!isNaN(palavra) || palavra === "") {
+    palavra = prompt(`Informe uma palavra para saber quantas vogais tem.`);
+  }
+
+  alert(`A palavra ${palavra} tem ${vogalPalavra(palavra)}`);
 </script>

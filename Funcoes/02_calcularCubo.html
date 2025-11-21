@@ -11,5 +11,11 @@
 
   const calculaCuboArrow = (numero) => numero * numero;
 
-  alert(calculaCuboArrow(20));
+  let numero = Number(prompt(`Informe um número inteiro para saber se seu cubo.`));
+
+  while (isNaN(numero) || !Number.isInteger(numero) || numero == "" || numero < 1) {
+    numero = Number(prompt(`Informe um número inteiro para saber se seu cubo.`));
+  }
+
+  alert(calculaCuboArrow(numero));
 </script>
