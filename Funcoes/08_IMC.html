@@ -19,9 +19,7 @@
     altura = Number(prompt(`Informe sua altura. (Cm)`));
   }
 
-  (altura <= 2.5) ? altura * 100 : null;
-
-
+  altura <= 2.5 ? altura * 100 : null; // para transformar metros em cm
 
   alert(`O seu índice IMC é: ${IMC(peso, altura)}`);
 </script>

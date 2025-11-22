@@ -6,22 +6,35 @@
 
   const validaPrimo = (numero) => {
     if (numero <= 1) {
-      return false;
+      return "Numero não primo";
     } else if (numero == 2) {
-      return true;
+      return "Numero Primo!";
     } else if (numero % 2 == 0) {
-      return false;
+      return "Numero não primo";
     } else {
       for (let i = 3; i <= Math.sqrt(numero); i += 2) {
         if (numero % i == 0) {
-          return false;
+          return "Numero não primo";
           break;
         }
       }
     }
 
-    return true;
+    return "Numero Primo!";
   };
 
-  alert(validaPrimo(parseInt(10)));
+  let numero = Number(
+    prompt(`Informe um número inteiro e positivo. Para ver se é primo.`)
+  );
+
+  while (
+    isNaN(numero) ||
+    !Number.isInteger(numero) ||
+    numero == "" ||
+    numero < 1
+  ) {
+    numero = Number(prompt(`Informe um número inteiro e positivo. Para ver se é primo.`));
+  }
+
+  alert(validaPrimo(numero));
 </script>
