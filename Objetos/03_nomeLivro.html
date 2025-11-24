@@ -1,18 +1,40 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: DADOS DO LIVRO
     Crie um objeto chamado livro com as propriedades titulo, autor e numeroDePaginas, e crie um método que retorne o livro em formato string.
     */
-    
-    let livro = {
-        titulo: "Biografia Autoral de Igor Michels",
-        autor: "Igor Michels",
-        numeroDePaginas: 92
-    }
-    
-    for (let prop in livro) {
-        document.write(prop + ": " + livro[prop] + "<br>"); // fazer uma função ver
-    }
 
+  let titulo = prompt(`Informe o título do livro.`);
+
+  while (!isNaN(titulo) || titulo === "") {
+    titulo = prompt(`Informe o título do livro.`);
+  }
+
+  let autor = prompt(`Informe o autor do livro`);
+
+  while (!isNaN(autor) || autor === "") {
+    autor = prompt(`Informe o autor do livro`);
+  }
+
+  let numeroDePaginas = prompt(Number(`Informe o número de páginas no livro`));
+
+  while (
+    isNaN(numeroDePaginas) ||
+    !Number.isInteger(numeroDePaginas) ||
+    numeroDePaginas == "" ||
+    numeroDePaginas < 1
+  ) {
+    numeroDePaginas = Number(prompt(`Informe o número de páginas no livro`));
+  }
+
+  let livro = {
+    titulo: titulo,
+    autor: autor,
+    numeroDePaginas: numeroDePaginas,
+  };
+
+  for (let prop in livro) {
+    document.write(prop + ": " + livro[prop] + "<br>"); // fazer uma função ver
+  }
 </script>

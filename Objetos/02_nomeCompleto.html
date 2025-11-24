@@ -5,12 +5,25 @@
     Crie um objeto chamado pessoa com as propriedades nome e sobrenome, e crie um método que retorne o nome completo da pessoa.
     */
 
-  let nomePessoa = {
-    nome: "Igor",
-    sobrenome: "Michels",
-  };
+  let nome = prompt(`Informe seu primeiro nome.`).trim().toLowerCase();
 
-  const retornaNome = (nome, sobrenome) => nomePessoa.nome + " " + nomePessoa.sobrenome;
+  while (!isNaN(nome) || nome === "") {
+    nome = prompt(`Informe seu primeiro nome.`).trim().toLowerCase();
+  }
+
+  let sobrenome = prompt(`Informe o seu sobrenome`).trim().toLowerCase();
+
+  while (!isNaN(sobrenome) || sobrenome === "") {
+    sobrenome = prompt(`Informe o seu sobrenome`).trim().toLowerCase();
+  }
+
+  const retornaNome = (nome, sobrenome) =>
+    "Olá " + nomePessoa.nome + " " + nomePessoa.sobrenome;
+
+  let nomePessoa = {
+    nome: nome,
+    sobrenome: sobrenome,
+  };
 
   alert(retornaNome(nomePessoa.nome, nomePessoa.sobrenome));
 </script>

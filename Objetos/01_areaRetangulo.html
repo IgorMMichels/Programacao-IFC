@@ -5,16 +5,25 @@
     Crie um objeto chamado retangulo com as propriedades base e altura, e crie um método para calcular a área do retângulo.
     */
 
-  let retangulo = {
-    base: 15,
-    altura: 8,
-  };
+  const calculaArea = (base, altura) => (base * altura) / 2;
 
-    const calculaArea = (base, altura) => (base * altura) / 2;
+  let base = Number(prompt(`Informe a base do triângulo`));
 
-  for (let prop in retangulo) {
-    document.write(prop + ": " + retangulo[prop] + "<br>");
+  while (isNaN(base) || base == "" || base < 1) {
+    base = Number(prompt(`Informe a base do triângulo`));
   }
+
+  let altura = Number(prompt(`Informe a altura do triângulo`));
+
+  while (isNaN(altura) || altura == "" || altura < 1) {
+    altura = Number(prompt(`Informe a altura do triângulo`));
+  }
+
+  let retangulo = {
+    base: base,
+    altura: altura,
+    area: calculaArea(base, altura),
+  };
 
   document.write(`Área: ${calculaArea(retangulo.base, retangulo.altura)}`);
 </script>

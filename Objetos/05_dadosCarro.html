@@ -5,17 +5,32 @@
     Crie um objeto chamado carro com as propriedades marca, modelo e ano, e crie um método que retorne a marca, modelo e ano do carro em formato string.
     */
 
-  const retornaCarro = (marca, modelo, ano) => {
-    let carro = {
-      marca: marca,
-      modelo: modelo,
-      ano: ano,
-    };
+  let marca = prompt(`Informe a marca do carro`);
 
-    return carro
+  while (!isNaN(marca) || marca === "") {
+    marca = prompt(`Informe a marca do carro`);
+  }  
+
+  let modelo = prompt(`Informe o modelo do carro`);
+
+  while (!isNaN(modelo) || modelo === "") {
+    modelo = prompt(`Informe o modelo do carro`);
+  }  
+
+  let ano = Number(prompt(`Informe o ano do carro`));
+
+  while (isNaN(ano) || !Number.isInteger(ano) || ano == "" || ano < 1) {
+    ano = Number(prompt(`Informe o ano do carro`));
+  }
+
+  let carro = {
+    marca: marca,
+    modelo: modelo,
+    ano: ano,
   };
 
-   for (let prop in carro) {
-        document.write(prop + ": " + carro[prop] + "<br>"); // fazer uma função ver
-    }
+
+  for (let prop in carro) {
+    document.write(prop + ": " + carro[prop] + "<br>"); // fazer uma função ver
+  }
 </script>
