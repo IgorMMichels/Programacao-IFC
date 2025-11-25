@@ -1,9 +1,29 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
-    PROBLEMA: COR DA CASA
-    Crie um objeto chamado casa com as propriedades cor, numeroDePortas e numeroDeJanelas, e crie um método que retorne a cor da casa.
-    */
-    
-    
+
+
+  let cor = prompt(`Informe a cor da casa`);
+
+  while (!isNaN(cor) || cor == "") {
+    cor = prompt(`Informe a cor da casa`);
+  }
+  let numeroDePortas = prompt(`Informe o numero de portas da casa`);
+
+  while (!isNaN(numeroDePortas) || numeroDePortas == "") {
+    numeroDePortas = prompt(`Informe o numero de portas da casa`);
+  }
+
+  let numeroDeJanelas = prompt(`Informe o número de janelas na casa`);
+
+  while (!isNaN(numeroDeJanelas) || numeroDeJanelas == "") {
+    numeroDeJanelas = prompt(`Informe o número de janelas na casa`);
+  }
+
+  let casa = {
+    cor: cor,
+    numeroDePortas: numeroDePortas,
+    numeroDeJanelas: numeroDeJanelas,
+  };
+
+  document.write(`A cor da casa é: ${casa.cor}`)
 </script>
