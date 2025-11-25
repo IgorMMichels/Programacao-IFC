@@ -1,16 +1,37 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: DADOS DO FUNCIONÁRIO
     Crie um objeto chamado funcionario com as propriedades nome, cargo, salario, e crie um método que retorne o nome, cargo e salario do funcionário em formato string.
     */
-    
-    //ENTRADA
 
+  let nome = prompt(`Informe o nome do funcionário.`).trim();
 
-    //PROCESSAMENTO
+  while (!isNaN(nome) || nome === "") {
+    nome = prompt(`Informe o nome do funcionário.`);
+  }
 
+  let cargo = prompt(`Informe o cargo do funcionário.`).trim();
 
-    //SAÍDA
-    
+  while (!isNaN(cargo) || cargo === "") {
+    cargo = prompt(`Informe o cargo do funcionário.`).trim();
+  }
+
+  let salario = Number(prompt(`Informe o salario do funcionário`)).trim();
+
+  while (isNaN(salario) || salario == "" || salario < 1) {
+    salario = Number(prompt(`Informe o salario do funcionário`)).trim();
+  }
+
+  let funcionario = {
+    nome: nome,
+    cargo: cargo,
+    salario: salario,
+  };
+
+  document.write(`Nome do Funcionário: ${funcionario.nome} <br>`);
+  document.write(`Cargo do Funcionário: ${funcionario.cargo} <br>`);
+  document.write(
+    `Salário do Funcionário: R$${funcionario.salario.toFixed(2)} <br>`
+  );
 </script>

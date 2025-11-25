@@ -1,16 +1,35 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: MICROONDAS
     Crie um objeto chamado microondas com as propriedades marca, modelo, ligado, e crie um método que retorne todas as propriedades do objeto.
     */
-    
-    //ENTRADA
 
+  let marca = prompt(`Informe a marca do microondas.`).trim();
 
-    //PROCESSAMENTO
+  while (!isNaN(marca) || marca === "") {
+    marca = prompt(`Informe a marca do microondas.`).trim();
+  }
 
+  let modelo = prompt(`Informe o modelo do microondas.`).trim();
 
-    //SAÍDA
+  while (modelo === "") {
+    modelo = prompt(`Informe o  modelo do microondas.`);
+  }
 
+  let ligado = prompt(`O microondas se encontra em que estado. (Ligado ou Desligado)`).toLowerCase().trim();
+
+  while (ligado != "ligado" && ligado != "desligado") {
+    ligado = prompt(`O microondas se encontra em que estado. (Ligado ou Desligado)`).toLowerCase().trim();
+  }
+
+  let microondas = {
+    marca: marca,
+    modelo: modelo,
+    ligado: ligado,
+  };
+
+  document.write(`Modelo do Microondas: ${microondas.modelo} <br>`);
+  document.write(`Marca do Microondas: ${microondas.marca} <br>`);
+  document.write(`O estado do microondas: ${microondas.ligado} <br>`);
 </script>

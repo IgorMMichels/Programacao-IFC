@@ -1,16 +1,41 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: DADOS DO CLIENTE
     Crie um objeto chamado cliente com as propriedades nome, idade, email, e crie um método que retorne o nome, idade e email do cliente em formato string.
     */
 
-    let nomeCliente = prompt(`Informe o nome do cliente.`)
-    
-    let cliente = {
-        nome: nomeCliente,
-        idade: idadeCliente,
-        email: emailCliente,
-    }
-    
+  let nomeCliente = prompt(`Informe o nome do cliente.`).trim();
+
+  while (!isNaN(nomeCliente) || nomeCliente === "") {
+    nomeCliente = prompt(`Informe o nome do cliente.`).trim();
+  }
+
+  let idadeCliente = Number(prompt(`Informe a idade do cliente.`)).trim();
+
+  while (
+    isNaN(idadeCliente) ||
+    !Number.isInteger(idadeCliente) ||
+    idadeCliente == "" ||
+    idadeCliente < 1 ||
+    idadeCliente > 150
+  ) {
+    idadeCliente = Number(prompt(`Informe a idade do cliente.`)).trim();
+  }
+
+  let emailCliente = prompt(`Informe o email do cliente.`);
+
+  while (!isNaN(emailCliente) || emailCliente === "") {
+    emailCliente = prompt(`Informe o nome do cliente.`).trim();
+  }
+
+  let cliente = {
+    nome: nomeCliente,
+    idade: idadeCliente,
+    email: emailCliente,
+  };
+
+  document.write(`Nome do Cliente: ${cliente.nome} <br>`);
+  document.write(`Idade do Cliente: ${cliente.idade} <br>`);
+  document.write(`Email do Cliente: ${cliente.email}`);
 </script>

@@ -1,16 +1,37 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: CONTA BANCÁRIA
     Crie um objeto chamado conta com as propriedades numero, saldo, tipo, e crie um método que retorne todas as propriedades.
     */
-    
-    //ENTRADA
 
+  let numero = Number(prompt(`Informe o número da conta.`)).trim();
 
-    //PROCESSAMENTO
+  while (
+    isNaN(numero) ||
+    !Number.isInteger(numero) ||
+    numero == "" ||
+    numero < 1
+  ) {
+    numero = Number(prompt(`Informe o número da conta`)).trim();
+  }
 
+  let saldo = Number(prompt(`Informe o saldo da conta.`)).trim();
 
-    //SAÍDA
-    
+  let tipo = prompt(`Informe o tipo da sua conta.`).trim();
+
+  while (!isNaN(tipo) || tipo === "") {
+    tipo = prompt(`Informe o tipo da sua conta.`).trim();
+  }
+
+  let conta = {
+    numero: numero,
+    saldo: saldo,
+    tipo: tipo
+  }
+
+  document.write(`Número da conta: ${conta.numero} <br>`);
+  document.write(`Saldo da conta: R$${(conta.saldo).toFixed(2)} <br>`);
+  document.write(`Tipo da conta: ${conta.tipo}`);
+
 </script>
