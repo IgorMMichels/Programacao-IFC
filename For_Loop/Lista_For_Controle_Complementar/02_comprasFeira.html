@@ -33,10 +33,22 @@
   for (let i = 0; i < produtos.length; i++) {
     produtoAtual = produtos[i].nome;
 
-    qntProduto =  Number(prompt(`Quantos(as) ${produtoAtual} você deseja adicionar? Preço: R$${produtos[i].preco.toFixed(2)}`));
+    qntProduto = Number(
+      prompt(
+        `Quantos(as) ${produtoAtual} você deseja adicionar? Preço: R$${produtos[
+          i
+        ].preco.toFixed(2)}`
+      )
+    );
 
-    while(isNaN(qntProduto) || qntProduto % 1 != 0 || qntProduto < 0) {
-        qntProduto =  Number(prompt(`Inválido. Quantos(as) ${produtoAtual} você deseja adicionar? Preço: R$${produtos[i].preco.toFixed(2)}`));
+    while (isNaN(qntProduto) || qntProduto % 1 != 0 || qntProduto < 0) {
+      qntProduto = Number(
+        prompt(
+          `Inválido. Quantos(as) ${produtoAtual} você deseja adicionar? Preço: R$${produtos[
+            i
+          ].preco.toFixed(2)}`
+        )
+      );
     }
 
     valorTotal += produtos[i].preco * qntProduto;

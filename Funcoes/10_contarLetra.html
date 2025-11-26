@@ -29,11 +29,11 @@
     `Informe a letra que você quer saber quantas contem na palavra.`
   );
 
-  while (!isNaN(palavra) || palavra === "" || palavra.length != 1) {
+  while (!isNaN(letra) || letra === "" || letra.length != 1) {
     letra = prompt(
       `Informe a letra que você quer saber quantas contem na palavra.`
     );
   }
 
-  alert(`A quantidade de letras ${letra} na palavra ${palavra} é: ${vogalPalavra(letra, palavra)}`);
+  alert(`A quantidade de letras ${letra} na palavra ${palavra} é: ${vogalPalavra(palavra, letra)}`);
 </script>

@@ -14,9 +14,9 @@
 
   let graus = Number(prompt(`Informe uma temperatura em graus Celcius para Converter em Fahrenheit.`));
 
-  while (isNaN(graus) || graus == "" || graus < 1) {
+  while (isNaN(graus) || graus == "") {
     graus = Number(prompt(`Informe uma temperatura em graus Celcius para Converter em Fahrenheit.`));
   }
 
-  alert(`A temperatura ${graus}º graus celcius em Fahrenheit é: ${fahrenheitCelcius(graus)}`);
+  alert(`A temperatura ${graus}º graus celcius em Fahrenheit é: ${grausFahrenheitArrow(graus).toFixed(1)}`);
 </script>

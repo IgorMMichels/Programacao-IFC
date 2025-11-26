@@ -17,7 +17,7 @@
     )
   );
 
-  while (isNaN(graus) || graus == "" || graus < 1) {
+  while (isNaN(graus) || graus == "") {
     graus = Number(
       prompt(
         `Informe uma temperatura em graus Fahrenheit para Converter em graus Celcius.`
@@ -25,5 +25,5 @@
     );
   }
 
-  alert(`A temperatura ${graus} graus Fahrenheit em celcius é: ${fahrenheitCelcius(graus)}º`);
+  alert(`A temperatura ${graus} graus Fahrenheit em celcius é: ${fahrenheitCelciusArrow(graus).toFixed(1)}º`);
 </script>

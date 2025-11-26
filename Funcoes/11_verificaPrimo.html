@@ -15,7 +15,6 @@
       for (let i = 3; i <= Math.sqrt(numero); i += 2) {
         if (numero % i == 0) {
           return "Numero não primo";
-          break;
         }
       }
     }
@@ -33,7 +32,9 @@
     numero == "" ||
     numero < 1
   ) {
-    numero = Number(prompt(`Informe um número inteiro e positivo. Para ver se é primo.`));
+    numero = Number(
+      prompt(`Informe um número inteiro e positivo. Para ver se é primo.`)
+    );
   }
 
   alert(validaPrimo(numero));

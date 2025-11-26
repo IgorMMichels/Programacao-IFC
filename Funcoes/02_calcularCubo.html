@@ -13,7 +13,7 @@
 
   let numero = Number(prompt(`Informe um número inteiro para saber se seu cubo.`));
 
-  while (isNaN(numero) || !Number.isInteger(numero) || numero == "" || numero < 1) {
+  while (isNaN(numero) || !Number.isInteger(numero) || numero == "") { // resolvi não validar número negativo, pois não foi pedido
     numero = Number(prompt(`Informe um número inteiro para saber se seu cubo.`));
   }
 
